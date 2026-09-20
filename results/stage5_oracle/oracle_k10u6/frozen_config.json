@@ -1,0 +1,117 @@
+{
+  "dataset": "oracle",
+  "name": "stage5_oracle_k10u6",
+  "oracle_root": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\data\\oracle\\processed_k10u6",
+  "output_dir": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage5_oracle\\oracle_k10u6",
+  "seed": 42,
+  "augment_train": false,
+  "state_dim": 128,
+  "stem_channels": 128,
+  "message_dim": 64,
+  "prototype_temperature": 0.15,
+  "geometry_view": "raw",
+  "batch_size": 512,
+  "expert_epochs": 35,
+  "expert_lr": 0.001,
+  "expert_weight_decay": 0.0001,
+  "supcon_temperature": 0.1,
+  "supcon_weight": 0.1,
+  "compact_weight": 0.1,
+  "margin_weight": 0.1,
+  "prototype_margin": 0.5,
+  "diversity_weight": 0.01,
+  "reconstruction_weight": 0.05,
+  "openmax_alpha_rank": 3,
+  "openmax_tail_size": 50,
+  "lco_folds": 5,
+  "lco_partition_seed": 2026,
+  "lco_expert_epochs": 20,
+  "lco_coordinator_epochs": 10,
+  "lco_max_samples": 8192,
+  "pug_kinds": [
+    "competition",
+    "disagreement",
+    "mixed"
+  ],
+  "pug_eta_grid": [
+    1.0,
+    1.5,
+    2.0
+  ],
+  "unknown_score_rules": [
+    "mean4",
+    "geo_open_boundary",
+    "max4"
+  ],
+  "arbitration_rules": [
+    "communication",
+    "mean",
+    "max",
+    "noisy_or"
+  ],
+  "known_acceptance_grid": [
+    0.9,
+    0.92,
+    0.94,
+    0.95,
+    0.96,
+    0.97
+  ],
+  "adaptive_threshold_priors": [
+    null,
+    0.0,
+    25.0,
+    100.0
+  ],
+  "communication_candidates": [
+    {
+      "mode": "none",
+      "budget": 0.5,
+      "gate_threshold": 0.5
+    },
+    {
+      "mode": "audit_sparse_cf",
+      "budget": 0.25,
+      "gate_threshold": 0.5
+    },
+    {
+      "mode": "audit_optional_cf",
+      "budget": 0.1,
+      "gate_threshold": 0.5
+    },
+    {
+      "mode": "audit_optional_cf",
+      "budget": 0.1,
+      "gate_threshold": 0.65
+    },
+    {
+      "mode": "audit_optional_cf",
+      "budget": 0.1,
+      "gate_threshold": 0.8
+    },
+    {
+      "mode": "audit_residual_cf",
+      "budget": 0.1,
+      "gate_threshold": 0.65
+    }
+  ],
+  "min_known_accuracy": 0.93,
+  "coordinator_hidden_dim": 192,
+  "coordinator_epochs": 20,
+  "coordinator_batch_size": 512,
+  "coordinator_lr": 0.0005,
+  "coordinator_weight_decay": 0.0001,
+  "coordinator_class_weight": 0.5,
+  "budget_weight": 0.02,
+  "cf_weight": 0.1,
+  "cf_temperature": 0.25,
+  "bootstrap_repetitions": 1000,
+  "comparison_target": {
+    "method": "previous_scheme_pcbm",
+    "known_accuracy": 0.9455,
+    "unknown_recall": 0.9651666666666666,
+    "auroc": 0.9813703932291666,
+    "oscr": 0.9664017526041667,
+    "macro_f1": 0.9280577936207467
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "known_classes": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "proxy_unknown_classes": [
+    1,
+    9
+  ],
+  "seed": 42,
+  "local_epoch": 30,
+  "local_history": [
+    {
+      "loss": 2.616434097290039,
+      "known_loss": 2.616434097290039,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.126953125,
+      "prototype_known_accuracy": 0.1201171875,
+      "steps": 8.0,
+      "epoch": 1.0
+    },
+    {
+      "loss": 2.216030776500702,
+      "known_loss": 2.216030776500702,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.12548828125,
+      "prototype_known_accuracy": 0.12646484375,
+      "steps": 8.0,
+      "epoch": 2.0
+    },
+    {
+      "loss": 2.1233597695827484,
+      "known_loss": 2.1233597695827484,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.13037109375,
+      "prototype_known_accuracy": 0.11962890625,
+      "steps": 8.0,
+      "epoch": 3.0
+    },
+    {
+      "loss": 2.093323975801468,
+      "known_loss": 2.093323975801468,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.140625,
+      "prototype_known_accuracy": 0.1259765625,
+      "steps": 8.0,
+      "epoch": 4.0
+    },
+    {
+      "loss": 2.0837013125419617,
+      "known_loss": 2.0837013125419617,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.16259765625,
+      "prototype_known_accuracy": 0.125,
+      "steps": 8.0,
+      "epoch": 5.0
+    },
+    {
+      "loss": 2.0782873928546906,
+      "known_loss": 2.0782873928546906,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.1572265625,
+      "prototype_known_accuracy": 0.14599609375,
+      "steps": 8.0,
+      "epoch": 6.0
+    },
+    {
+      "loss": 2.0604820549488068,
+      "known_loss": 2.0604820549488068,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.1494140625,
+      "prototype_known_accuracy": 0.20068359375,
+      "steps": 8.0,
+      "epoch": 7.0
+    },
+    {
+      "loss": 1.9980396777391434,
+      "known_loss": 1.9980396777391434,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.19677734375,
+      "prototype_known_accuracy": 0.20263671875,
+      "steps": 8.0,
+      "epoch": 8.0
+    },
+    {
+      "loss": 1.894002377986908,
+      "known_loss": 1.894002377986908,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.22314453125,
+      "prototype_known_accuracy": 0.26953125,
+      "steps": 8.0,
+      "epoch": 9.0
+    },
+    {
+      "loss": 1.8215493708848953,
+      "known_loss": 1.8215493708848953,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.25537109375,
+      "prototype_known_accuracy": 0.302734375,
+      "steps": 8.0,
+      "epoch": 10.0
+    },
+    {
+      "loss": 1.7247884273529053,
+      "known_loss": 1.7247884273529053,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.318359375,
+      "prototype_known_accuracy": 0.3701171875,
+      "steps": 8.0,
+      "epoch": 11.0
+    },
+    {
+      "loss": 1.6524622738361359,
+      "known_loss": 1.6524622738361359,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.41162109375,
+      "prototype_known_accuracy": 0.39697265625,
+      "steps": 8.0,
+      "epoch": 12.0
+    },
+    {
+      "loss": 1.6290463507175446,
+      "known_loss": 1.6290463507175446,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.478515625,
+      "prototype_known_accuracy": 0.33984375,
+      "steps": 8.0,
+      "epoch": 13.0
+    },
+    {
+      "loss": 1.4333976060152054,
+      "known_loss": 1.4333976060152054,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.552734375,
+      "prototype_known_accuracy": 0.4775390625,
+      "steps": 8.0,
+      "epoch": 14.0
+    },
+    {
+      "loss": 1.3610525131225586,
+      "known_loss": 1.3610525131225586,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.58984375,
+      "prototype_known_accuracy": 0.47900390625,
+      "steps": 8.0,
+      "epoch": 15.0
+    },
+    {
+      "loss": 1.5171518474817276,
+      "known_loss": 1.5171518474817276,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.66845703125,
+      "prototype_known_accuracy": 0.353515625,
+      "steps": 8.0,
+      "epoch": 16.0
+    },
+    {
+      "loss": 1.4367616921663284,
+      "known_loss": 1.4367616921663284,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.68994140625,
+      "prototype_known_accuracy": 0.3466796875,
+      "steps": 8.0,
+      "epoch": 17.0
+    },
+    {
+      "loss": 1.3079725950956345,
+      "known_loss": 1.3079725950956345,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.7578125,
+      "prototype_known_accuracy": 0.412109375,
+      "steps": 8.0,
+      "epoch": 18.0
+    },
+    {
+      "loss": 1.1828082203865051,
+      "known_loss": 1.1828082203865051,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.80029296875,
+      "prototype_known_accuracy": 0.50390625,
+      "steps": 8.0,
+      "epoch": 19.0
+    },
+    {
+      "loss": 1.0919905453920364,
+      "known_loss": 1.0919905453920364,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.83154296875,
+      "prototype_known_accuracy": 0.5849609375,
+      "steps": 8.0,
+      "epoch": 20.0
+    },
+    {
+      "loss": 1.0803459733724594,
+      "known_loss": 1.0803459733724594,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.8876953125,
+      "prototype_known_accuracy": 0.49365234375,
+      "steps": 8.0,
+      "epoch": 21.0
+    },
+    {
+      "loss": 0.988302193582058,
+      "known_loss": 0.988302193582058,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.89404296875,
+      "prototype_known_accuracy": 0.568359375,
+      "steps": 8.0,
+      "epoch": 22.0
+    },
+    {
+      "loss": 0.89138562977314,
+      "known_loss": 0.89138562977314,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.9208984375,
+      "prototype_known_accuracy": 0.65771484375,
+      "steps": 8.0,
+      "epoch": 23.0
+    },
+    {
+      "loss": 0.8285889476537704,
+      "known_loss": 0.8285889476537704,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.93310546875,
+      "prototype_known_accuracy": 0.697265625,
+      "steps": 8.0,
+      "epoch": 24.0
+    },
+    {
+      "loss": 0.8006390556693077,
+      "known_loss": 0.8006390556693077,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.94873046875,
+      "prototype_known_accuracy": 0.68115234375,
+      "steps": 8.0,
+      "epoch": 25.0
+    },
+    {
+      "loss": 1.000758208334446,
+      "known_loss": 1.000758208334446,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.95654296875,
+      "prototype_known_accuracy": 0.46533203125,
+      "steps": 8.0,
+      "epoch": 26.0
+    },
+    {
+      "loss": 0.9056888595223427,
+      "known_loss": 0.9056888595223427,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.9658203125,
+      "prototype_known_accuracy": 0.4990234375,
+      "steps": 8.0,
+      "epoch": 27.0
+    },
+    {
+      "loss": 0.8300020396709442,
+      "known_loss": 0.8300020396709442,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.96728515625,
+      "prototype_known_accuracy": 0.55078125,
+      "steps": 8.0,
+      "epoch": 28.0
+    },
+    {
+      "loss": 0.7716016843914986,
+      "known_loss": 0.7716016843914986,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.97802734375,
+      "prototype_known_accuracy": 0.599609375,
+      "steps": 8.0,
+      "epoch": 29.0
+    },
+    {
+      "loss": 0.7847919389605522,
+      "known_loss": 0.7847919389605522,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.0,
+      "waveform_known_accuracy": 0.98828125,
+      "prototype_known_accuracy": 0.5595703125,
+      "steps": 8.0,
+      "epoch": 30.0
+    }
+  ],
+  "open_history": [
+    {
+      "loss": 1.740753397345543,
+      "known_loss": 0.5972688645124435,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 6.314691603183746,
+      "waveform_known_accuracy": 0.98974609375,
+      "prototype_known_accuracy": 0.80224609375,
+      "steps": 8.0,
+      "epoch": 1.0
+    },
+    {
+      "loss": 1.3750686943531036,
+      "known_loss": 0.6201503872871399,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 4.394741863012314,
+      "waveform_known_accuracy": 0.9892578125,
+      "prototype_known_accuracy": 0.80615234375,
+      "steps": 8.0,
+      "epoch": 2.0
+    },
+    {
+      "loss": 1.1348796784877777,
+      "known_loss": 0.7201571613550186,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 2.7937696278095245,
+      "waveform_known_accuracy": 0.9873046875,
+      "prototype_known_accuracy": 0.81298828125,
+      "steps": 8.0,
+      "epoch": 3.0
+    },
+    {
+      "loss": 1.028250440955162,
+      "known_loss": 0.8142136037349701,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 1.8843976259231567,
+      "waveform_known_accuracy": 0.984375,
+      "prototype_known_accuracy": 0.8115234375,
+      "steps": 8.0,
+      "epoch": 4.0
+    },
+    {
+      "loss": 0.9931614622473717,
+      "known_loss": 0.8556538224220276,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 1.5431918948888779,
+      "waveform_known_accuracy": 0.98486328125,
+      "prototype_known_accuracy": 0.81005859375,
+      "steps": 8.0,
+      "epoch": 5.0
+    }
+  ],
+  "b2_history": [
+    {
+      "loss": 1.0323977768421173,
+      "known_loss": 1.112963542342186,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.7101348266005516,
+      "known_accuracy": 0.97705078125,
+      "epoch": 1.0
+    },
+    {
+      "loss": 0.9420783147215843,
+      "known_loss": 0.9530145302414894,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 0.8983333930373192,
+      "known_accuracy": 0.98095703125,
+      "epoch": 2.0
+    },
+    {
+      "loss": 0.8834015354514122,
+      "known_loss": 0.8286057785153389,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 1.10258449614048,
+      "known_accuracy": 0.9814453125,
+      "epoch": 3.0
+    },
+    {
+      "loss": 0.8512088879942894,
+      "known_loss": 0.7377779111266136,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 1.3049326837062836,
+      "known_accuracy": 0.98291015625,
+      "epoch": 4.0
+    },
+    {
+      "loss": 0.8374078571796417,
+      "known_loss": 0.6768137887120247,
+      "proxy_open_loss": 0.0,
+      "pug_open_loss": 1.479784071445465,
+      "known_accuracy": 0.98291015625,
+      "epoch": 5.0
+    }
+  ],
+  "enrollment": {
+    "num_samples": 2048.0,
+    "num_classes": 8.0,
+    "tail_location_mean": 0.1491386890411377,
+    "tail_scale_mean": 0.16500817239284515
+  },
+  "num_train_known": 2048,
+  "num_pug": 2048,
+  "elapsed_seconds": 27.378716707229614
+}

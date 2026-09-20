@@ -1,0 +1,161 @@
+{
+  "dataset": "stage1_oracle_k10u6_demod_seed42",
+  "tau": 0.95,
+  "known_closed_set_accuracy": {
+    "identity": 0.991125,
+    "prototype": 0.9925,
+    "fused_closed": 0.991125
+  },
+  "channel_metrics": {
+    "identity": {
+      "auroc": 0.8390266380208334,
+      "aupr_out": 0.9379501152445827,
+      "fpr95": 0.683375,
+      "oscr": 0.8369870937499999,
+      "tau": 0.95,
+      "known_accuracy": 0.955875,
+      "unknown_recall": 0.47679166666666667,
+      "macro_f1": 0.7683557290384464,
+      "h_score": 0.6362306668799442
+    },
+    "prototype": {
+      "auroc": 0.93864075,
+      "aupr_out": 0.9761446754823178,
+      "fpr95": 0.320375,
+      "oscr": 0.9359018072916667,
+      "tau": 0.95,
+      "known_accuracy": 0.95975,
+      "unknown_recall": 0.6778333333333333,
+      "macro_f1": 0.7951904242848865,
+      "h_score": 0.79452511322579
+    },
+    "reconstruction": {
+      "auroc": 0.6724396770833333,
+      "aupr_out": 0.8628512222900612,
+      "fpr95": 0.944,
+      "oscr": 0.668654828125,
+      "tau": 0.95,
+      "known_accuracy": 0.957875,
+      "unknown_recall": 0.21629166666666666,
+      "macro_f1": 0.7012756390137332,
+      "h_score": 0.3528977377572746
+    },
+    "fused_mean": {
+      "auroc": 0.8849322864583333,
+      "aupr_out": 0.952906775684853,
+      "fpr95": 0.438625,
+      "oscr": 0.8814128906250001,
+      "tau": 0.95,
+      "known_accuracy": 0.985125,
+      "unknown_recall": 0.21508333333333332,
+      "macro_f1": 0.7099214462652297,
+      "h_score": 0.3530786495400104
+    },
+    "fused_max": {
+      "auroc": 0.9352671901041667,
+      "aupr_out": 0.9706754716510602,
+      "fpr95": 0.254125,
+      "oscr": 0.9314508958333334,
+      "tau": 0.95,
+      "known_accuracy": 0.9055,
+      "unknown_recall": 0.7947083333333333,
+      "macro_f1": 0.8293870532470052,
+      "h_score": 0.8464943756892538
+    }
+  },
+  "conditional_catch": {
+    "identity": {
+      "n_missed": 12557,
+      "caught_by_prototype": 0.544477184040774,
+      "caught_by_reconstruction": 0.14318706697459585,
+      "caught_by_either_helper": 0.6076292107987576
+    },
+    "prototype": {
+      "n_missed": 7732,
+      "caught_by_identity": 0.2602172788411795,
+      "caught_by_reconstruction": 0.15920848422141748,
+      "caught_by_either_helper": 0.36277806518365235
+    },
+    "reconstruction": {
+      "n_missed": 18809,
+      "caught_by_identity": 0.4279866021585411,
+      "caught_by_prototype": 0.6543675899835185,
+      "caught_by_either_helper": 0.7380509330639587
+    }
+  },
+  "detection_overlap": {
+    "tau": 0.95,
+    "n_unknown": 24000,
+    "recall_per_channel": {
+      "identity": 0.47679166666666667,
+      "prototype": 0.6778333333333333,
+      "reconstruction": 0.21629166666666666
+    },
+    "union_recall": 0.7947083333333333,
+    "unique_contribution": {
+      "identity": 0.06558333333333333,
+      "prototype": 0.243,
+      "reconstruction": 0.033041666666666664
+    },
+    "pairwise_jaccard": {
+      "identity__prototype": {
+        "jaccard": 0.5159190371991247,
+        "intersection": 9431
+      },
+      "identity__reconstruction": {
+        "jaccard": 0.2562495279812703,
+        "intersection": 3393
+      },
+      "prototype__reconstruction": {
+        "jaccard": 0.22629864563689353,
+        "intersection": 3960
+      }
+    }
+  },
+  "correlations": {
+    "raw_score_spearman": [
+      [
+        1.0,
+        0.5965935389796726,
+        0.23329526824104466
+      ],
+      [
+        0.5965935389796726,
+        1.0,
+        0.209784190214647
+      ],
+      [
+        0.23329526824104466,
+        0.209784190214647,
+        1.0
+      ]
+    ],
+    "raw_names": [
+      "1-conf",
+      "d1",
+      "rec_err"
+    ],
+    "embedding_cka": {
+      "identity__prototype": 0.4481812126968459,
+      "identity__reconstruction": 0.32290186877522975,
+      "prototype__reconstruction": 0.46249701324801823
+    },
+    "id_proto_pred_disagree_on_known": 0.012
+  },
+  "gate": {
+    "best_fusion_rule": "fused_max",
+    "fusion_aurocs": {
+      "fused_mean": 0.8849322864583333,
+      "fused_max": 0.9352671901041667
+    },
+    "best_single_auroc": 0.93864075,
+    "fused_beats_best_single_auroc": false,
+    "fused_auroc_gain": -0.0033735598958333224,
+    "max_abs_score_correlation": 0.5965935389796726,
+    "not_collapsed_corr_lt_0_95": true,
+    "identity_missed_unknown_rescued_fraction": 0.6076292107987576,
+    "union_recall": 0.7947083333333333,
+    "best_single_channel_recall": 0.6778333333333333,
+    "union_adds_recall": true
+  }
+}

@@ -5,8 +5,13 @@ data/WiSig/pkl_wifi_2021_03_15/
 data/WiSig/pkl_wifi_2021_03_23/
 data/oracle/KRI-16IQImbalances-DemodulatedData/
 
-# === Experiment outputs & third-party reference code ===
-results/
+# === Experiment outputs: keep JSON/MD/CSV/PNG results, exclude model weights & data arrays ===
+results/**/*.pt
+results/**/*.pth
+results/**/*.npz
+results/**/*.npy
+results/**/*.joblib
+results/**/lco_selection.json
 多智能体GitHub/
 
 # === Python / IDE / OS ===

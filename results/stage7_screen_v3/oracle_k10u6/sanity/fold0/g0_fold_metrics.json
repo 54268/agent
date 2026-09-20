@@ -1,0 +1,105 @@
+{
+  "fold": 0,
+  "known_classes": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "proxy_unknown_classes": [
+    1,
+    9
+  ],
+  "metrics": {
+    "waveform": {
+      "auroc": 0.61073212890625,
+      "aupr_out": 0.25258954512938986,
+      "fpr95": 0.90375,
+      "tau": 0.9405853846123252,
+      "known_accuracy": 0.270625,
+      "unknown_recall": 0.07375,
+      "macro_f1": 0.17471823273637563,
+      "h_score": 0.1159119782214156,
+      "oscr": 0.19232148437500002,
+      "num_known": 6400,
+      "num_unknown": 1600
+    },
+    "prototype": {
+      "auroc": 0.8715598144531249,
+      "aupr_out": 0.6789897607494866,
+      "fpr95": 0.55015625,
+      "tau": 0.9442655640551377,
+      "known_accuracy": 0.65359375,
+      "unknown_recall": 0.540625,
+      "macro_f1": 0.6180283362257037,
+      "h_score": 0.5917661585764752,
+      "oscr": 0.60703232421875,
+      "num_known": 6400,
+      "num_unknown": 1600
+    },
+    "b2": {
+      "auroc": 0.8766749023437499,
+      "aupr_out": 0.705434013459047,
+      "fpr95": 0.55015625,
+      "tau": 0.9440965040628084,
+      "known_accuracy": 0.6528125,
+      "unknown_recall": 0.574375,
+      "macro_f1": 0.6226143569429722,
+      "h_score": 0.6110870257193787,
+      "oscr": 0.60997958984375,
+      "num_known": 6400,
+      "num_unknown": 1600
+    }
+  },
+  "public_selector": {
+    "auroc": 0.7958169921875,
+    "aupr_out": 0.5791230175057509,
+    "fpr95": 0.7903125,
+    "tau": 0.9409243157166739,
+    "known_accuracy": 0.59390625,
+    "unknown_recall": 0.3525,
+    "macro_f1": 0.5455710858861251,
+    "h_score": 0.44241456166419024,
+    "oscr": 0.49909892578125,
+    "num_known": 6400,
+    "num_unknown": 1600
+  },
+  "public_selector_diagnostics": {
+    "mean_loss": 0.454375,
+    "gain_over_stop": 0.314375,
+    "oracle_gain_recovery": 0.686970773012838,
+    "accuracy": 0.76175
+  },
+  "complementarity": {
+    "unique_rescue": {
+      "waveform": {
+        "absolute_rate": 0.056375,
+        "baseline_failure_rate": 0.15535652772993455,
+        "count": 451
+      },
+      "prototype": {
+        "absolute_rate": 0.00325,
+        "baseline_failure_rate": 0.008956252152945229,
+        "count": 26
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.7228125,
+      "unknown_recall": 0.59375,
+      "h_score": 0.6519552575361975,
+      "oscr": 0.7238835937499999
+    },
+    "baseline_success_rate": 0.637125,
+    "oracle_success_rate": 0.697
+  },
+  "protocol": {
+    "formal_unknown_used": false,
+    "calibration_and_test_known_are_disjoint": true,
+    "oscr_uses_pre_rejection_prediction": true,
+    "stop_exactly_equals_b2": true
+  }
+}

@@ -1,0 +1,646 @@
+{
+  "no_communication": [
+    {
+      "epoch": 1,
+      "loss": 2.4626571823216086,
+      "val_pseudo_auroc": 0.9695354656222802,
+      "val_pseudo_recall": 0.7389033942558747,
+      "val_class_acc": 0.8733333333333333,
+      "known95_threshold": 0.890049722790718
+    },
+    {
+      "epoch": 2,
+      "loss": 0.7410364148751745,
+      "val_pseudo_auroc": 0.9802277342616768,
+      "val_pseudo_recall": 0.8642297650130548,
+      "val_class_acc": 0.905,
+      "known95_threshold": 0.8781598478555679
+    },
+    {
+      "epoch": 3,
+      "loss": 0.41811755543234963,
+      "val_pseudo_auroc": 0.9841227879315347,
+      "val_pseudo_recall": 0.9151436031331592,
+      "val_class_acc": 0.9072222222222223,
+      "known95_threshold": 0.8130459398031235
+    },
+    {
+      "epoch": 4,
+      "loss": 0.3263859949771713,
+      "val_pseudo_auroc": 0.9891924136930663,
+      "val_pseudo_recall": 0.9477806788511749,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.6280887067317958
+    },
+    {
+      "epoch": 5,
+      "loss": 0.2777565805417187,
+      "val_pseudo_auroc": 0.9913181752248332,
+      "val_pseudo_recall": 0.9530026109660574,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.7066619187593453
+    },
+    {
+      "epoch": 6,
+      "loss": 0.2442680502087815,
+      "val_pseudo_auroc": 0.9933046852335365,
+      "val_pseudo_recall": 0.9699738903394256,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.4348127365112305
+    },
+    {
+      "epoch": 7,
+      "loss": 0.2193922682378277,
+      "val_pseudo_auroc": 0.9927567449956484,
+      "val_pseudo_recall": 0.9640992167101827,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.40471999347209875
+    },
+    {
+      "epoch": 8,
+      "loss": 0.19794077963199255,
+      "val_pseudo_auroc": 0.9943577748767044,
+      "val_pseudo_recall": 0.9771540469973891,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.38204843401908867
+    },
+    {
+      "epoch": 9,
+      "loss": 0.18282830175363793,
+      "val_pseudo_auroc": 0.9937140992167101,
+      "val_pseudo_recall": 0.9804177545691906,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.6085966169834133
+    },
+    {
+      "epoch": 10,
+      "loss": 0.1699035658963821,
+      "val_pseudo_auroc": 0.9956766753698868,
+      "val_pseudo_recall": 0.987597911227154,
+      "val_class_acc": 0.9127777777777778,
+      "known95_threshold": 0.18855047151446333
+    },
+    {
+      "epoch": 11,
+      "loss": 0.16060344018276382,
+      "val_pseudo_auroc": 0.9955871047287497,
+      "val_pseudo_recall": 0.9765013054830287,
+      "val_class_acc": 0.9122222222222223,
+      "known95_threshold": 0.6169533550739277
+    },
+    {
+      "epoch": 12,
+      "loss": 0.15647838220656293,
+      "val_pseudo_auroc": 0.9957977951842182,
+      "val_pseudo_recall": 0.9869451697127938,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.12512482553720472
+    },
+    {
+      "epoch": 13,
+      "loss": 0.14457640940288327,
+      "val_pseudo_auroc": 0.9958525529445895,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.18068953230977042
+    },
+    {
+      "epoch": 14,
+      "loss": 0.13828211636663232,
+      "val_pseudo_auroc": 0.9963711198143311,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.09424541071057313
+    },
+    {
+      "epoch": 15,
+      "loss": 0.13486430663732613,
+      "val_pseudo_auroc": 0.9965850739773717,
+      "val_pseudo_recall": 0.9882506527415144,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.09608837105333796
+    },
+    {
+      "epoch": 16,
+      "loss": 0.13008336402335258,
+      "val_pseudo_auroc": 0.9965042065564258,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.05036676675081234
+    },
+    {
+      "epoch": 17,
+      "loss": 0.1269877759165734,
+      "val_pseudo_auroc": 0.9962717580504787,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.10546985119581215
+    },
+    {
+      "epoch": 18,
+      "loss": 0.12226644448889126,
+      "val_pseudo_auroc": 0.9960106614447345,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.1307552650570865
+    },
+    {
+      "epoch": 19,
+      "loss": 0.11938373551428692,
+      "val_pseudo_auroc": 0.9967022048157819,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.06877862215042112
+    },
+    {
+      "epoch": 20,
+      "loss": 0.11614673749643302,
+      "val_pseudo_auroc": 0.9963591528865681,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.0821015212684867
+    },
+    {
+      "epoch": 21,
+      "loss": 0.11253631251787989,
+      "val_pseudo_auroc": 0.996637655932695,
+      "val_pseudo_recall": 0.9908616187989556,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.03606019224971531
+    },
+    {
+      "epoch": 22,
+      "loss": 0.11178807391310638,
+      "val_pseudo_auroc": 0.9969921308384102,
+      "val_pseudo_recall": 0.9882506527415144,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.24757222384214383
+    },
+    {
+      "epoch": 23,
+      "loss": 0.10749280366507716,
+      "val_pseudo_auroc": 0.9967323034522774,
+      "val_pseudo_recall": 0.987597911227154,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.05112088341265906
+    },
+    {
+      "epoch": 24,
+      "loss": 0.108300433687444,
+      "val_pseudo_auroc": 0.996957136640557,
+      "val_pseudo_recall": 0.9908616187989556,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.0765607386827465
+    },
+    {
+      "epoch": 25,
+      "loss": 0.10428046400442063,
+      "val_pseudo_auroc": 0.9970717290397447,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.03181484304368496
+    },
+    {
+      "epoch": 26,
+      "loss": 0.10219172068736838,
+      "val_pseudo_auroc": 0.9958946185088483,
+      "val_pseudo_recall": 0.9856396866840731,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.07877263538539392
+    },
+    {
+      "epoch": 27,
+      "loss": 0.09855358657784433,
+      "val_pseudo_auroc": 0.9958772120684652,
+      "val_pseudo_recall": 0.9869451697127938,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.019681638013571444
+    },
+    {
+      "epoch": 28,
+      "loss": 0.09911490067745904,
+      "val_pseudo_auroc": 0.9958895416304032,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.03523375857621428
+    },
+    {
+      "epoch": 29,
+      "loss": 0.097370438249606,
+      "val_pseudo_auroc": 0.9958280751378009,
+      "val_pseudo_recall": 0.9856396866840731,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.07054484002292155
+    },
+    {
+      "epoch": 30,
+      "loss": 0.09868227867585308,
+      "val_pseudo_auroc": 0.9965778212938788,
+      "val_pseudo_recall": 0.987597911227154,
+      "val_class_acc": 0.9077777777777778,
+      "known95_threshold": 0.02512461710721248
+    },
+    {
+      "epoch": 31,
+      "loss": 0.09297213979862021,
+      "val_pseudo_auroc": 0.99691833478387,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.006050480972044166
+    },
+    {
+      "epoch": 32,
+      "loss": 0.09142127717440983,
+      "val_pseudo_auroc": 0.9968323904844792,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.023877241741865847
+    },
+    {
+      "epoch": 33,
+      "loss": 0.0896168496342575,
+      "val_pseudo_auroc": 0.9964316797214969,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.043699578568339344
+    },
+    {
+      "epoch": 34,
+      "loss": 0.08960971151882748,
+      "val_pseudo_auroc": 0.9971156077748767,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.10149028562009318
+    },
+    {
+      "epoch": 35,
+      "loss": 0.08637502443677975,
+      "val_pseudo_auroc": 0.9966757325210328,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.007776770507916807
+    },
+    {
+      "epoch": 36,
+      "loss": 0.08915142178910333,
+      "val_pseudo_auroc": 0.9967290397447056,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.042237219214439375
+    },
+    {
+      "epoch": 37,
+      "loss": 0.08488366148381862,
+      "val_pseudo_auroc": 0.9967003916449086,
+      "val_pseudo_recall": 0.9928198433420365,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.015006714547052952
+    },
+    {
+      "epoch": 38,
+      "loss": 0.08271103855573907,
+      "val_pseudo_auroc": 0.9962137365825355,
+      "val_pseudo_recall": 0.9908616187989556,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.01441616760566824
+    },
+    {
+      "epoch": 39,
+      "loss": 0.08355562958702352,
+      "val_pseudo_auroc": 0.9961578909196404,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.011052959831431427
+    },
+    {
+      "epoch": 40,
+      "loss": 0.0887622022591297,
+      "val_pseudo_auroc": 0.9970963881636206,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.1942856729030605
+    }
+  ],
+  "communication": [
+    {
+      "epoch": 1,
+      "loss": 1.8704581836484513,
+      "val_pseudo_auroc": 0.9761477371627503,
+      "val_pseudo_recall": 0.8067885117493473,
+      "val_class_acc": 0.9022222222222223,
+      "known95_threshold": 0.9033847928047181
+    },
+    {
+      "epoch": 2,
+      "loss": 0.5291337581175678,
+      "val_pseudo_auroc": 0.9871942993907745,
+      "val_pseudo_recall": 0.9197127937336814,
+      "val_class_acc": 0.9072222222222223,
+      "known95_threshold": 0.8474150031805038
+    },
+    {
+      "epoch": 3,
+      "loss": 0.29793107749531106,
+      "val_pseudo_auroc": 0.9930370612126487,
+      "val_pseudo_recall": 0.9608355091383812,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.561438167095184
+    },
+    {
+      "epoch": 4,
+      "loss": 0.22251519855088409,
+      "val_pseudo_auroc": 0.992987742964897,
+      "val_pseudo_recall": 0.9738903394255874,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.5598915785551067
+    },
+    {
+      "epoch": 5,
+      "loss": 0.1816132330107239,
+      "val_pseudo_auroc": 0.994829561937917,
+      "val_pseudo_recall": 0.9771540469973891,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.3155443474650374
+    },
+    {
+      "epoch": 6,
+      "loss": 0.16155735737872573,
+      "val_pseudo_auroc": 0.9959841891499854,
+      "val_pseudo_recall": 0.9804177545691906,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.32334481924772257
+    },
+    {
+      "epoch": 7,
+      "loss": 0.13879608877424923,
+      "val_pseudo_auroc": 0.9964650420655643,
+      "val_pseudo_recall": 0.9869451697127938,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.1910284139215942
+    },
+    {
+      "epoch": 8,
+      "loss": 0.12848398843838735,
+      "val_pseudo_auroc": 0.9951356251813173,
+      "val_pseudo_recall": 0.9771540469973891,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.533675962686537
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1194347657966164,
+      "val_pseudo_auroc": 0.9963094720046417,
+      "val_pseudo_recall": 0.9830287206266318,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.05302820187062003
+    },
+    {
+      "epoch": 10,
+      "loss": 0.11234914525499884,
+      "val_pseudo_auroc": 0.9965440963156368,
+      "val_pseudo_recall": 0.9849869451697127,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.08862088285386563
+    },
+    {
+      "epoch": 11,
+      "loss": 0.1011690450914251,
+      "val_pseudo_auroc": 0.9968882361473745,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.9111111111111111,
+      "known95_threshold": 0.07480563633143898
+    },
+    {
+      "epoch": 12,
+      "loss": 0.09785317386846122,
+      "val_pseudo_auroc": 0.9962206266318537,
+      "val_pseudo_recall": 0.9849869451697127,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.26560377925634376
+    },
+    {
+      "epoch": 13,
+      "loss": 0.09605896038079412,
+      "val_pseudo_auroc": 0.9973248476936467,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.09238134324550604
+    },
+    {
+      "epoch": 14,
+      "loss": 0.09139956897534664,
+      "val_pseudo_auroc": 0.9965636785610676,
+      "val_pseudo_recall": 0.9856396866840731,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.06410346403717988
+    },
+    {
+      "epoch": 15,
+      "loss": 0.08669108978982241,
+      "val_pseudo_auroc": 0.9969604003481287,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.02817869521677486
+    },
+    {
+      "epoch": 16,
+      "loss": 0.07968756127282509,
+      "val_pseudo_auroc": 0.99629605454018,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.057308965176343915
+    },
+    {
+      "epoch": 17,
+      "loss": 0.07913125445070507,
+      "val_pseudo_auroc": 0.9962699448796055,
+      "val_pseudo_recall": 0.9843342036553525,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.4159881606698032
+    },
+    {
+      "epoch": 18,
+      "loss": 0.07817820846659583,
+      "val_pseudo_auroc": 0.9967312155497534,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.02186774015426611
+    },
+    {
+      "epoch": 19,
+      "loss": 0.07138591011365254,
+      "val_pseudo_auroc": 0.9962750217580505,
+      "val_pseudo_recall": 0.9862924281984334,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.04054350703954685
+    },
+    {
+      "epoch": 20,
+      "loss": 0.06919217041266039,
+      "val_pseudo_auroc": 0.9966996663765594,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9116666666666666,
+      "known95_threshold": 0.01540458318777373
+    },
+    {
+      "epoch": 21,
+      "loss": 0.06501854725135198,
+      "val_pseudo_auroc": 0.9972004641717435,
+      "val_pseudo_recall": 0.9908616187989556,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.01685094255954027
+    },
+    {
+      "epoch": 22,
+      "loss": 0.06302614152993796,
+      "val_pseudo_auroc": 0.9967109080359734,
+      "val_pseudo_recall": 0.987597911227154,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.07634009718894919
+    },
+    {
+      "epoch": 23,
+      "loss": 0.06203490700924172,
+      "val_pseudo_auroc": 0.9973049028140412,
+      "val_pseudo_recall": 0.9934725848563969,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.008768060989677903
+    },
+    {
+      "epoch": 24,
+      "loss": 0.06343958700228038,
+      "val_pseudo_auroc": 0.9954250072526836,
+      "val_pseudo_recall": 0.97911227154047,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.13048177212476678
+    },
+    {
+      "epoch": 25,
+      "loss": 0.06102474481804566,
+      "val_pseudo_auroc": 0.997088772845953,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.013349615084007347
+    },
+    {
+      "epoch": 26,
+      "loss": 0.05871834795242586,
+      "val_pseudo_auroc": 0.9959138381201045,
+      "val_pseudo_recall": 0.9836814621409922,
+      "val_class_acc": 0.9077777777777778,
+      "known95_threshold": 0.04381765760481347
+    },
+    {
+      "epoch": 27,
+      "loss": 0.05482426189682769,
+      "val_pseudo_auroc": 0.9960338700319118,
+      "val_pseudo_recall": 0.9830287206266318,
+      "val_class_acc": 0.9105555555555556,
+      "known95_threshold": 0.031133457086980332
+    },
+    {
+      "epoch": 28,
+      "loss": 0.05174529160718498,
+      "val_pseudo_auroc": 0.9964289599651871,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.04233976695686561
+    },
+    {
+      "epoch": 29,
+      "loss": 0.05269230446256931,
+      "val_pseudo_auroc": 0.9968728241949522,
+      "val_pseudo_recall": 0.9941253263707572,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.009169956948608152
+    },
+    {
+      "epoch": 30,
+      "loss": 0.05010461847081124,
+      "val_pseudo_auroc": 0.9972835073977372,
+      "val_pseudo_recall": 0.9908616187989556,
+      "val_class_acc": 0.91,
+      "known95_threshold": 0.00782925009261814
+    },
+    {
+      "epoch": 31,
+      "loss": 0.04677060578112145,
+      "val_pseudo_auroc": 0.9962757470263999,
+      "val_pseudo_recall": 0.9895561357702349,
+      "val_class_acc": 0.9061111111111111,
+      "known95_threshold": 0.03667638208717091
+    },
+    {
+      "epoch": 32,
+      "loss": 0.04661796924968561,
+      "val_pseudo_auroc": 0.9973145126196693,
+      "val_pseudo_recall": 0.9921671018276762,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.020908225607126924
+    },
+    {
+      "epoch": 33,
+      "loss": 0.044117210093159345,
+      "val_pseudo_auroc": 0.9971843269509718,
+      "val_pseudo_recall": 0.9921671018276762,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.024069759249687166
+    },
+    {
+      "epoch": 34,
+      "loss": 0.04377062256512402,
+      "val_pseudo_auroc": 0.9968465332172904,
+      "val_pseudo_recall": 0.9889033942558747,
+      "val_class_acc": 0.9077777777777778,
+      "known95_threshold": 0.0522946005687113
+    },
+    {
+      "epoch": 35,
+      "loss": 0.04354195066686696,
+      "val_pseudo_auroc": 0.9974798738033072,
+      "val_pseudo_recall": 0.9934725848563969,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.012018783856183239
+    },
+    {
+      "epoch": 36,
+      "loss": 0.03953903884913936,
+      "val_pseudo_auroc": 0.9963161807368727,
+      "val_pseudo_recall": 0.987597911227154,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.04407361466437573
+    },
+    {
+      "epoch": 37,
+      "loss": 0.03825850281981552,
+      "val_pseudo_auroc": 0.99777288221642,
+      "val_pseudo_recall": 0.9934725848563969,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.019736616872251
+    },
+    {
+      "epoch": 38,
+      "loss": 0.0350704116711639,
+      "val_pseudo_auroc": 0.996634210908036,
+      "val_pseudo_recall": 0.9869451697127938,
+      "val_class_acc": 0.9094444444444445,
+      "known95_threshold": 0.013938733981922208
+    },
+    {
+      "epoch": 39,
+      "loss": 0.03494838510856688,
+      "val_pseudo_auroc": 0.9972786118363794,
+      "val_pseudo_recall": 0.9902088772845953,
+      "val_class_acc": 0.9088888888888889,
+      "known95_threshold": 0.006949405139312121
+    },
+    {
+      "epoch": 40,
+      "loss": 0.03274191912240202,
+      "val_pseudo_auroc": 0.9976356251813171,
+      "val_pseudo_recall": 0.9921671018276762,
+      "val_class_acc": 0.9083333333333333,
+      "known95_threshold": 0.005001384764909691
+    }
+  ]
+}

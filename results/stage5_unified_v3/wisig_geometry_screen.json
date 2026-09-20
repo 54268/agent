@@ -1,0 +1,21 @@
+{
+  "protocol": "wisig fold0: 32 support / 8 heldout",
+  "epochs": 15,
+  "rows": [
+    {
+      "view": "universal",
+      "best_epoch": 11,
+      "identity_val_accuracy": 0.8909722222222223,
+      "geometry_val_accuracy": 0.9159722222222222,
+      "joint_mean_accuracy": 0.9034722222222222
+    },
+    {
+      "view": "spectral",
+      "best_epoch": 13,
+      "identity_val_accuracy": 0.89375,
+      "geometry_val_accuracy": 0.8958333333333334,
+      "joint_mean_accuracy": 0.8947916666666667
+    }
+  ],
+  "selected": "universal"
+}

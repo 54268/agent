@@ -1,0 +1,78 @@
+{
+  "overrides": {
+    "b2_max_adaptive_mass": 0.35,
+    "b2_initial_adaptive_fraction": 0.2,
+    "nested_b2_epochs": 5,
+    "b2_selector_distillation_weight": 0.25,
+    "b2_no_regret_weight": 1.0
+  },
+  "audit": {
+    "outer_index": 0,
+    "inner_indices": [
+      1,
+      2,
+      3
+    ],
+    "num_inner_episodes": 3,
+    "anchor_agent": "prototype",
+    "waveform_fit_objective": 0.6798120389957409,
+    "prototype_fit_objective": 0.5713672137747823,
+    "fit_sample_count": 30528,
+    "fit_sample_keys_unique_by_producer": true,
+    "fit_sources": [
+      "train"
+    ],
+    "public_only": true,
+    "contains_private_state": false,
+    "formal_unknown_used": false,
+    "outer_test_used": false,
+    "state_sha256": "57d9a6df108b8859583dfd3889db28c37bff630680678ffc511d44b727e7b1d3"
+  },
+  "history": [
+    {
+      "epoch": 1.0,
+      "steps": 90.0,
+      "loss": 1.3295725756221348,
+      "task_loss": 0.5588336186276541,
+      "regret": 0.10500157566534149,
+      "selector_loss": 2.662949554125468,
+      "best_local_loss": 0.4549003604385588
+    },
+    {
+      "epoch": 2.0,
+      "steps": 90.0,
+      "loss": 1.289678735865487,
+      "task_loss": 0.559182044201427,
+      "regret": 0.10381979598767227,
+      "selector_loss": 2.5067076206207277,
+      "best_local_loss": 0.45659226344691384
+    },
+    {
+      "epoch": 3.0,
+      "steps": 90.0,
+      "loss": 1.2775368875927395,
+      "task_loss": 0.557164239221149,
+      "regret": 0.10302690313094193,
+      "selector_loss": 2.4693830013275146,
+      "best_local_loss": 0.45540821353594463
+    },
+    {
+      "epoch": 4.0,
+      "steps": 90.0,
+      "loss": 1.268962859445148,
+      "task_loss": 0.5568882319662306,
+      "regret": 0.10252089094784525,
+      "selector_loss": 2.4382149590386284,
+      "best_local_loss": 0.4556705229812198
+    },
+    {
+      "epoch": 5.0,
+      "steps": 90.0,
+      "loss": 1.2620044575797187,
+      "task_loss": 0.5569470776451959,
+      "regret": 0.1028240772171153,
+      "selector_loss": 2.4089332183202106,
+      "best_local_loss": 0.4554586526420381
+    }
+  ]
+}

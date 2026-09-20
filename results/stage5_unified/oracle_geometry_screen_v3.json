@@ -1,0 +1,21 @@
+{
+  "protocol": "oracle fold0: 8 support / 2 heldout",
+  "epochs": 15,
+  "rows": [
+    {
+      "view": "universal",
+      "best_epoch": 15,
+      "identity_val_accuracy": 0.8146875,
+      "geometry_val_accuracy": 0.8653125,
+      "joint_mean_accuracy": 0.8400000000000001
+    },
+    {
+      "view": "raw",
+      "best_epoch": 15,
+      "identity_val_accuracy": 0.830625,
+      "geometry_val_accuracy": 0.7809375,
+      "joint_mean_accuracy": 0.8057812499999999
+    }
+  ],
+  "selected": "universal"
+}

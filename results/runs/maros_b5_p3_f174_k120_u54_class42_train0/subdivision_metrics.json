@@ -1,0 +1,70 @@
+{
+  "num_evaluated_unknown": 354,
+  "num_true_unknown_classes": 45,
+  "num_predicted_clusters": 12,
+  "nmi": 0.3906130474216304,
+  "ari": 0.10327699823165602,
+  "purity": 0.2740112994350282,
+  "hungarian_accuracy": 0.2570621468926554,
+  "backend": "gmm_diag_bic",
+  "feature_mode": "fused_embedding_pca",
+  "pca_dim": 32,
+  "fit_num_clusters": 12,
+  "resolved_num_clusters": 12,
+  "unknown_cache_size": 1061,
+  "unknown_cache_precision": 0.33364750235626767,
+  "unknown_cache_recall": 0.06555555555555556,
+  "coverage_of_selected_true_unknown": 1.0,
+  "coverage_of_total_test_unknown": 0.06555555555555556,
+  "selection_history": [
+    {
+      "components": 4,
+      "bic": 94939.82882347894,
+      "aic": 93653.38433457792,
+      "converged": true
+    },
+    {
+      "components": 8,
+      "bic": 94738.96539303531,
+      "aic": 92161.10944809465,
+      "converged": true
+    },
+    {
+      "components": 12,
+      "bic": 94455.51778381027,
+      "aic": 90586.25038282998,
+      "converged": true
+    },
+    {
+      "components": 16,
+      "bic": 94767.26609948385,
+      "aic": 89606.58724246392,
+      "converged": true
+    },
+    {
+      "components": 24,
+      "bic": 95646.34638978167,
+      "aic": 87902.84462068247,
+      "converged": true
+    },
+    {
+      "components": 32,
+      "bic": 96820.20593109372,
+      "aic": 86493.88124991524,
+      "converged": true
+    },
+    {
+      "components": 40,
+      "bic": 98879.76120583026,
+      "aic": 85970.61361257252,
+      "converged": true
+    },
+    {
+      "components": 48,
+      "bic": 100860.76761761472,
+      "aic": 85368.79711227771,
+      "converged": true
+    }
+  ],
+  "note": "True unknown labels are used only for offline evaluation, never for selecting K or fitting clusters."
+}

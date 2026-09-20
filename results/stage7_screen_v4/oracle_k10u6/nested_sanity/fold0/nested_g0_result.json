@@ -1,0 +1,337 @@
+{
+  "outer_index": 0,
+  "passed": true,
+  "stopped_before_outer_evaluation": false,
+  "nested_oof": {
+    "passed": true,
+    "checks": {
+      "structural_inner_oof_evidence": true,
+      "four_inner_folds": true,
+      "nested_b2_delta_h_vs_best_local_ge_0_01": true,
+      "positive_inner_folds_ge_3": true
+    },
+    "metrics": {
+      "waveform": {
+        "auroc": 0.8521476562500001,
+        "aupr_out": 0.8546458129624279,
+        "fpr95": 0.70625,
+        "tau": 0.9494418271230992,
+        "known_accuracy": 0.94,
+        "unknown_recall": 0.34625,
+        "macro_f1": 0.7353377107148847,
+        "h_score": 0.5060835762876579,
+        "oscr": 0.833590625,
+        "num_known": 800,
+        "num_unknown": 800
+      },
+      "prototype": {
+        "auroc": 0.8951749999999999,
+        "aupr_out": 0.8952716669028585,
+        "fpr95": 0.4025,
+        "tau": 0.9481444278916045,
+        "known_accuracy": 0.9475,
+        "unknown_recall": 0.5275,
+        "macro_f1": 0.7867161104614063,
+        "h_score": 0.6777033898305084,
+        "oscr": 0.8847812500000001,
+        "num_known": 800,
+        "num_unknown": 800
+      },
+      "b2": {
+        "auroc": 0.8919453125000001,
+        "aupr_out": 0.8935883025757743,
+        "fpr95": 0.4275,
+        "tau": 0.9486948628779295,
+        "known_accuracy": 0.94375,
+        "unknown_recall": 0.54375,
+        "macro_f1": 0.7924967079693762,
+        "h_score": 0.689968487394958,
+        "oscr": 0.8814046875,
+        "num_known": 800,
+        "num_unknown": 800
+      }
+    },
+    "delta_h_vs_best_local": 0.0122650975644496,
+    "fold_h_deltas": [
+      -0.04682409626863904,
+      0.0032304842020930424,
+      0.016571780670467606,
+      0.005258847874734962
+    ],
+    "positive_inner_folds": 3,
+    "pairwise_agent_rescue": {
+      "waveform": {
+        "absolute_rate": 0.080625,
+        "other_failure_rate": 0.30714285714285716,
+        "count": 129
+      },
+      "prototype": {
+        "absolute_rate": 0.175,
+        "other_failure_rate": 0.4903677758318739,
+        "count": 280
+      }
+    },
+    "complementarity": {
+      "unique_rescue": {
+        "prototype": {
+          "absolute_rate": 0.175,
+          "baseline_failure_rate": 0.4903677758318739,
+          "count": 280
+        }
+      },
+      "oracle": {
+        "known_accuracy": 0.99,
+        "unknown_recall": 0.64625,
+        "h_score": 0.782016806722689,
+        "oscr": 0.9803953125000001
+      },
+      "baseline_success_rate": 0.643125,
+      "oracle_success_rate": 0.818125
+    },
+    "evidence": {
+      "source": "inner_episode_oof",
+      "registrable": true,
+      "folds": 4,
+      "sample_count": 1600,
+      "sample_keys_unique": true,
+      "outer_test_used": false,
+      "formal_unknown_used": false
+    }
+  },
+  "outer": {
+    "fold": 0,
+    "known_classes": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "proxy_unknown_classes": [
+      1,
+      9
+    ],
+    "metrics": {
+      "waveform": {
+        "auroc": 0.9205059082031251,
+        "aupr_out": 0.788604020881895,
+        "fpr95": 0.40015625,
+        "tau": 0.9494530239844404,
+        "known_accuracy": 0.93796875,
+        "unknown_recall": 0.6425,
+        "macro_f1": 0.8982763902637573,
+        "h_score": 0.762615422639644,
+        "oscr": 0.90104501953125,
+        "num_known": 6400,
+        "num_unknown": 1600
+      },
+      "prototype": {
+        "auroc": 0.922483447265625,
+        "aupr_out": 0.8238849186226468,
+        "fpr95": 0.413125,
+        "tau": 0.9493844547649625,
+        "known_accuracy": 0.92421875,
+        "unknown_recall": 0.71875,
+        "macro_f1": 0.9005493284043004,
+        "h_score": 0.8086364717070851,
+        "oscr": 0.89559287109375,
+        "num_known": 6400,
+        "num_unknown": 1600
+      },
+      "b2": {
+        "auroc": 0.9312080078125,
+        "aupr_out": 0.8381309162023673,
+        "fpr95": 0.35015625,
+        "tau": 0.9495190016642195,
+        "known_accuracy": 0.928125,
+        "unknown_recall": 0.725625,
+        "macro_f1": 0.9046678915640108,
+        "h_score": 0.8144770408163264,
+        "oscr": 0.9078478515624999,
+        "num_known": 6400,
+        "num_unknown": 1600
+      }
+    },
+    "public_selector": {
+      "auroc": 0.8919453125000001,
+      "aupr_out": 0.8935883025757743,
+      "fpr95": 0.4275,
+      "tau": 0.9486948628779295,
+      "known_accuracy": 0.94375,
+      "unknown_recall": 0.54375,
+      "macro_f1": 0.7924967079693762,
+      "h_score": 0.689968487394958,
+      "oscr": 0.8814046875,
+      "num_known": 800,
+      "num_unknown": 800
+    },
+    "nested_oof": {
+      "passed": true,
+      "checks": {
+        "structural_inner_oof_evidence": true,
+        "four_inner_folds": true,
+        "nested_b2_delta_h_vs_best_local_ge_0_01": true,
+        "positive_inner_folds_ge_3": true
+      },
+      "metrics": {
+        "waveform": {
+          "auroc": 0.8521476562500001,
+          "aupr_out": 0.8546458129624279,
+          "fpr95": 0.70625,
+          "tau": 0.9494418271230992,
+          "known_accuracy": 0.94,
+          "unknown_recall": 0.34625,
+          "macro_f1": 0.7353377107148847,
+          "h_score": 0.5060835762876579,
+          "oscr": 0.833590625,
+          "num_known": 800,
+          "num_unknown": 800
+        },
+        "prototype": {
+          "auroc": 0.8951749999999999,
+          "aupr_out": 0.8952716669028585,
+          "fpr95": 0.4025,
+          "tau": 0.9481444278916045,
+          "known_accuracy": 0.9475,
+          "unknown_recall": 0.5275,
+          "macro_f1": 0.7867161104614063,
+          "h_score": 0.6777033898305084,
+          "oscr": 0.8847812500000001,
+          "num_known": 800,
+          "num_unknown": 800
+        },
+        "b2": {
+          "auroc": 0.8919453125000001,
+          "aupr_out": 0.8935883025757743,
+          "fpr95": 0.4275,
+          "tau": 0.9486948628779295,
+          "known_accuracy": 0.94375,
+          "unknown_recall": 0.54375,
+          "macro_f1": 0.7924967079693762,
+          "h_score": 0.689968487394958,
+          "oscr": 0.8814046875,
+          "num_known": 800,
+          "num_unknown": 800
+        }
+      },
+      "delta_h_vs_best_local": 0.0122650975644496,
+      "fold_h_deltas": [
+        -0.04682409626863904,
+        0.0032304842020930424,
+        0.016571780670467606,
+        0.005258847874734962
+      ],
+      "positive_inner_folds": 3,
+      "pairwise_agent_rescue": {
+        "waveform": {
+          "absolute_rate": 0.080625,
+          "other_failure_rate": 0.30714285714285716,
+          "count": 129
+        },
+        "prototype": {
+          "absolute_rate": 0.175,
+          "other_failure_rate": 0.4903677758318739,
+          "count": 280
+        }
+      },
+      "complementarity": {
+        "unique_rescue": {
+          "prototype": {
+            "absolute_rate": 0.175,
+            "baseline_failure_rate": 0.4903677758318739,
+            "count": 280
+          }
+        },
+        "oracle": {
+          "known_accuracy": 0.99,
+          "unknown_recall": 0.64625,
+          "h_score": 0.782016806722689,
+          "oscr": 0.9803953125000001
+        },
+        "baseline_success_rate": 0.643125,
+        "oracle_success_rate": 0.818125
+      },
+      "evidence": {
+        "source": "inner_episode_oof",
+        "registrable": true,
+        "folds": 4,
+        "sample_count": 1600,
+        "sample_keys_unique": true,
+        "outer_test_used": false,
+        "formal_unknown_used": false
+      }
+    },
+    "pairwise_agent_rescue": {
+      "waveform": {
+        "absolute_rate": 0.064,
+        "other_failure_rate": 0.5475935828877005,
+        "count": 512
+      },
+      "prototype": {
+        "absolute_rate": 0.06825,
+        "other_failure_rate": 0.5634674922600619,
+        "count": 546
+      }
+    },
+    "complementarity": {
+      "unique_rescue": {
+        "prototype": {
+          "absolute_rate": 0.06825,
+          "baseline_failure_rate": 0.5634674922600619,
+          "count": 546
+        }
+      },
+      "oracle": {
+        "known_accuracy": 0.98296875,
+        "unknown_recall": 0.80375,
+        "h_score": 0.8843710100568429,
+        "oscr": 0.9832083984375
+      },
+      "baseline_success_rate": 0.878875,
+      "oracle_success_rate": 0.947125
+    },
+    "transfer_audit": {
+      "format": "maros.stage7.b2_transfer",
+      "version": 1,
+      "module_path": "dialogue.b2_fusion",
+      "source_num_classes": 6,
+      "target_num_classes": 8,
+      "class_count_changed": true,
+      "transferred_keys": [
+        "adaptive_enabled",
+        "anchor_distribution",
+        "anchor_index_tensor",
+        "class_adaptive_logit",
+        "open_adaptive_logit",
+        "open_head.0.bias",
+        "open_head.0.weight",
+        "open_head.1.bias",
+        "open_head.1.weight",
+        "open_head.3.bias",
+        "open_head.3.weight",
+        "weight_head.0.bias",
+        "weight_head.0.weight",
+        "weight_head.1.bias",
+        "weight_head.1.weight",
+        "weight_head.3.bias",
+        "weight_head.3.weight"
+      ],
+      "state_sha256": "49ae2a105a0148dbcd172ad9b5839a3d30dc2abfa34721e73167a425562c8fc0",
+      "shape_dtype_validated": true,
+      "strict_public_b2_only": true
+    },
+    "protocol": {
+      "formal_unknown_used": false,
+      "outer_test_used_for_training_or_selection": false,
+      "nested_inner_oof_selector": true,
+      "public_only_b2_transfer": true,
+      "calibration_and_test_known_are_disjoint": true,
+      "oscr_uses_pre_rejection_prediction": true,
+      "stop_exactly_equals_b2": true
+    }
+  },
+  "formal_unknown_used": false
+}

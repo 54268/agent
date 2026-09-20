@@ -1,0 +1,73 @@
+{
+  "partition_seed": 2026,
+  "fold": 3,
+  "candidate": "c4_sequential_cf_adversarial",
+  "mode": "sequential_cf",
+  "adaptive_explorer": true,
+  "support_classes": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+  ],
+  "heldout_classes": [
+    2,
+    5
+  ],
+  "metrics": {
+    "waveform": {
+      "auroc": 0.5527158203125,
+      "aupr_out": 0.21975315235477064,
+      "fpr95": 0.9090625,
+      "oscr": 0.08624375000000001,
+      "tau": 0.8981937529287723,
+      "known_accuracy": 0.1428125,
+      "unknown_recall": 0.10875,
+      "macro_f1": 0.08936978357255938,
+      "h_score": 0.1234751552795031
+    },
+    "prototype": {
+      "auroc": 0.456104296875,
+      "aupr_out": 0.18149983484443652,
+      "fpr95": 0.9590625,
+      "oscr": 0.06944453125,
+      "tau": 0.9015674878016603,
+      "known_accuracy": 0.1303125,
+      "unknown_recall": 0.06875,
+      "macro_f1": 0.10511250484883577,
+      "h_score": 0.09001177394034537
+    },
+    "verifier": {
+      "auroc": 0.4631859375,
+      "aupr_out": 0.18778375395594224,
+      "fpr95": 0.9703125,
+      "oscr": 0.057871875,
+      "tau": 0.9008076992175023,
+      "known_accuracy": 0.1121875,
+      "unknown_recall": 0.08625,
+      "macro_f1": 0.03915105099180094,
+      "h_score": 0.09752362204724409
+    },
+    "team": {
+      "auroc": 0.4990767578125,
+      "aupr_out": 0.19968268623211502,
+      "fpr95": 0.9453125,
+      "oscr": 0.071710546875,
+      "tau": 0.8965493618195746,
+      "known_accuracy": 0.1271875,
+      "unknown_recall": 0.1025,
+      "macro_f1": 0.10877690947028398,
+      "h_score": 0.1135170068027211
+    }
+  },
+  "behaviour": {
+    "query_rate": 1.0,
+    "mean_edges": 1.4299999475479126,
+    "mean_bits": 575.8326416015625,
+    "leader_waveform_rate": 0.0
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "warning": "diagnostic open-test audit; never use for LCO selection",
+  "identity": {
+    "known_nearest_prototype_accuracy": 0.985875,
+    "dmin_auroc": 0.9186263463541667,
+    "class_z_auroc": 0.9465363828125001,
+    "known_dmin_mean": 0.03311917930841446,
+    "unknown_dmin_mean": 0.23125405609607697
+  },
+  "geometry_fused": {
+    "known_nearest_prototype_accuracy": 0.81375,
+    "dmin_auroc": 0.5332116796874999,
+    "class_z_auroc": 0.646649859375,
+    "known_dmin_mean": 0.1210293248295784,
+    "unknown_dmin_mean": 0.16180144250392914
+  },
+  "geometry_views": {
+    "raw": {
+      "known_nearest_prototype_accuracy": 0.965875,
+      "dmin_auroc": 0.8069010442708333,
+      "class_z_auroc": 0.902640125,
+      "known_dmin_mean": 0.11175183206796646,
+      "unknown_dmin_mean": 0.463395357131958
+    },
+    "spectral": {
+      "known_nearest_prototype_accuracy": 0.09975,
+      "dmin_auroc": 0.49986221875000003,
+      "class_z_auroc": 0.49976346875,
+      "known_dmin_mean": 0.005528210662305355,
+      "unknown_dmin_mean": 0.00558248907327652
+    },
+    "envelope_phase": {
+      "known_nearest_prototype_accuracy": 0.81375,
+      "dmin_auroc": 0.533211640625,
+      "class_z_auroc": 0.6466498489583332,
+      "known_dmin_mean": 0.1210293248295784,
+      "unknown_dmin_mean": 0.16180142760276794
+    },
+    "difference_iq": {
+      "known_nearest_prototype_accuracy": 0.829,
+      "dmin_auroc": 0.7539489140625,
+      "class_z_auroc": 0.8482679791666667,
+      "known_dmin_mean": 0.11596785485744476,
+      "unknown_dmin_mean": 0.3142565190792084
+    }
+  }
+}

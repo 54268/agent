@@ -1,0 +1,161 @@
+{
+  "dataset": "stage1_oracle_k10u6_demod_seed43",
+  "tau": 0.95,
+  "known_closed_set_accuracy": {
+    "identity": 0.988625,
+    "prototype": 0.988,
+    "fused_closed": 0.988625
+  },
+  "channel_metrics": {
+    "identity": {
+      "auroc": 0.9154646276041667,
+      "aupr_out": 0.965459036652201,
+      "fpr95": 0.422,
+      "oscr": 0.911095265625,
+      "tau": 0.95,
+      "known_accuracy": 0.953,
+      "unknown_recall": 0.6075833333333334,
+      "macro_f1": 0.7680026585172872,
+      "h_score": 0.7420647193891174
+    },
+    "prototype": {
+      "auroc": 0.9108096953124999,
+      "aupr_out": 0.9650336330099656,
+      "fpr95": 0.4675,
+      "oscr": 0.9056013802083333,
+      "tau": 0.95,
+      "known_accuracy": 0.95375,
+      "unknown_recall": 0.6782916666666666,
+      "macro_f1": 0.7875787507109944,
+      "h_score": 0.7927747070387297
+    },
+    "reconstruction": {
+      "auroc": 0.48142489322916665,
+      "aupr_out": 0.775062683789365,
+      "fpr95": 0.9915,
+      "oscr": 0.4774879427083333,
+      "tau": 0.95,
+      "known_accuracy": 0.938375,
+      "unknown_recall": 0.10320833333333333,
+      "macro_f1": 0.5870040770907508,
+      "h_score": 0.1859632670613649
+    },
+    "fused_mean": {
+      "auroc": 0.8430830494791666,
+      "aupr_out": 0.929101807968264,
+      "fpr95": 0.475625,
+      "oscr": 0.8391875260416667,
+      "tau": 0.95,
+      "known_accuracy": 0.97975,
+      "unknown_recall": 0.1505,
+      "macro_f1": 0.6190546560976065,
+      "h_score": 0.26091992921919926
+    },
+    "fused_max": {
+      "auroc": 0.9199783854166668,
+      "aupr_out": 0.9666878646559943,
+      "fpr95": 0.35,
+      "oscr": 0.9145493333333334,
+      "tau": 0.95,
+      "known_accuracy": 0.8895,
+      "unknown_recall": 0.81525,
+      "macro_f1": 0.8146268378071735,
+      "h_score": 0.8507580290365157
+    }
+  },
+  "conditional_catch": {
+    "identity": {
+      "n_missed": 9418,
+      "caught_by_prototype": 0.5130600976852835,
+      "caught_by_reconstruction": 0.026438734338500743,
+      "caught_by_either_helper": 0.5291994053939265
+    },
+    "prototype": {
+      "n_missed": 7721,
+      "caught_by_identity": 0.40603548763113584,
+      "caught_by_reconstruction": 0.08548115529076544,
+      "caught_by_either_helper": 0.4257220567284031
+    },
+    "reconstruction": {
+      "n_missed": 21523,
+      "caught_by_identity": 0.5739906146912606,
+      "caught_by_prototype": 0.6719323514379966,
+      "caught_by_either_helper": 0.7939878269757933
+    }
+  },
+  "detection_overlap": {
+    "tau": 0.95,
+    "n_unknown": 24000,
+    "recall_per_channel": {
+      "identity": 0.6075833333333334,
+      "prototype": 0.6782916666666666,
+      "reconstruction": 0.10320833333333333
+    },
+    "union_recall": 0.81525,
+    "unique_contribution": {
+      "identity": 0.10945833333333334,
+      "prototype": 0.19729166666666667,
+      "reconstruction": 0.006333333333333333
+    },
+    "pairwise_jaccard": {
+      "identity__prototype": {
+        "jaccard": 0.5896260430617081,
+        "intersection": 11447
+      },
+      "identity__reconstruction": {
+        "jaccard": 0.15022587822803588,
+        "intersection": 2228
+      },
+      "prototype__reconstruction": {
+        "jaccard": 0.10726725308459767,
+        "intersection": 1817
+      }
+    }
+  },
+  "correlations": {
+    "raw_score_spearman": [
+      [
+        1.0,
+        0.693739537061165,
+        0.0582094054165433
+      ],
+      [
+        0.693739537061165,
+        1.0,
+        -0.12790002580054186
+      ],
+      [
+        0.0582094054165433,
+        -0.12790002580054186,
+        1.0
+      ]
+    ],
+    "raw_names": [
+      "1-conf",
+      "d1",
+      "rec_err"
+    ],
+    "embedding_cka": {
+      "identity__prototype": 0.40975371759193363,
+      "identity__reconstruction": 0.23053556654932422,
+      "prototype__reconstruction": 0.25596062312285434
+    },
+    "id_proto_pred_disagree_on_known": 0.012125
+  },
+  "gate": {
+    "best_fusion_rule": "fused_max",
+    "fusion_aurocs": {
+      "fused_mean": 0.8430830494791666,
+      "fused_max": 0.9199783854166668
+    },
+    "best_single_auroc": 0.9154646276041667,
+    "fused_beats_best_single_auroc": true,
+    "fused_auroc_gain": 0.004513757812500074,
+    "max_abs_score_correlation": 0.693739537061165,
+    "not_collapsed_corr_lt_0_95": true,
+    "identity_missed_unknown_rescued_fraction": 0.5291994053939265,
+    "union_recall": 0.81525,
+    "best_single_channel_recall": 0.6782916666666666,
+    "union_adds_recall": true
+  }
+}

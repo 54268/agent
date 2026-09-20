@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "checks": {
+    "structural_inner_oof_evidence": true,
+    "four_inner_folds": true,
+    "nested_b2_delta_h_vs_best_local_ge_0_01": true,
+    "positive_inner_folds_ge_3": true
+  },
+  "metrics": {
+    "waveform": {
+      "auroc": 0.8521476562500001,
+      "aupr_out": 0.8546458129624279,
+      "fpr95": 0.70625,
+      "tau": 0.9494418271230992,
+      "known_accuracy": 0.94,
+      "unknown_recall": 0.34625,
+      "macro_f1": 0.7353377107148847,
+      "h_score": 0.5060835762876579,
+      "oscr": 0.833590625,
+      "num_known": 800,
+      "num_unknown": 800
+    },
+    "prototype": {
+      "auroc": 0.8951749999999999,
+      "aupr_out": 0.8952716669028585,
+      "fpr95": 0.4025,
+      "tau": 0.9481444278916045,
+      "known_accuracy": 0.9475,
+      "unknown_recall": 0.5275,
+      "macro_f1": 0.7867161104614063,
+      "h_score": 0.6777033898305084,
+      "oscr": 0.8847812500000001,
+      "num_known": 800,
+      "num_unknown": 800
+    },
+    "b2": {
+      "auroc": 0.89177734375,
+      "aupr_out": 0.893458549425662,
+      "fpr95": 0.43125,
+      "tau": 0.9486839008879955,
+      "known_accuracy": 0.94375,
+      "unknown_recall": 0.5425,
+      "macro_f1": 0.7920395902972862,
+      "h_score": 0.6889613120269132,
+      "oscr": 0.8812484374999999,
+      "num_known": 800,
+      "num_unknown": 800
+    }
+  },
+  "delta_h_vs_best_local": 0.011257922196404868,
+  "fold_h_deltas": [
+    -0.05113527116255434,
+    0.0032304842020930424,
+    0.016571780670467606,
+    0.005258847874734962
+  ],
+  "positive_inner_folds": 3,
+  "pairwise_agent_rescue": {
+    "waveform": {
+      "absolute_rate": 0.080625,
+      "other_failure_rate": 0.30714285714285716,
+      "count": 129
+    },
+    "prototype": {
+      "absolute_rate": 0.175,
+      "other_failure_rate": 0.4903677758318739,
+      "count": 280
+    }
+  },
+  "complementarity": {
+    "unique_rescue": {
+      "prototype": {
+        "absolute_rate": 0.175,
+        "baseline_failure_rate": 0.4903677758318739,
+        "count": 280
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.99,
+      "unknown_recall": 0.64625,
+      "h_score": 0.782016806722689,
+      "oscr": 0.9803953125000001
+    },
+    "baseline_success_rate": 0.643125,
+    "oracle_success_rate": 0.818125
+  },
+  "evidence": {
+    "source": "inner_episode_oof",
+    "registrable": true,
+    "folds": 4,
+    "sample_count": 1600,
+    "sample_keys_unique": true,
+    "outer_test_used": false,
+    "formal_unknown_used": false
+  }
+}

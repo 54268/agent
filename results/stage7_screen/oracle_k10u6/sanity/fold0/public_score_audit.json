@@ -1,0 +1,107 @@
+{
+  "dataset": "oracle",
+  "fold": 0,
+  "formal_unknown_used": false,
+  "roles": {
+    "waveform": {
+      "learned_open": {
+        "raw_auroc": 0.6081607421875,
+        "auroc": 0.52719033203125,
+        "oscr": 0.43148798828125007,
+        "known_accuracy": 0.7578125,
+        "unknown_recall": 0.19875,
+        "h_score": 0.31490934335184584
+      },
+      "one_minus_top1": {
+        "raw_auroc": 0.49384912109374995,
+        "auroc": 0.78224384765625,
+        "oscr": 0.64328466796875,
+        "known_accuracy": 0.76765625,
+        "unknown_recall": 0.51375,
+        "h_score": 0.6155477990488964
+      },
+      "negative_margin": {
+        "raw_auroc": 0.45273388671875003,
+        "auroc": 0.7426134765625,
+        "oscr": 0.6123981445312501,
+        "known_accuracy": 0.76296875,
+        "unknown_recall": 0.423125,
+        "h_score": 0.5443602621525491
+      },
+      "entropy": {
+        "raw_auroc": 0.578835595703125,
+        "auroc": 0.8464837890624999,
+        "oscr": 0.685898046875,
+        "known_accuracy": 0.7678125,
+        "unknown_recall": 0.560625,
+        "h_score": 0.6480619266055045
+      },
+      "energy": {
+        "raw_auroc": 0.69600634765625,
+        "auroc": 0.8613491699218749,
+        "oscr": 0.6843503906249999,
+        "known_accuracy": 0.759375,
+        "unknown_recall": 0.5675,
+        "h_score": 0.6495642958078192
+      },
+      "one_minus_reliability": {
+        "raw_auroc": 0.539846875,
+        "auroc": 0.8167904296874999,
+        "oscr": 0.66797666015625,
+        "known_accuracy": 0.770625,
+        "unknown_recall": 0.55,
+        "h_score": 0.641883577851396
+      }
+    },
+    "prototype": {
+      "learned_open": {
+        "raw_auroc": 0.541460888671875,
+        "auroc": 0.5502779296875,
+        "oscr": 0.26025761718749996,
+        "known_accuracy": 0.43890625,
+        "unknown_recall": 0.06375,
+        "h_score": 0.11132965495803544
+      },
+      "one_minus_top1": {
+        "raw_auroc": 0.50344912109375,
+        "auroc": 0.48884355468749996,
+        "oscr": 0.23877646484375,
+        "known_accuracy": 0.44,
+        "unknown_recall": 0.058125,
+        "h_score": 0.10268506900878294
+      },
+      "negative_margin": {
+        "raw_auroc": 0.48145830078124996,
+        "auroc": 0.490031494140625,
+        "oscr": 0.23672060546875,
+        "known_accuracy": 0.43875,
+        "unknown_recall": 0.068125,
+        "h_score": 0.11793773119605426
+      },
+      "entropy": {
+        "raw_auroc": 0.564335791015625,
+        "auroc": 0.481733349609375,
+        "oscr": 0.23743642578125,
+        "known_accuracy": 0.44546875,
+        "unknown_recall": 0.060625,
+        "h_score": 0.10672545538746528
+      },
+      "energy": {
+        "raw_auroc": 0.560039208984375,
+        "auroc": 0.50990888671875,
+        "oscr": 0.23463583984375003,
+        "known_accuracy": 0.435625,
+        "unknown_recall": 0.05,
+        "h_score": 0.08970398970398971
+      },
+      "one_minus_reliability": {
+        "raw_auroc": 0.5009353515625,
+        "auroc": 0.49919013671875,
+        "oscr": 0.242979296875,
+        "known_accuracy": 0.44171875,
+        "unknown_recall": 0.04625,
+        "h_score": 0.08373278898495036
+      }
+    }
+  }
+}

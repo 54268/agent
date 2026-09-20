@@ -1,0 +1,10 @@
+{
+  "dataset": "oracle_kri16_demod",
+  "num_known": 10,
+  "signal_length": 256,
+  "train": 28000,
+  "validation": 4000,
+  "test_known": 8000,
+  "test_unknown": 24000,
+  "real_unknown_used_for_training_or_selection": false
+}

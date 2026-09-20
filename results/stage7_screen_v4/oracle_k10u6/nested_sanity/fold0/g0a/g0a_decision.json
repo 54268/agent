@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "waveform_known_accuracy_ge_0_85": true,
+    "prototype_known_accuracy_ge_0_85": true,
+    "waveform_auroc_ge_0_75": true,
+    "prototype_auroc_ge_0_75": true,
+    "agent_oracle_delta_h_vs_best_local_ge_0_03": true,
+    "agent_oracle_delta_oscr_vs_best_local_ge_0_015": true,
+    "waveform_pairwise_rescue_ge_0_05": true,
+    "prototype_pairwise_rescue_ge_0_05": true
+  },
+  "best_local_h": 0.8086364717070851,
+  "best_local_oscr": 0.90104501953125,
+  "oracle_delta_h": 0.07573453834975785,
+  "oracle_delta_oscr": 0.08216337890624992,
+  "note": "necessary G0a only; passing authorises inner models, not G1",
+  "checkpoint_source": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage7_screen_v4\\oracle_k10u6\\sanity\\fold0\\g0_model.pt",
+  "formal_unknown_used": false
+}

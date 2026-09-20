@@ -1,0 +1,10 @@
+{
+  "eval_mode_train_accuracy": {
+    "waveform": 0.9795597484276729,
+    "prototype": 0.9992138364779874
+  },
+  "required_minimum": 0.85,
+  "passed": true,
+  "num_samples": 7632,
+  "formal_unknown_used": false
+}

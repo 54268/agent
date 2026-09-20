@@ -1,0 +1,116 @@
+{
+  "project_root": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI",
+  "experiment_id": "maros_b5_p3_f174_k120_u54_class42_train0",
+  "data": {
+    "root": "data/WiSig",
+    "audit": "artifacts/audits/wisig_support_by_cell.json",
+    "processed_dir": "artifacts/processed/p3_f174_k120_u54_class42_caps300_48_100",
+    "normalization": "per_packet_complex_rms",
+    "caps_per_tx": {
+      "train_known": 300,
+      "validation_known": 48,
+      "test_known": 100,
+      "test_unknown": 100
+    }
+  },
+  "protocol": {
+    "name": "P3-F174",
+    "total_classes": 174,
+    "known_classes": 120,
+    "class_partition_seed": 42,
+    "min_packets_each_split": 1,
+    "domain_split": {
+      "train_dates": [
+        "2021_03_01",
+        "2021_03_08"
+      ],
+      "validation_dates": [
+        "2021_03_15"
+      ],
+      "test_dates": [
+        "2021_03_23"
+      ],
+      "train_receivers": [
+        "8-8",
+        "20-20",
+        "18-19",
+        "3-2",
+        "3-19",
+        "24-16",
+        "13-7",
+        "24-13",
+        "7-7",
+        "19-19",
+        "23-5",
+        "23-7",
+        "19-1",
+        "14-14",
+        "23-3",
+        "13-13",
+        "1-1",
+        "20-19",
+        "23-1",
+        "24-5"
+      ],
+      "validation_receivers": [
+        "19-20",
+        "19-2",
+        "20-1",
+        "8-7",
+        "11-10"
+      ],
+      "test_receivers": [
+        "13-14",
+        "8-14",
+        "1-19",
+        "2-19",
+        "18-2"
+      ]
+    }
+  },
+  "model": {
+    "embedding_dim": 64,
+    "top_k": 2
+  },
+  "training": {
+    "seed": 0,
+    "epochs": 15,
+    "patience": 5,
+    "batch_size": 256,
+    "num_workers": 0,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "grad_clip": 5.0
+  },
+  "loss_weights": {
+    "team": 1.0,
+    "local": 0.25,
+    "prototype": 0.08,
+    "domain": 0.08,
+    "diversity": 0.04,
+    "open": 0.3,
+    "route": 0.05,
+    "balance": 0.02,
+    "budget": 0.002
+  },
+  "subdivision": {
+    "pca_dim": 32,
+    "candidate_components": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64
+    ],
+    "max_components": 64,
+    "selection_sample_size": 4000
+  },
+  "output": {
+    "run_dir": "results/runs/maros_b5_p3_f174_k120_u54_class42_train0"
+  }
+}

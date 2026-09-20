@@ -1,0 +1,61 @@
+{
+  "heldout_inner": 3,
+  "audit": {
+    "anchor_index": 1,
+    "alternative_index": 0,
+    "threshold": 1.0,
+    "fit_oof_gain": 0.0,
+    "fit_oof_switch_rate": 0.0,
+    "fit_oof_accuracy": 0.5016638935108153,
+    "producer_indices": [
+      0,
+      1,
+      2
+    ],
+    "public_only": true,
+    "outer_test_used": false,
+    "formal_unknown_used": false
+  },
+  "metrics": {
+    "waveform": {
+      "auroc": 0.8073863636363636,
+      "aupr_out": 0.8284784099220652,
+      "fpr95": 0.7424242424242424,
+      "tau": 0.9510560247246324,
+      "known_accuracy": 0.9444444444444444,
+      "unknown_recall": 0.39,
+      "macro_f1": 0.7782185543684597,
+      "h_score": 0.5520399666944213,
+      "oscr": 0.8020959595959598,
+      "num_known": 198,
+      "num_unknown": 200
+    },
+    "prototype": {
+      "auroc": 0.8623737373737375,
+      "aupr_out": 0.863335451646961,
+      "fpr95": 0.5202020202020202,
+      "tau": 0.949021011316124,
+      "known_accuracy": 0.9696969696969697,
+      "unknown_recall": 0.405,
+      "macro_f1": 0.7989188597250497,
+      "h_score": 0.571365590212719,
+      "oscr": 0.8627525252525252,
+      "num_known": 198,
+      "num_unknown": 200
+    },
+    "safe_selector": {
+      "auroc": 0.8623737373737375,
+      "aupr_out": 0.863335451646961,
+      "fpr95": 0.5202020202020202,
+      "tau": 0.949021011316124,
+      "known_accuracy": 0.9696969696969697,
+      "unknown_recall": 0.405,
+      "macro_f1": 0.7989188597250497,
+      "h_score": 0.571365590212719,
+      "oscr": 0.8627525252525252,
+      "num_known": 198,
+      "num_unknown": 200
+    }
+  },
+  "heldout_switch_rate": 0.0
+}

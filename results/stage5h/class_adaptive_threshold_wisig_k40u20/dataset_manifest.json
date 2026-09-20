@@ -1,0 +1,22 @@
+{
+  "dataset": "wisig_1day_1rx",
+  "source": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\data\\WiSig\\WiSig_OpenSet_1Day_1Rx\\wisig_openset_subset.pkl",
+  "signal_length": 256,
+  "num_known": 40,
+  "counts": {
+    "train": 12720,
+    "val": 1800,
+    "known_test": 3680,
+    "unknown_test": 4800,
+    "open_test": 8480
+  },
+  "evaluation_groups": {
+    "known_tx": 40,
+    "unknown_tx": 20
+  },
+  "protocol": {
+    "real_unknown_used_for_training": false,
+    "real_unknown_used_for_selection": false,
+    "real_unknown_used_for_threshold": false
+  }
+}

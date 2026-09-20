@@ -1,0 +1,983 @@
+{
+  "seeds": [
+    42
+  ],
+  "selection": {
+    "pug": "mixed_eta1",
+    "communication": "audit_optional_cf_budget0.1_threshold0.5_idproto_boundary_arbcommunication_tau0.88_prior0",
+    "mode": "audit_optional_cf",
+    "budget": 0.1,
+    "gate_threshold": 0.5,
+    "score_rule": "idproto_boundary",
+    "arbitration_rule": "communication",
+    "known_acceptance": 0.88,
+    "adaptive_threshold_prior": 0.0
+  },
+  "elapsed_seconds": 1787.6312808990479,
+  "rules": {
+    "identity": {
+      "auroc": {
+        "mean": 0.9063033489583332,
+        "std": 0.0,
+        "values": [
+          0.9063033489583332
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9570068321395059,
+        "std": 0.0,
+        "values": [
+          0.9570068321395059
+        ]
+      },
+      "fpr95": {
+        "mean": 0.329,
+        "std": 0.0,
+        "values": [
+          0.329
+        ]
+      },
+      "oscr": {
+        "mean": 0.9092466979166666,
+        "std": 0.0,
+        "values": [
+          0.9092466979166666
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.788125,
+        "std": 0.0,
+        "values": [
+          0.788125
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.8875,
+        "std": 0.0,
+        "values": [
+          0.8875
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7827371372078736,
+        "std": 0.0,
+        "values": [
+          0.7827371372078736
+        ]
+      },
+      "h_score": {
+        "mean": 0.8348657217456172,
+        "std": 0.0,
+        "values": [
+          0.8348657217456172
+        ]
+      }
+    },
+    "prototype": {
+      "auroc": {
+        "mean": 0.95504475,
+        "std": 0.0,
+        "values": [
+          0.95504475
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9834139672004645,
+        "std": 0.0,
+        "values": [
+          0.9834139672004645
+        ]
+      },
+      "fpr95": {
+        "mean": 0.21925,
+        "std": 0.0,
+        "values": [
+          0.21925
+        ]
+      },
+      "oscr": {
+        "mean": 0.9544147135416666,
+        "std": 0.0,
+        "values": [
+          0.9544147135416666
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.8775,
+        "std": 0.0,
+        "values": [
+          0.8775
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.9009583333333333,
+        "std": 0.0,
+        "values": [
+          0.9009583333333333
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.8573075336092537,
+        "std": 0.0,
+        "values": [
+          0.8573075336092537
+        ]
+      },
+      "h_score": {
+        "mean": 0.8890744558723613,
+        "std": 0.0,
+        "values": [
+          0.8890744558723613
+        ]
+      }
+    },
+    "openmax": {
+      "auroc": {
+        "mean": 0.9672910234375002,
+        "std": 0.0,
+        "values": [
+          0.9672910234375002
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9854433901413243,
+        "std": 0.0,
+        "values": [
+          0.9854433901413243
+        ]
+      },
+      "fpr95": {
+        "mean": 0.095875,
+        "std": 0.0,
+        "values": [
+          0.095875
+        ]
+      },
+      "oscr": {
+        "mean": 0.9665976145833333,
+        "std": 0.0,
+        "values": [
+          0.9665976145833333
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.881,
+        "std": 0.0,
+        "values": [
+          0.881
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.957625,
+        "std": 0.0,
+        "values": [
+          0.957625
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.895352696381692,
+        "std": 0.0,
+        "values": [
+          0.895352696381692
+        ]
+      },
+      "h_score": {
+        "mean": 0.9177158202461078,
+        "std": 0.0,
+        "values": [
+          0.9177158202461078
+        ]
+      }
+    },
+    "no_communication": {
+      "auroc": {
+        "mean": 0.9071389765625001,
+        "std": 0.0,
+        "values": [
+          0.9071389765625001
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9636080700711802,
+        "std": 0.0,
+        "values": [
+          0.9636080700711802
+        ]
+      },
+      "fpr95": {
+        "mean": 0.3775,
+        "std": 0.0,
+        "values": [
+          0.3775
+        ]
+      },
+      "oscr": {
+        "mean": 0.906682375,
+        "std": 0.0,
+        "values": [
+          0.906682375
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.877625,
+        "std": 0.0,
+        "values": [
+          0.877625
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.6925,
+        "std": 0.0,
+        "values": [
+          0.6925
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.77608956200325,
+        "std": 0.0,
+        "values": [
+          0.77608956200325
+        ]
+      },
+      "h_score": {
+        "mean": 0.7741489531088289,
+        "std": 0.0,
+        "values": [
+          0.7741489531088289
+        ]
+      }
+    },
+    "communication": {
+      "auroc": {
+        "mean": 0.903044421875,
+        "std": 0.0,
+        "values": [
+          0.903044421875
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.957967228919094,
+        "std": 0.0,
+        "values": [
+          0.957967228919094
+        ]
+      },
+      "fpr95": {
+        "mean": 0.417,
+        "std": 0.0,
+        "values": [
+          0.417
+        ]
+      },
+      "oscr": {
+        "mean": 0.9025142760416667,
+        "std": 0.0,
+        "values": [
+          0.9025142760416667
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.883625,
+        "std": 0.0,
+        "values": [
+          0.883625
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.902125,
+        "std": 0.0,
+        "values": [
+          0.902125
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.8675789911271644,
+        "std": 0.0,
+        "values": [
+          0.8675789911271644
+        ]
+      },
+      "h_score": {
+        "mean": 0.8927791719165616,
+        "std": 0.0,
+        "values": [
+          0.8927791719165616
+        ]
+      }
+    },
+    "messages_off": {
+      "auroc": {
+        "mean": 0.6503609505208333,
+        "std": 0.0,
+        "values": [
+          0.6503609505208333
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.8316742769170061,
+        "std": 0.0,
+        "values": [
+          0.8316742769170061
+        ]
+      },
+      "fpr95": {
+        "mean": 0.622625,
+        "std": 0.0,
+        "values": [
+          0.622625
+        ]
+      },
+      "oscr": {
+        "mean": 0.6497077864583333,
+        "std": 0.0,
+        "values": [
+          0.6497077864583333
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.87725,
+        "std": 0.0,
+        "values": [
+          0.87725
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.18170833333333333,
+        "std": 0.0,
+        "values": [
+          0.18170833333333333
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.6408364823909222,
+        "std": 0.0,
+        "values": [
+          0.6408364823909222
+        ]
+      },
+      "h_score": {
+        "mean": 0.30105742671650604,
+        "std": 0.0,
+        "values": [
+          0.30105742671650604
+        ]
+      }
+    },
+    "messages_shuffled": {
+      "auroc": {
+        "mean": 0.8927291901041667,
+        "std": 0.0,
+        "values": [
+          0.8927291901041667
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.953725630828309,
+        "std": 0.0,
+        "values": [
+          0.953725630828309
+        ]
+      },
+      "fpr95": {
+        "mean": 0.438375,
+        "std": 0.0,
+        "values": [
+          0.438375
+        ]
+      },
+      "oscr": {
+        "mean": 0.8922289999999999,
+        "std": 0.0,
+        "values": [
+          0.8922289999999999
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.886375,
+        "std": 0.0,
+        "values": [
+          0.886375
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.8859583333333333,
+        "std": 0.0,
+        "values": [
+          0.8859583333333333
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.8642616687888952,
+        "std": 0.0,
+        "values": [
+          0.8642616687888952
+        ]
+      },
+      "h_score": {
+        "mean": 0.8861666176885461,
+        "std": 0.0,
+        "values": [
+          0.8861666176885461
+        ]
+      }
+    },
+    "drop_identity_sender": {
+      "auroc": {
+        "mean": 0.8155929479166667,
+        "std": 0.0,
+        "values": [
+          0.8155929479166667
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9176326945161638,
+        "std": 0.0,
+        "values": [
+          0.9176326945161638
+        ]
+      },
+      "fpr95": {
+        "mean": 0.4075,
+        "std": 0.0,
+        "values": [
+          0.4075
+        ]
+      },
+      "oscr": {
+        "mean": 0.8152687760416666,
+        "std": 0.0,
+        "values": [
+          0.8152687760416666
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.883875,
+        "std": 0.0,
+        "values": [
+          0.883875
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.46491666666666664,
+        "std": 0.0,
+        "values": [
+          0.46491666666666664
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7067866190010798,
+        "std": 0.0,
+        "values": [
+          0.7067866190010798
+        ]
+      },
+      "h_score": {
+        "mean": 0.6093279324086374,
+        "std": 0.0,
+        "values": [
+          0.6093279324086374
+        ]
+      }
+    },
+    "drop_geometry_sender": {
+      "auroc": {
+        "mean": 0.9396258125,
+        "std": 0.0,
+        "values": [
+          0.9396258125
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.9777105513418144,
+        "std": 0.0,
+        "values": [
+          0.9777105513418144
+        ]
+      },
+      "fpr95": {
+        "mean": 0.39175,
+        "std": 0.0,
+        "values": [
+          0.39175
+        ]
+      },
+      "oscr": {
+        "mean": 0.939051015625,
+        "std": 0.0,
+        "values": [
+          0.939051015625
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.872875,
+        "std": 0.0,
+        "values": [
+          0.872875
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.8937916666666667,
+        "std": 0.0,
+        "values": [
+          0.8937916666666667
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.8626437245679823,
+        "std": 0.0,
+        "values": [
+          0.8626437245679823
+        ]
+      },
+      "h_score": {
+        "mean": 0.8832095106132075,
+        "std": 0.0,
+        "values": [
+          0.8832095106132075
+        ]
+      }
+    },
+    "uniform_weights": {
+      "auroc": {
+        "mean": 0.903044421875,
+        "std": 0.0,
+        "values": [
+          0.903044421875
+        ]
+      },
+      "aupr_out": {
+        "mean": 0.957967228919094,
+        "std": 0.0,
+        "values": [
+          0.957967228919094
+        ]
+      },
+      "fpr95": {
+        "mean": 0.417,
+        "std": 0.0,
+        "values": [
+          0.417
+        ]
+      },
+      "oscr": {
+        "mean": 0.902495375,
+        "std": 0.0,
+        "values": [
+          0.902495375
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.88375,
+        "std": 0.0,
+        "values": [
+          0.88375
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.902125,
+        "std": 0.0,
+        "values": [
+          0.902125
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.8677004655621182,
+        "std": 0.0,
+        "values": [
+          0.8677004655621182
+        ]
+      },
+      "h_score": {
+        "mean": 0.892842969132778,
+        "std": 0.0,
+        "values": [
+          0.892842969132778
+        ]
+      }
+    }
+  },
+  "causal_interventions": {
+    "messages_off": {
+      "class_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "unknown_score_mean_abs_change": {
+        "mean": 0.283933625,
+        "std": 0.0,
+        "values": [
+          0.283933625
+        ]
+      },
+      "auroc_delta": {
+        "mean": -0.2526834713541667,
+        "std": 0.0,
+        "values": [
+          -0.2526834713541667
+        ]
+      },
+      "oscr_delta": {
+        "mean": -0.2528064895833334,
+        "std": 0.0,
+        "values": [
+          -0.2528064895833334
+        ]
+      }
+    },
+    "messages_shuffled": {
+      "class_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "unknown_score_mean_abs_change": {
+        "mean": 0.0253883515625,
+        "std": 0.0,
+        "values": [
+          0.0253883515625
+        ]
+      },
+      "auroc_delta": {
+        "mean": -0.010315231770833266,
+        "std": 0.0,
+        "values": [
+          -0.010315231770833266
+        ]
+      },
+      "oscr_delta": {
+        "mean": -0.010285276041666735,
+        "std": 0.0,
+        "values": [
+          -0.010285276041666735
+        ]
+      }
+    },
+    "drop_identity_sender": {
+      "class_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "unknown_score_mean_abs_change": {
+        "mean": 0.1928200546875,
+        "std": 0.0,
+        "values": [
+          0.1928200546875
+        ]
+      },
+      "auroc_delta": {
+        "mean": -0.0874514739583333,
+        "std": 0.0,
+        "values": [
+          -0.0874514739583333
+        ]
+      },
+      "oscr_delta": {
+        "mean": -0.08724550000000009,
+        "std": 0.0,
+        "values": [
+          -0.08724550000000009
+        ]
+      }
+    },
+    "drop_geometry_sender": {
+      "class_flip_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "unknown_score_mean_abs_change": {
+        "mean": 0.0507040390625,
+        "std": 0.0,
+        "values": [
+          0.0507040390625
+        ]
+      },
+      "auroc_delta": {
+        "mean": 0.03658139062499999,
+        "std": 0.0,
+        "values": [
+          0.03658139062499999
+        ]
+      },
+      "oscr_delta": {
+        "mean": 0.036536739583333366,
+        "std": 0.0,
+        "values": [
+          0.036536739583333366
+        ]
+      }
+    },
+    "uniform_weights": {
+      "class_flip_rate": {
+        "mean": 0.104875,
+        "std": 0.0,
+        "values": [
+          0.104875
+        ]
+      },
+      "unknown_score_mean_abs_change": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "auroc_delta": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "oscr_delta": {
+        "mean": -1.8901041666685714e-05,
+        "std": 0.0,
+        "values": [
+          -1.8901041666685714e-05
+        ]
+      }
+    }
+  },
+  "protocol": {
+    "real_unknown_used_for_training": false,
+    "real_unknown_used_for_selection": false,
+    "real_unknown_used_for_threshold": false
+  },
+  "mean_edge_gates": {
+    "names": [
+      "geometry_to_identity",
+      "identity_to_geometry",
+      "identity_to_boundary",
+      "geometry_to_boundary"
+    ],
+    "mean": [
+      0.0,
+      0.0,
+      0.7382500171661377,
+      0.0
+    ],
+    "std": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "grouped_paired_bootstrap": {
+    "unit": "transmitter",
+    "stratified_known_unknown": true,
+    "paired_methods": true,
+    "repetitions": 1000,
+    "known_transmitters": 10,
+    "unknown_transmitters": 6,
+    "communication": {
+      "auroc": {
+        "mean": 0.9041108470963541,
+        "ci95": [
+          0.8054396757161457,
+          0.9744699975911458
+        ]
+      },
+      "oscr": {
+        "mean": 0.9035747788177083,
+        "ci95": [
+          0.8052078841145833,
+          0.9738810290364583
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.8836812500000001,
+        "ci95": [
+          0.87075,
+          0.8965093749999999
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.9040662916666666,
+        "ci95": [
+          0.7485416666666667,
+          0.9978333333333333
+        ]
+      },
+      "h_score": {
+        "mean": 0.8924782330632252,
+        "ci95": [
+          0.8126079082638196,
+          0.9387782333100445
+        ]
+      }
+    },
+    "no_communication": {
+      "auroc": {
+        "mean": 0.9078853379713542,
+        "ci95": [
+          0.8422259927083334,
+          0.9571097876953125
+        ]
+      },
+      "oscr": {
+        "mean": 0.90742388765625,
+        "ci95": [
+          0.8419947582031251,
+          0.9565268152343749
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.87773925,
+        "ci95": [
+          0.863875,
+          0.890878125
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.6950028333333335,
+        "ci95": [
+          0.501875,
+          0.8467916666666667
+        ]
+      },
+      "h_score": {
+        "mean": 0.7723985766711504,
+        "ci95": [
+          0.6379440916103167,
+          0.8625758006919675
+        ]
+      }
+    },
+    "messages_off": {
+      "auroc": {
+        "mean": 0.651434971875,
+        "ci95": [
+          0.5445235022786459,
+          0.7521436179036458
+        ]
+      },
+      "oscr": {
+        "mean": 0.6507764879270833,
+        "ci95": [
+          0.5439885924479166,
+          0.7504505623697917
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.8773098749999999,
+        "ci95": [
+          0.864496875,
+          0.888503125
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.1834875416666667,
+        "ci95": [
+          0.096875,
+          0.27208333333333334
+        ]
+      },
+      "h_score": {
+        "mean": 0.30090325165553966,
+        "ci95": [
+          0.1746479702183763,
+          0.4151458608447733
+        ]
+      }
+    },
+    "paired_delta": {
+      "auroc": {
+        "mean": -0.003774490875000005,
+        "ci95": [
+          -0.11757017493489592,
+          0.08540510494791691
+        ]
+      },
+      "oscr": {
+        "mean": -0.0038491088385416644,
+        "ci95": [
+          -0.11744036328125003,
+          0.0852424190104166
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.005942,
+        "ci95": [
+          -0.003753125000000029,
+          0.014624999999999999
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.20906345833333334,
+        "ci95": [
+          0.04341666666666666,
+          0.43804166666666666
+        ]
+      },
+      "h_score": {
+        "mean": 0.12007965639207473,
+        "ci95": [
+          0.025792954265037776,
+          0.2668536598392748
+        ]
+      }
+    },
+    "paired_delta_vs_messages_off": {
+      "auroc": {
+        "mean": 0.25267587522135415,
+        "ci95": [
+          0.12099847903645837,
+          0.3767409165364584
+        ]
+      },
+      "oscr": {
+        "mean": 0.252798290890625,
+        "ci95": [
+          0.12136138450520827,
+          0.37665620013020834
+        ]
+      },
+      "known_accuracy": {
+        "mean": 0.006371374999999999,
+        "ci95": [
+          -0.007624999999999993,
+          0.021128125000000057
+        ]
+      },
+      "unknown_recall": {
+        "mean": 0.72057875,
+        "ci95": [
+          0.5775135416666667,
+          0.8500906249999999
+        ]
+      },
+      "h_score": {
+        "mean": 0.5915749814076855,
+        "ci95": [
+          0.48014892628337547,
+          0.7298148720726894
+        ]
+      }
+    }
+  },
+  "success_gates": {
+    "unknown_recall_ge_0_90": true,
+    "known_accuracy_ge_0_85": true,
+    "h_score_ge_0_875": true,
+    "auroc_ge_0_95": false,
+    "oscr_ge_0_90": true,
+    "communication_delta_h_ge_0_01": true,
+    "communication_delta_oscr_ge_0_005": false,
+    "positive_h_seeds_ge_2": false,
+    "messages_improve_h_vs_off": true,
+    "messages_improve_oscr_vs_off": true,
+    "messages_positive_h_seeds_ge_2": false,
+    "messages_positive_oscr_seeds_ge_2": false
+  }
+}

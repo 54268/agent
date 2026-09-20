@@ -1,0 +1,16 @@
+{
+  "method": "fit-side producer-OOF conservative public selector",
+  "probability_grid": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "minimum_switch_rate": 0.05,
+  "maximum_switch_rate": 0.5,
+  "source_fold_dir": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage7_screen_v5\\wisig_k40u20\\nested_sanity\\fold0",
+  "outer_test_evaluated": false,
+  "formal_unknown_used": false
+}

@@ -1,0 +1,440 @@
+{
+  "selection_source": "five-fold leave-class-out; no real test unknown used",
+  "selected": {
+    "pug": "mixed_eta1.5",
+    "communication": "sparse_cf_budget0.5_geo_open_boundary",
+    "mode": "sparse_cf",
+    "budget": 0.5,
+    "score_rule": "geo_open_boundary"
+  },
+  "perception_agents_formal": [
+    {
+      "candidate": "identity",
+      "auroc": 0.8858726788949275,
+      "oscr": 0.8369356506642512,
+      "known_accuracy": 0.9032608695652175,
+      "unknown_recall": 0.06541666666666666,
+      "h_score": 0.12194903766459923
+    },
+    {
+      "candidate": "prototype",
+      "auroc": 0.9358310782759661,
+      "oscr": 0.8889218372584541,
+      "known_accuracy": 0.9168478260869565,
+      "unknown_recall": 0.31034722222222216,
+      "h_score": 0.4603943121875638
+    },
+    {
+      "candidate": "openmax",
+      "auroc": 0.8472903362771739,
+      "oscr": 0.7867622471316426,
+      "known_accuracy": 0.8914855072463768,
+      "unknown_recall": 0.643263888888889,
+      "h_score": 0.7467911127336504
+    }
+  ],
+  "boundary_explorer_lco": [
+    {
+      "candidate": "disagreement_eta1",
+      "auroc": 0.8164023919753086,
+      "oscr": 0.8099266975308641,
+      "known_accuracy": 0.9111111111111111,
+      "unknown_recall": 0.05222222222222221,
+      "h_score": 0.09824095108206049
+    },
+    {
+      "candidate": "mixed_eta1.5",
+      "auroc": 0.8352420910493826,
+      "oscr": 0.8287388117283949,
+      "known_accuracy": 0.9111111111111111,
+      "unknown_recall": 0.05222222222222221,
+      "h_score": 0.09824095108206049
+    },
+    {
+      "candidate": "disagreement_eta1.5",
+      "auroc": 0.8277083333333334,
+      "oscr": 0.8212029320987655,
+      "known_accuracy": 0.9109722222222223,
+      "unknown_recall": 0.05222222222222221,
+      "h_score": 0.09823976428516475
+    },
+    {
+      "candidate": "competition_eta1",
+      "auroc": 0.8290578703703704,
+      "oscr": 0.8225802469135803,
+      "known_accuracy": 0.9111111111111111,
+      "unknown_recall": 0.05166666666666666,
+      "h_score": 0.09728341712675627
+    },
+    {
+      "candidate": "mixed_eta1",
+      "auroc": 0.822509837962963,
+      "oscr": 0.8160335648148148,
+      "known_accuracy": 0.9111111111111111,
+      "unknown_recall": 0.05166666666666666,
+      "h_score": 0.09728341712675627
+    },
+    {
+      "candidate": "disagreement_eta2",
+      "auroc": 0.8342912808641975,
+      "oscr": 0.8277839506172839,
+      "known_accuracy": 0.9109722222222223,
+      "unknown_recall": 0.05166666666666666,
+      "h_score": 0.09728223032986051
+    },
+    {
+      "candidate": "mixed_eta2",
+      "auroc": 0.844225887345679,
+      "oscr": 0.8377183641975308,
+      "known_accuracy": 0.9109722222222223,
+      "unknown_recall": 0.05166666666666666,
+      "h_score": 0.09728223032986051
+    },
+    {
+      "candidate": "competition_eta1.5",
+      "auroc": 0.8418186728395062,
+      "oscr": 0.8353209876543211,
+      "known_accuracy": 0.9111111111111111,
+      "unknown_recall": 0.05111111111111111,
+      "h_score": 0.09632047719287584
+    },
+    {
+      "candidate": "competition_eta2",
+      "auroc": 0.8477278163580246,
+      "oscr": 0.8412125771604938,
+      "known_accuracy": 0.9109722222222223,
+      "unknown_recall": 0.05111111111111111,
+      "h_score": 0.0963192903959801
+    }
+  ],
+  "calibration_agent_lco_no_communication": [
+    {
+      "candidate": "mean4",
+      "auroc": 0.9316846064814814,
+      "oscr": 0.8841338734567902,
+      "known_accuracy": 0.8994444444444444,
+      "unknown_recall": 0.5683333333333334,
+      "h_score": 0.6847672444831951
+    },
+    {
+      "candidate": "geo_open_boundary",
+      "auroc": 0.9193287037037037,
+      "oscr": 0.8702716049382717,
+      "known_accuracy": 0.8973611111111112,
+      "unknown_recall": 0.5688888888888889,
+      "h_score": 0.6785554270167473
+    },
+    {
+      "candidate": "mean3",
+      "auroc": 0.9193346836419753,
+      "oscr": 0.8823989197530864,
+      "known_accuracy": 0.9044444444444444,
+      "unknown_recall": 0.4105555555555555,
+      "h_score": 0.5504383727322224
+    },
+    {
+      "candidate": "max4",
+      "auroc": 0.9206471836419754,
+      "oscr": 0.8794633487654322,
+      "known_accuracy": 0.8947222222222223,
+      "unknown_recall": 0.37777777777777777,
+      "h_score": 0.5123039579131865
+    },
+    {
+      "candidate": "boundary",
+      "auroc": 0.8113346836419753,
+      "oscr": 0.7987175925925926,
+      "known_accuracy": 0.9087500000000001,
+      "unknown_recall": 0.09444444444444444,
+      "h_score": 0.16707803027141177
+    }
+  ],
+  "communication_lco_at_selected_calibration": [
+    {
+      "candidate": "sparse_cf_budget0.5",
+      "mean_edges": 2.711888885498047,
+      "auroc": 0.9207700617283952,
+      "oscr": 0.861758101851852,
+      "known_accuracy": 0.8916666666666666,
+      "unknown_recall": 0.6905555555555555,
+      "h_score": 0.7746902502754291
+    },
+    {
+      "candidate": "full_budget0.5",
+      "mean_edges": 4.0,
+      "auroc": 0.9141917438271605,
+      "oscr": 0.8587893518518518,
+      "known_accuracy": 0.8952777777777777,
+      "unknown_recall": 0.6788888888888889,
+      "h_score": 0.7700860021067172
+    },
+    {
+      "candidate": "sparse_budget0.75",
+      "mean_edges": 3.0561110973358154,
+      "auroc": 0.9230231481481482,
+      "oscr": 0.8682600308641975,
+      "known_accuracy": 0.89375,
+      "unknown_recall": 0.6694444444444445,
+      "h_score": 0.7599191405714271
+    },
+    {
+      "candidate": "sparse_budget0.5",
+      "mean_edges": 2.2702221870422363,
+      "auroc": 0.9222062114197531,
+      "oscr": 0.8660520833333333,
+      "known_accuracy": 0.8937500000000002,
+      "unknown_recall": 0.6677777777777778,
+      "h_score": 0.7585078955861883
+    },
+    {
+      "candidate": "sparse_cf_budget0.75",
+      "mean_edges": 3.6708888530731203,
+      "auroc": 0.913995563271605,
+      "oscr": 0.8572318672839506,
+      "known_accuracy": 0.8924999999999998,
+      "unknown_recall": 0.6527777777777777,
+      "h_score": 0.7489538021495878
+    },
+    {
+      "candidate": "none_budget0.5",
+      "mean_edges": 0.0,
+      "auroc": 0.9193287037037037,
+      "oscr": 0.8702716049382717,
+      "known_accuracy": 0.8973611111111112,
+      "unknown_recall": 0.5688888888888889,
+      "h_score": 0.6785554270167473
+    }
+  ],
+  "top_joint_lco_candidates": [
+    {
+      "candidate": "sparse_cf_budget0.5_geo_open_boundary",
+      "mode": "sparse_cf",
+      "budget": 0.5,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 2.711888885498047,
+      "auroc": 0.9207700617283952,
+      "oscr": 0.861758101851852,
+      "known_accuracy": 0.8916666666666666,
+      "unknown_recall": 0.6905555555555555,
+      "h_score": 0.7746902502754291
+    },
+    {
+      "candidate": "full_budget0.5_geo_open_boundary",
+      "mode": "full",
+      "budget": 0.5,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 4.0,
+      "auroc": 0.9141917438271605,
+      "oscr": 0.8587893518518518,
+      "known_accuracy": 0.8952777777777777,
+      "unknown_recall": 0.6788888888888889,
+      "h_score": 0.7700860021067172
+    },
+    {
+      "candidate": "sparse_budget0.75_geo_open_boundary",
+      "mode": "sparse",
+      "budget": 0.75,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 3.0561110973358154,
+      "auroc": 0.9230231481481482,
+      "oscr": 0.8682600308641975,
+      "known_accuracy": 0.89375,
+      "unknown_recall": 0.6694444444444445,
+      "h_score": 0.7599191405714271
+    },
+    {
+      "candidate": "sparse_budget0.5_geo_open_boundary",
+      "mode": "sparse",
+      "budget": 0.5,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 2.2702221870422363,
+      "auroc": 0.9222062114197531,
+      "oscr": 0.8660520833333333,
+      "known_accuracy": 0.8937500000000002,
+      "unknown_recall": 0.6677777777777778,
+      "h_score": 0.7585078955861883
+    },
+    {
+      "candidate": "sparse_cf_budget0.75_geo_open_boundary",
+      "mode": "sparse_cf",
+      "budget": 0.75,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 3.6708888530731203,
+      "auroc": 0.913995563271605,
+      "oscr": 0.8572318672839506,
+      "known_accuracy": 0.8924999999999998,
+      "unknown_recall": 0.6527777777777777,
+      "h_score": 0.7489538021495878
+    },
+    {
+      "candidate": "sparse_cf_budget0.5_mean4",
+      "mode": "sparse_cf",
+      "budget": 0.5,
+      "score_rule": "mean4",
+      "mean_edges": 2.711888885498047,
+      "auroc": 0.9354280478395062,
+      "oscr": 0.8808807870370371,
+      "known_accuracy": 0.8965277777777778,
+      "unknown_recall": 0.6333333333333334,
+      "h_score": 0.7371771752093647
+    },
+    {
+      "candidate": "full_budget0.5_mean4",
+      "mode": "full",
+      "budget": 0.5,
+      "score_rule": "mean4",
+      "mean_edges": 4.0,
+      "auroc": 0.9291734182098764,
+      "oscr": 0.8778730709876543,
+      "known_accuracy": 0.8991666666666667,
+      "unknown_recall": 0.6238888888888889,
+      "h_score": 0.730896885136719
+    },
+    {
+      "candidate": "sparse_budget0.5_mean4",
+      "mode": "sparse",
+      "budget": 0.5,
+      "score_rule": "mean4",
+      "mean_edges": 2.2702221870422363,
+      "auroc": 0.9336014660493828,
+      "oscr": 0.8817033179012347,
+      "known_accuracy": 0.8973611111111112,
+      "unknown_recall": 0.6261111111111111,
+      "h_score": 0.7305459968842845
+    },
+    {
+      "candidate": "sparse_cf_budget0.75_mean4",
+      "mode": "sparse_cf",
+      "budget": 0.75,
+      "score_rule": "mean4",
+      "mean_edges": 3.6708888530731203,
+      "auroc": 0.9315981867283952,
+      "oscr": 0.8787569444444443,
+      "known_accuracy": 0.8973611111111112,
+      "unknown_recall": 0.6205555555555556,
+      "h_score": 0.7285331604567931
+    },
+    {
+      "candidate": "sparse_budget0.75_mean4",
+      "mode": "sparse",
+      "budget": 0.75,
+      "score_rule": "mean4",
+      "mean_edges": 3.0561110973358154,
+      "auroc": 0.9345883487654321,
+      "oscr": 0.8834309413580247,
+      "known_accuracy": 0.8980555555555556,
+      "unknown_recall": 0.6172222222222221,
+      "h_score": 0.7242217632742555
+    },
+    {
+      "candidate": "none_budget0.5_mean4",
+      "mode": "none",
+      "budget": 0.5,
+      "score_rule": "mean4",
+      "mean_edges": 0.0,
+      "auroc": 0.9316846064814814,
+      "oscr": 0.8841338734567902,
+      "known_accuracy": 0.8994444444444444,
+      "unknown_recall": 0.5683333333333334,
+      "h_score": 0.6847672444831951
+    },
+    {
+      "candidate": "none_budget0.5_geo_open_boundary",
+      "mode": "none",
+      "budget": 0.5,
+      "score_rule": "geo_open_boundary",
+      "mean_edges": 0.0,
+      "auroc": 0.9193287037037037,
+      "oscr": 0.8702716049382717,
+      "known_accuracy": 0.8973611111111112,
+      "unknown_recall": 0.5688888888888889,
+      "h_score": 0.6785554270167473
+    },
+    {
+      "candidate": "sparse_cf_budget0.5_mean3",
+      "mode": "sparse_cf",
+      "budget": 0.5,
+      "score_rule": "mean3",
+      "mean_edges": 2.711888885498047,
+      "auroc": 0.9303761574074075,
+      "oscr": 0.8854984567901234,
+      "known_accuracy": 0.9016666666666667,
+      "unknown_recall": 0.5183333333333333,
+      "h_score": 0.655454366110729
+    },
+    {
+      "candidate": "sparse_cf_budget0.75_mean3",
+      "mode": "sparse_cf",
+      "budget": 0.75,
+      "score_rule": "mean3",
+      "mean_edges": 3.6708888530731203,
+      "auroc": 0.9244693287037038,
+      "oscr": 0.8826778549382717,
+      "known_accuracy": 0.9029166666666667,
+      "unknown_recall": 0.5,
+      "h_score": 0.6405373723848474
+    },
+    {
+      "candidate": "full_budget0.5_mean3",
+      "mode": "full",
+      "budget": 0.5,
+      "score_rule": "mean3",
+      "mean_edges": 4.0,
+      "auroc": 0.9212874228395063,
+      "oscr": 0.8817631172839506,
+      "known_accuracy": 0.903888888888889,
+      "unknown_recall": 0.4933333333333333,
+      "h_score": 0.6352476570320107
+    }
+  ],
+  "formal_message_interventions": [
+    {
+      "candidate": "communication",
+      "auroc": 0.9003360507246377,
+      "oscr": 0.8468158023852657,
+      "known_accuracy": 0.8966485507246378,
+      "unknown_recall": 0.6106250000000001,
+      "h_score": 0.7205145166847305
+    },
+    {
+      "candidate": "messages_off",
+      "auroc": 0.9355233148399758,
+      "oscr": 0.8810604430857487,
+      "known_accuracy": 0.8943840579710146,
+      "unknown_recall": 0.6793055555555556,
+      "h_score": 0.7688715636420046
+    },
+    {
+      "candidate": "messages_shuffled",
+      "auroc": 0.907734176856884,
+      "oscr": 0.8466938217089371,
+      "known_accuracy": 0.8858695652173912,
+      "unknown_recall": 0.5605555555555556,
+      "h_score": 0.6798275782427518
+    },
+    {
+      "candidate": "drop_identity_sender",
+      "auroc": 0.9089056083937198,
+      "oscr": 0.8638846429649759,
+      "known_accuracy": 0.8996376811594203,
+      "unknown_recall": 0.48701388888888886,
+      "h_score": 0.6280551373565361
+    },
+    {
+      "candidate": "drop_geometry_sender",
+      "auroc": 0.9025612450935991,
+      "oscr": 0.8466603449577293,
+      "known_accuracy": 0.895108695652174,
+      "unknown_recall": 0.6531250000000001,
+      "h_score": 0.751455508873819
+    },
+    {
+      "candidate": "no_communication",
+      "auroc": 0.8816772814764492,
+      "oscr": 0.8416719693538647,
+      "known_accuracy": 0.9001811594202899,
+      "unknown_recall": 0.3653472222222222,
+      "h_score": 0.5080147290344387
+    }
+  ]
+}

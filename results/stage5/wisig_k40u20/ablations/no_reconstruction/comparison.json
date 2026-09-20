@@ -1,0 +1,47 @@
+{
+  "ablation": "no_reconstruction",
+  "selection_frozen": {
+    "pug": "mixed_eta1.5",
+    "communication": "sparse_cf_budget0.5_geo_open_boundary",
+    "mode": "sparse_cf",
+    "budget": 0.5,
+    "score_rule": "geo_open_boundary"
+  },
+  "changed": {
+    "reconstruction_weight": 0.0
+  },
+  "comparisons": [
+    {
+      "seed": 42,
+      "ablation": {
+        "auroc": 0.8586316802536232,
+        "aupr_out": 0.8668704100920844,
+        "fpr95": 0.6260869565217392,
+        "oscr": 0.8307629076086956,
+        "tau": 0.95,
+        "known_accuracy": 0.9116847826086957,
+        "unknown_recall": 0.3016666666666667,
+        "macro_f1": 0.7214727314295278,
+        "h_score": 0.45333099422189715
+      },
+      "reference": {
+        "auroc": 0.9442836277173913,
+        "aupr_out": 0.9528074999099153,
+        "fpr95": 0.22418478260869565,
+        "oscr": 0.8802164855072464,
+        "tau": 0.95,
+        "known_accuracy": 0.8896739130434783,
+        "unknown_recall": 0.7485416666666667,
+        "macro_f1": 0.8225293071596059,
+        "h_score": 0.8130285194543816
+      },
+      "delta": {
+        "auroc": -0.08565194746376803,
+        "oscr": -0.04945357789855076,
+        "known_accuracy": 0.02201086956521736,
+        "unknown_recall": -0.44687499999999997,
+        "h_score": -0.35969752523248444
+      }
+    }
+  ]
+}

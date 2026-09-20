@@ -1,0 +1,126 @@
+{
+  "fold": 0,
+  "known_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39
+  ],
+  "proxy_unknown_classes": [
+    9,
+    11,
+    12,
+    21,
+    24,
+    25,
+    30,
+    38
+  ],
+  "metrics": {
+    "waveform": {
+      "auroc": 0.8710905194057184,
+      "aupr_out": 0.5244572349730154,
+      "fpr95": 0.29721467391304346,
+      "tau": 0.9393713708825203,
+      "known_accuracy": 0.8926630434782609,
+      "unknown_recall": 0.266304347826087,
+      "macro_f1": 0.840536090053262,
+      "h_score": 0.4102273306488608,
+      "oscr": 0.8392996256202742,
+      "num_known": 2944,
+      "num_unknown": 736
+    },
+    "prototype": {
+      "auroc": 0.9156941808689745,
+      "aupr_out": 0.6662773057524245,
+      "fpr95": 0.19701086956521738,
+      "tau": 0.9257839791184592,
+      "known_accuracy": 0.8957201086956522,
+      "unknown_recall": 0.4904891304347826,
+      "macro_f1": 0.8772500225174782,
+      "h_score": 0.6338739705741346,
+      "oscr": 0.877262800537571,
+      "num_known": 2944,
+      "num_unknown": 736
+    },
+    "b2": {
+      "auroc": 0.8988565542296786,
+      "aupr_out": 0.6101761335645909,
+      "fpr95": 0.22724184782608695,
+      "tau": 0.9342961693214314,
+      "known_accuracy": 0.8936820652173914,
+      "unknown_recall": 0.37907608695652173,
+      "macro_f1": 0.8596125248771808,
+      "h_score": 0.5323454415706478,
+      "oscr": 0.8641258196479207,
+      "num_known": 2944,
+      "num_unknown": 736
+    }
+  },
+  "public_selector": null,
+  "public_selector_diagnostics": {},
+  "complementarity": {
+    "unique_rescue": {
+      "prototype": {
+        "absolute_rate": 0.08478260869565217,
+        "baseline_failure_rate": 0.3644859813084112,
+        "count": 312
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.9191576086956522,
+      "unknown_recall": 0.5842391304347826,
+      "h_score": 0.7143927189139276,
+      "oscr": 0.9185041056238186
+    },
+    "baseline_success_rate": 0.7673913043478261,
+    "oracle_success_rate": 0.8521739130434782
+  },
+  "pairwise_agent_rescue": {
+    "waveform": {
+      "absolute_rate": 0.0375,
+      "other_failure_rate": 0.20234604105571846,
+      "count": 138
+    },
+    "prototype": {
+      "absolute_rate": 0.08478260869565217,
+      "other_failure_rate": 0.3644859813084112,
+      "count": 312
+    }
+  },
+  "protocol": {
+    "formal_unknown_used": false,
+    "calibration_and_test_known_are_disjoint": true,
+    "oscr_uses_pre_rejection_prediction": true,
+    "stop_exactly_equals_b2": true,
+    "outer_selector_is_diagnostic_only": false
+  }
+}

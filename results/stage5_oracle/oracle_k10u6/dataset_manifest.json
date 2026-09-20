@@ -1,0 +1,22 @@
+{
+  "dataset": "oracle_kri16_demod",
+  "source": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\data\\oracle\\processed_k10u6",
+  "signal_length": 256,
+  "num_known": 10,
+  "counts": {
+    "train": 28000,
+    "val": 4000,
+    "known_test": 8000,
+    "unknown_test": 24000,
+    "open_test": 32000
+  },
+  "evaluation_groups": {
+    "known_tx": 10,
+    "unknown_tx": 6
+  },
+  "protocol": {
+    "real_unknown_used_for_training": false,
+    "real_unknown_used_for_selection": false,
+    "real_unknown_used_for_threshold": false
+  }
+}

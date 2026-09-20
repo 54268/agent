@@ -1,0 +1,28 @@
+{
+  "protocol": "ORACLE fold0: 8 support / 2 heldout",
+  "epochs": 15,
+  "rows": [
+    {
+      "view": "envelope_phase",
+      "best_epoch": 15,
+      "identity_val_accuracy": 0.7465625,
+      "geometry_val_accuracy": 0.6009375,
+      "joint_mean_accuracy": 0.6737500000000001
+    },
+    {
+      "view": "difference_iq",
+      "best_epoch": 15,
+      "identity_val_accuracy": 0.823125,
+      "geometry_val_accuracy": 0.7309375,
+      "joint_mean_accuracy": 0.7770312500000001
+    },
+    {
+      "view": "raw",
+      "best_epoch": 15,
+      "identity_val_accuracy": 0.830625,
+      "geometry_val_accuracy": 0.7809375,
+      "joint_mean_accuracy": 0.8057812499999999
+    }
+  ],
+  "selected": "raw"
+}

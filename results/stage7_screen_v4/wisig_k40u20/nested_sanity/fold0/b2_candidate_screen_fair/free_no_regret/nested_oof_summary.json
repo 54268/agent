@@ -1,0 +1,96 @@
+{
+  "passed": false,
+  "checks": {
+    "structural_inner_oof_evidence": true,
+    "four_inner_folds": true,
+    "nested_b2_delta_h_vs_best_local_ge_0_01": true,
+    "positive_inner_folds_ge_3": false
+  },
+  "metrics": {
+    "waveform": {
+      "auroc": 0.8250066583806819,
+      "aupr_out": 0.7551816865032935,
+      "fpr95": 0.5286458333333334,
+      "tau": 0.9289189435354063,
+      "known_accuracy": 0.8411458333333334,
+      "unknown_recall": 0.42613636363636365,
+      "macro_f1": 0.7139546231203862,
+      "h_score": 0.5656874649729123,
+      "oscr": 0.7806729403409091,
+      "num_known": 384,
+      "num_unknown": 352
+    },
+    "prototype": {
+      "auroc": 0.8874918619791666,
+      "aupr_out": 0.8467929383847977,
+      "fpr95": 0.3515625,
+      "tau": 0.9312785090366711,
+      "known_accuracy": 0.8697916666666666,
+      "unknown_recall": 0.4772727272727273,
+      "macro_f1": 0.7576101051875337,
+      "h_score": 0.6163444639718804,
+      "oscr": 0.8412124171401515,
+      "num_known": 384,
+      "num_unknown": 352
+    },
+    "b2": {
+      "auroc": 0.8896040482954546,
+      "aupr_out": 0.8561503638677911,
+      "fpr95": 0.3177083333333333,
+      "tau": 0.9358322100095784,
+      "known_accuracy": 0.8645833333333334,
+      "unknown_recall": 0.5028409090909091,
+      "macro_f1": 0.7424809482937159,
+      "h_score": 0.63586391966759,
+      "oscr": 0.8342877012310607,
+      "num_known": 384,
+      "num_unknown": 352
+    }
+  },
+  "delta_h_vs_best_local": 0.019519455695709675,
+  "fold_h_deltas": [
+    0.08169105382566144,
+    -0.0012226771810954773,
+    -0.1310776276095444,
+    0.0973689460820989
+  ],
+  "positive_inner_folds": 2,
+  "pairwise_agent_rescue": {
+    "waveform": {
+      "absolute_rate": 0.10190217391304347,
+      "other_failure_rate": 0.32051282051282054,
+      "count": 75
+    },
+    "prototype": {
+      "absolute_rate": 0.14130434782608695,
+      "other_failure_rate": 0.39543726235741444,
+      "count": 104
+    }
+  },
+  "complementarity": {
+    "unique_rescue": {
+      "prototype": {
+        "absolute_rate": 0.14130434782608695,
+        "baseline_failure_rate": 0.39543726235741444,
+        "count": 104
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.8932291666666666,
+      "unknown_recall": 0.6647727272727273,
+      "h_score": 0.7622511776325785,
+      "oscr": 0.8899665601325758
+    },
+    "baseline_success_rate": 0.6426630434782609,
+    "oracle_success_rate": 0.7839673913043478
+  },
+  "evidence": {
+    "source": "inner_episode_oof",
+    "registrable": true,
+    "folds": 4,
+    "sample_count": 736,
+    "sample_keys_unique": true,
+    "outer_test_used": false,
+    "formal_unknown_used": false
+  }
+}

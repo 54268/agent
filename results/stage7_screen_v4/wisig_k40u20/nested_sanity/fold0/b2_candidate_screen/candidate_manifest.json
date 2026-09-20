@@ -1,0 +1,43 @@
+{
+  "purpose": "public-only nested B2 action-space diagnosis",
+  "source_fold_dir": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage7_screen_v4\\wisig_k40u20\\nested_sanity\\fold0",
+  "outer_fold": 0,
+  "candidates": {
+    "anchored_reference": {
+      "b2_max_adaptive_mass": 0.35,
+      "b2_initial_adaptive_fraction": 0.2,
+      "nested_b2_epochs": 5,
+      "b2_selector_distillation_weight": 0.25,
+      "b2_no_regret_weight": 1.0
+    },
+    "free_selector": {
+      "b2_max_adaptive_mass": 1.0,
+      "b2_initial_adaptive_fraction": 0.9,
+      "nested_b2_epochs": 20,
+      "b2_selector_distillation_weight": 1.0,
+      "b2_no_regret_weight": 1.0
+    },
+    "free_task_balanced": {
+      "b2_max_adaptive_mass": 1.0,
+      "b2_initial_adaptive_fraction": 0.9,
+      "nested_b2_epochs": 20,
+      "b2_selector_distillation_weight": 0.25,
+      "b2_no_regret_weight": 1.0
+    },
+    "free_no_regret": {
+      "b2_max_adaptive_mass": 1.0,
+      "b2_initial_adaptive_fraction": 0.9,
+      "nested_b2_epochs": 20,
+      "b2_selector_distillation_weight": 1.0,
+      "b2_no_regret_weight": 2.0
+    }
+  },
+  "ranking": [
+    "positive_inner_folds>=3",
+    "delta_h_vs_best_local>=0.01",
+    "pooled_h_score",
+    "pooled_oscr"
+  ],
+  "outer_test_evaluated": false,
+  "formal_unknown_used": false
+}

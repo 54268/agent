@@ -1,0 +1,96 @@
+{
+  "dataset": "wisig",
+  "seed": 42,
+  "best_epoch": 23,
+  "elapsed_seconds": 18.513542652130127,
+  "pseudo_generation": {
+    "num_candidates": 15360,
+    "num_in_shell": 7784,
+    "num_used": 7784,
+    "num_sources": 1820,
+    "shell_fallback": false,
+    "shell_low": 0.5047341585159302,
+    "shell_high": 1.8824687004089355,
+    "config": {
+      "seed_ratio": 0.2,
+      "variations": 6,
+      "eta_min": 0.45,
+      "eta_max": 1.35,
+      "repel_weight": 0.35,
+      "jitter": 0.1,
+      "noise": 0.04,
+      "knn_k": 10,
+      "shell_low_quantile": 0.9,
+      "shell_high_quantile": 0.999,
+      "seed": 42
+    }
+  },
+  "pseudo_validation": {
+    "auroc": 0.9980878299970989,
+    "recall_at_tau_0.95": 0.9980417754569191,
+    "num_validation_known": 1800,
+    "num_validation_pseudo": 1532
+  },
+  "open_test_metrics": {
+    "stage1_mean3": {
+      "auroc": 0.9236330389492754,
+      "aupr_out": 0.9126579460817399,
+      "fpr95": 0.28831521739130433,
+      "oscr": 0.872926856884058,
+      "tau": 0.95,
+      "known_accuracy": 0.897554347826087,
+      "unknown_recall": 0.5341666666666667,
+      "macro_f1": 0.7631456904584086,
+      "h_score": 0.6697444673609091
+    },
+    "stage1_max3": {
+      "auroc": 0.8958018002717392,
+      "aupr_out": 0.8710396603267275,
+      "fpr95": 0.3521739130434783,
+      "oscr": 0.8636692142210145,
+      "tau": 0.95,
+      "known_accuracy": 0.9046195652173913,
+      "unknown_recall": 0.23125,
+      "macro_f1": 0.6857618755520433,
+      "h_score": 0.3683403110047847
+    },
+    "boundary": {
+      "auroc": 0.8679163836050725,
+      "aupr_out": 0.8904186906155704,
+      "fpr95": 0.6456521739130435,
+      "oscr": 0.8107173913043478,
+      "tau": 0.95,
+      "known_accuracy": 0.8820652173913044,
+      "unknown_recall": 0.5108333333333334,
+      "macro_f1": 0.7288928994495603,
+      "h_score": 0.6469793725939029
+    },
+    "mean4": {
+      "auroc": 0.9328704710144928,
+      "aupr_out": 0.9259307539675001,
+      "fpr95": 0.2184782608695652,
+      "oscr": 0.8795484601449276,
+      "tau": 0.95,
+      "known_accuracy": 0.8896739130434783,
+      "unknown_recall": 0.6233333333333333,
+      "macro_f1": 0.7825288037514246,
+      "h_score": 0.7330611365214683
+    },
+    "max4": {
+      "auroc": 0.9148233129528985,
+      "aupr_out": 0.8958069064212487,
+      "fpr95": 0.20597826086956522,
+      "oscr": 0.8729967164855073,
+      "tau": 0.95,
+      "known_accuracy": 0.8948369565217391,
+      "unknown_recall": 0.4170833333333333,
+      "macro_f1": 0.7203017501109896,
+      "h_score": 0.5689699038912978
+    }
+  },
+  "protocol": {
+    "real_unknown_used_for_training": false,
+    "real_unknown_used_for_threshold": false,
+    "checkpoint_selection": "known validation + held-out generated pseudo-unknown only"
+  }
+}

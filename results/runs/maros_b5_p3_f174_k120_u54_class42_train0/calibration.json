@@ -1,0 +1,43 @@
+{
+  "threshold": 0.1077311988827221,
+  "fit_known": 2880,
+  "fit_pseudo_unknown": 2880,
+  "selection_known": 2880,
+  "selection_pseudo_unknown": 2880,
+  "selection_metrics": {
+    "overall_accuracy": 0.6741319444444445,
+    "macro_precision": 0.3700716418166393,
+    "macro_recall": 0.35740645087235995,
+    "macro_f1": 0.35104652766014577,
+    "weighted_f1": 0.6637424447212716,
+    "known_accuracy": 0.35208333333333336,
+    "closed_set_known_accuracy": 0.35659722222222223,
+    "unknown_precision": 0.9676222596964587,
+    "unknown_recall": 0.9961805555555555,
+    "unknown_f1": 0.9816937553464499,
+    "known_fpr_as_unknown": 0.03333333333333333,
+    "unknown_false_accept_rate": 0.0038194444444444443,
+    "auroc": 0.9987818287037037,
+    "aupr_out": 0.9986559718731568,
+    "fpr95": 0.0024305555555555556,
+    "oscr": 0.3564900414737654,
+    "oscr_standard": 0.3564900414737654,
+    "open_set_ece": 0.005409434393421097,
+    "open_set_brier": 0.010844306910640651,
+    "num_test": 5760,
+    "num_test_known": 2880,
+    "num_test_unknown": 2880,
+    "selection_objective": 0.6096967650286516,
+    "minimum_known_accuracy": 0.32093750000000004
+  },
+  "features": [
+    "private_open_logit",
+    "one_minus_max_softmax",
+    "fused_entropy",
+    "agent_js_divergence",
+    "domain_shift",
+    "router_entropy",
+    "normalized_energy",
+    "network_unknown_logit"
+  ]
+}

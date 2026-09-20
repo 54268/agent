@@ -1,0 +1,10 @@
+{
+  "dataset": "wisig_1day_1rx",
+  "num_known": 40,
+  "signal_length": 256,
+  "train": 12720,
+  "validation": 1800,
+  "test_known": 3680,
+  "test_unknown": 4800,
+  "real_unknown_used_for_training_or_selection": false
+}

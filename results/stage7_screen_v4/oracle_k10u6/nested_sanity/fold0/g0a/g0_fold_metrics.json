@@ -1,0 +1,96 @@
+{
+  "fold": 0,
+  "known_classes": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "proxy_unknown_classes": [
+    1,
+    9
+  ],
+  "metrics": {
+    "waveform": {
+      "auroc": 0.9205059082031251,
+      "aupr_out": 0.788604020881895,
+      "fpr95": 0.40015625,
+      "tau": 0.9494530239844404,
+      "known_accuracy": 0.93796875,
+      "unknown_recall": 0.6425,
+      "macro_f1": 0.8982763902637573,
+      "h_score": 0.762615422639644,
+      "oscr": 0.90104501953125,
+      "num_known": 6400,
+      "num_unknown": 1600
+    },
+    "prototype": {
+      "auroc": 0.922483447265625,
+      "aupr_out": 0.8238849186226468,
+      "fpr95": 0.413125,
+      "tau": 0.9493844547649625,
+      "known_accuracy": 0.92421875,
+      "unknown_recall": 0.71875,
+      "macro_f1": 0.9005493284043004,
+      "h_score": 0.8086364717070851,
+      "oscr": 0.89559287109375,
+      "num_known": 6400,
+      "num_unknown": 1600
+    },
+    "b2": {
+      "auroc": 0.9205059082031251,
+      "aupr_out": 0.788604020881895,
+      "fpr95": 0.40015625,
+      "tau": 0.9494530239844404,
+      "known_accuracy": 0.93796875,
+      "unknown_recall": 0.6425,
+      "macro_f1": 0.8982763902637573,
+      "h_score": 0.762615422639644,
+      "oscr": 0.90104501953125,
+      "num_known": 6400,
+      "num_unknown": 1600
+    }
+  },
+  "public_selector": null,
+  "public_selector_diagnostics": {},
+  "complementarity": {
+    "unique_rescue": {
+      "prototype": {
+        "absolute_rate": 0.06825,
+        "baseline_failure_rate": 0.5634674922600619,
+        "count": 546
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.98296875,
+      "unknown_recall": 0.80375,
+      "h_score": 0.8843710100568429,
+      "oscr": 0.9832083984375
+    },
+    "baseline_success_rate": 0.878875,
+    "oracle_success_rate": 0.947125
+  },
+  "pairwise_agent_rescue": {
+    "waveform": {
+      "absolute_rate": 0.064,
+      "other_failure_rate": 0.5475935828877005,
+      "count": 512
+    },
+    "prototype": {
+      "absolute_rate": 0.06825,
+      "other_failure_rate": 0.5634674922600619,
+      "count": 546
+    }
+  },
+  "protocol": {
+    "formal_unknown_used": false,
+    "calibration_and_test_known_are_disjoint": true,
+    "oscr_uses_pre_rejection_prediction": true,
+    "stop_exactly_equals_b2": true,
+    "outer_selector_is_diagnostic_only": false
+  }
+}

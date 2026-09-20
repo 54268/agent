@@ -1,0 +1,138 @@
+{
+  "config": {
+    "dataset": "wisig",
+    "name": "stage5_unified_v4_wisig_k40u20",
+    "method_profile": "universal_multiview_maros_v4_matched_lco_training",
+    "wisig_pkl": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\data\\WiSig\\WiSig_OpenSet_1Day_1Rx\\wisig_openset_subset.pkl",
+    "output_dir": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage5_unified_v4\\wisig_k40u20",
+    "seed": 42,
+    "augment_train": false,
+    "state_dim": 128,
+    "stem_channels": 128,
+    "message_dim": 64,
+    "prototype_temperature": 0.15,
+    "geometry_view": "universal",
+    "view_aux_weight": 0.25,
+    "batch_size": 256,
+    "expert_epochs": 30,
+    "expert_lr": 0.001,
+    "expert_weight_decay": 0.0001,
+    "supcon_temperature": 0.1,
+    "supcon_weight": 0.1,
+    "compact_weight": 0.1,
+    "margin_weight": 0.1,
+    "prototype_margin": 0.5,
+    "diversity_weight": 0.01,
+    "reconstruction_weight": 0.05,
+    "openmax_alpha_rank": 3,
+    "openmax_tail_size": 25,
+    "lco_folds": 5,
+    "lco_partition_seed": 2026,
+    "lco_expert_epochs": 30,
+    "lco_coordinator_epochs": 10,
+    "lco_max_samples": 4096,
+    "pug_kinds": [
+      "competition",
+      "disagreement",
+      "mixed"
+    ],
+    "pug_eta_grid": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "unknown_score_rules": [
+      "mean4",
+      "max4",
+      "idproto_boundary",
+      "mean5",
+      "max5",
+      "sensor_mean",
+      "sensor_max",
+      "idproto",
+      "rawproto",
+      "spectralproto",
+      "envelopeproto",
+      "differenceproto",
+      "complexproto",
+      "proto_mean",
+      "proto_max"
+    ],
+    "arbitration_rules": [
+      "communication",
+      "mean",
+      "max",
+      "noisy_or"
+    ],
+    "known_acceptance_grid": [
+      0.85,
+      0.88,
+      0.9,
+      0.92,
+      0.94,
+      0.95,
+      0.96,
+      0.97
+    ],
+    "adaptive_threshold_priors": [
+      null,
+      0.0,
+      25.0,
+      100.0
+    ],
+    "communication_candidates": [
+      {
+        "mode": "none",
+        "budget": 0.5,
+        "gate_threshold": 0.5
+      },
+      {
+        "mode": "audit_sparse_cf",
+        "budget": 0.25,
+        "gate_threshold": 0.5
+      },
+      {
+        "mode": "audit_optional_cf",
+        "budget": 0.1,
+        "gate_threshold": 0.5
+      },
+      {
+        "mode": "audit_optional_cf",
+        "budget": 0.1,
+        "gate_threshold": 0.65
+      },
+      {
+        "mode": "audit_optional_cf",
+        "budget": 0.1,
+        "gate_threshold": 0.8
+      },
+      {
+        "mode": "audit_residual_cf",
+        "budget": 0.1,
+        "gate_threshold": 0.65
+      }
+    ],
+    "min_known_accuracy": 0.85,
+    "coordinator_hidden_dim": 192,
+    "coordinator_epochs": 20,
+    "coordinator_batch_size": 512,
+    "coordinator_lr": 0.0005,
+    "coordinator_weight_decay": 0.0001,
+    "coordinator_class_weight": 0.5,
+    "budget_weight": 0.02,
+    "cf_weight": 0.1,
+    "cf_temperature": 0.25,
+    "bootstrap_repetitions": 1000
+  },
+  "selection": {
+    "pug": "competition_eta2",
+    "communication": "audit_sparse_cf_budget0.25_threshold0.5_sensor_mean_arbcommunication_tau0.88_priorglobal",
+    "mode": "audit_sparse_cf",
+    "budget": 0.25,
+    "gate_threshold": 0.5,
+    "score_rule": "sensor_mean",
+    "arbitration_rule": "communication",
+    "known_acceptance": 0.88,
+    "adaptive_threshold_prior": null
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "partition_seed": 2026,
+  "fold": 4,
+  "candidate": "c2_sequential",
+  "mode": "sequential",
+  "adaptive_explorer": false,
+  "support_classes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    8,
+    9
+  ],
+  "heldout_classes": [
+    4,
+    7
+  ],
+  "metrics": {
+    "waveform": {
+      "auroc": 0.551653125,
+      "aupr_out": 0.22481323295486297,
+      "fpr95": 0.9346875,
+      "oscr": 0.09201640625,
+      "tau": 0.9002727736452298,
+      "known_accuracy": 0.128125,
+      "unknown_recall": 0.115,
+      "macro_f1": 0.059672957621678756,
+      "h_score": 0.1212082262210797
+    },
+    "prototype": {
+      "auroc": 0.5758072265624999,
+      "aupr_out": 0.2511044997041045,
+      "fpr95": 0.9021875,
+      "oscr": 0.09994296875,
+      "tau": 0.8985305833827124,
+      "known_accuracy": 0.15875,
+      "unknown_recall": 0.15625,
+      "macro_f1": 0.14730091483073623,
+      "h_score": 0.15749007936507936
+    },
+    "verifier": {
+      "auroc": 0.48731582031250004,
+      "aupr_out": 0.19781596022069498,
+      "fpr95": 0.9490625,
+      "oscr": 0.057041406249999996,
+      "tau": 0.90003125,
+      "known_accuracy": 0.11125,
+      "unknown_recall": 0.09,
+      "macro_f1": 0.03316111996737323,
+      "h_score": 0.09950310559006212
+    },
+    "team": {
+      "auroc": 0.48197500000000004,
+      "aupr_out": 0.19037464184770206,
+      "fpr95": 0.955625,
+      "oscr": 0.09025898437500002,
+      "tau": 0.8971099605841303,
+      "known_accuracy": 0.1640625,
+      "unknown_recall": 0.09125,
+      "macro_f1": 0.14271821957556963,
+      "h_score": 0.11727356181150551
+    }
+  },
+  "behaviour": {
+    "query_rate": 1.0,
+    "mean_edges": 1.972499966621399,
+    "mean_bits": 788.6235961914062,
+    "leader_waveform_rate": 0.0
+  }
+}

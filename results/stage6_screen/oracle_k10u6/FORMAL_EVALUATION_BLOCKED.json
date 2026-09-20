@@ -1,0 +1,40 @@
+{
+  "reason": "no communication candidate passed the pre-registered LCO gain gates",
+  "real_unknown_evaluated": false,
+  "selection": {
+    "selected": "b2_no_communication",
+    "collaboration_promoted": false,
+    "checks": {
+      "c2_sequential": {
+        "known_accuracy": 0.16087500000000002,
+        "delta_h": 0.01098792914206613,
+        "delta_oscr": 0.007738750000000003,
+        "positive_h_folds": 5,
+        "required_positive_h_folds": 4,
+        "best_single_h": 0.12307201010534649,
+        "query_rate": 1.0,
+        "passes": false
+      },
+      "c3_sequential_cf": {
+        "known_accuracy": 0.16043749999999998,
+        "delta_h": 0.008122200515593092,
+        "delta_oscr": 0.0038503125000000082,
+        "positive_h_folds": 4,
+        "required_positive_h_folds": 4,
+        "best_single_h": 0.12099946185060004,
+        "query_rate": 0.9977499961853027,
+        "passes": false
+      },
+      "c4_sequential_cf_adversarial": {
+        "known_accuracy": 0.165625,
+        "delta_h": 0.011755989059966887,
+        "delta_oscr": 0.011593046874999999,
+        "positive_h_folds": 5,
+        "required_positive_h_folds": 4,
+        "best_single_h": 0.12111967898855566,
+        "query_rate": 1.0,
+        "passes": false
+      }
+    }
+  }
+}

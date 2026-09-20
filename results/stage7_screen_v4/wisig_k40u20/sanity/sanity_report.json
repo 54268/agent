@@ -1,0 +1,159 @@
+{
+  "phase": "sanity",
+  "dataset": "wisig",
+  "folds": [
+    {
+      "fold": 0,
+      "known_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39
+      ],
+      "proxy_unknown_classes": [
+        9,
+        11,
+        12,
+        21,
+        24,
+        25,
+        30,
+        38
+      ],
+      "metrics": {
+        "waveform": {
+          "auroc": 0.833486401967155,
+          "aupr_out": 0.4290513375606118,
+          "fpr95": 0.27717391304347827,
+          "tau": 0.9367889871953387,
+          "known_accuracy": 0.8783967391304348,
+          "unknown_recall": 0.20380434782608695,
+          "macro_f1": 0.8308939117050779,
+          "h_score": 0.330846229427659,
+          "oscr": 0.8053557715028354,
+          "num_known": 2944,
+          "num_unknown": 736
+        },
+        "prototype": {
+          "auroc": 0.921095272994447,
+          "aupr_out": 0.6540719941108075,
+          "fpr95": 0.14470108695652173,
+          "tau": 0.9374489402720396,
+          "known_accuracy": 0.899796195652174,
+          "unknown_recall": 0.3220108695652174,
+          "macro_f1": 0.8534525700790057,
+          "h_score": 0.47428790296261375,
+          "oscr": 0.8877714622223534,
+          "num_known": 2944,
+          "num_unknown": 736
+        },
+        "b2": {
+          "auroc": 0.8445442646798205,
+          "aupr_out": 0.4408778985526077,
+          "fpr95": 0.2578125,
+          "tau": 0.9380305737079658,
+          "known_accuracy": 0.8817934782608695,
+          "unknown_recall": 0.19701086956521738,
+          "macro_f1": 0.8330416047734117,
+          "h_score": 0.3220656280801664,
+          "oscr": 0.8170246780482042,
+          "num_known": 2944,
+          "num_unknown": 736
+        }
+      },
+      "public_selector": {
+        "auroc": 0.8993628345049622,
+        "aupr_out": 0.6141958120131067,
+        "fpr95": 0.23369565217391305,
+        "tau": 0.9351079405249024,
+        "known_accuracy": 0.8963994565217391,
+        "unknown_recall": 0.37228260869565216,
+        "macro_f1": 0.8580977962841365,
+        "h_score": 0.5260796810430125,
+        "oscr": 0.8697904359640831,
+        "num_known": 2944,
+        "num_unknown": 736
+      },
+      "public_selector_diagnostics": {
+        "mean_loss": 0.20842391304347826,
+        "gain_over_stop": 0.04809782608695652,
+        "oracle_gain_recovery": 0.5919732441471571,
+        "accuracy": 0.866304347826087
+      },
+      "complementarity": {
+        "unique_rescue": {
+          "waveform": {
+            "absolute_rate": 0.002173913043478261,
+            "baseline_failure_rate": 0.008519701810436636,
+            "count": 8
+          },
+          "prototype": {
+            "absolute_rate": 0.07771739130434782,
+            "baseline_failure_rate": 0.3045793397231097,
+            "count": 286
+          }
+        },
+        "oracle": {
+          "known_accuracy": 0.9167798913043478,
+          "unknown_recall": 0.4633152173913043,
+          "h_score": 0.6155489892882748,
+          "oscr": 0.9175824632266067
+        },
+        "baseline_success_rate": 0.7448369565217391,
+        "oracle_success_rate": 0.8260869565217391
+      },
+      "protocol": {
+        "formal_unknown_used": false,
+        "calibration_and_test_known_are_disjoint": true,
+        "oscr_uses_pre_rejection_prediction": true,
+        "stop_exactly_equals_b2": true
+      }
+    }
+  ],
+  "sanity": {
+    "passed": false,
+    "checks": {
+      "waveform_known_accuracy_ge_0_85": true,
+      "prototype_known_accuracy_ge_0_85": true,
+      "waveform_auroc_ge_0_75": true,
+      "prototype_auroc_ge_0_75": true,
+      "b2_not_worse_than_best_local_by_0_005": false,
+      "oracle_delta_h_ge_0_03": true,
+      "oracle_delta_oscr_ge_0_015": true,
+      "waveform_unique_rescue_ge_0_05": false,
+      "prototype_unique_rescue_ge_0_05": true,
+      "public_selector_delta_h_ge_0_01": true
+    },
+    "note": "single-fold feasibility only; this cannot promote G1"
+  },
+  "elapsed_seconds": 465.29539132118225,
+  "formal_unknown_evaluated": false
+}

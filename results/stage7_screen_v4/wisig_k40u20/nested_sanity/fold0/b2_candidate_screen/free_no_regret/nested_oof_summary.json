@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "checks": {
+    "structural_inner_oof_evidence": true,
+    "four_inner_folds": true,
+    "nested_b2_delta_h_vs_best_local_ge_0_01": true,
+    "positive_inner_folds_ge_3": true
+  },
+  "metrics": {
+    "waveform": {
+      "auroc": 0.8250066583806819,
+      "aupr_out": 0.7551816865032935,
+      "fpr95": 0.5286458333333334,
+      "tau": 0.9289189435354063,
+      "known_accuracy": 0.8411458333333334,
+      "unknown_recall": 0.42613636363636365,
+      "macro_f1": 0.7139546231203862,
+      "h_score": 0.5656874649729123,
+      "oscr": 0.7806729403409091,
+      "num_known": 384,
+      "num_unknown": 352
+    },
+    "prototype": {
+      "auroc": 0.8874918619791666,
+      "aupr_out": 0.8467929383847977,
+      "fpr95": 0.3515625,
+      "tau": 0.9312785090366711,
+      "known_accuracy": 0.8697916666666666,
+      "unknown_recall": 0.4772727272727273,
+      "macro_f1": 0.7576101051875337,
+      "h_score": 0.6163444639718804,
+      "oscr": 0.8412124171401515,
+      "num_known": 384,
+      "num_unknown": 352
+    },
+    "b2": {
+      "auroc": 0.8902439926609849,
+      "aupr_out": 0.86037590281737,
+      "fpr95": 0.3229166666666667,
+      "tau": 0.9363755487565497,
+      "known_accuracy": 0.8645833333333334,
+      "unknown_recall": 0.5,
+      "macro_f1": 0.7417708256323587,
+      "h_score": 0.6335877862595419,
+      "oscr": 0.8334147135416667,
+      "num_known": 384,
+      "num_unknown": 352
+    }
+  },
+  "delta_h_vs_best_local": 0.017243322287661567,
+  "fold_h_deltas": [
+    0.09153094130613026,
+    0.006908709063928931,
+    -0.15425573348113314,
+    0.08965700905463925
+  ],
+  "positive_inner_folds": 3,
+  "pairwise_agent_rescue": {
+    "waveform": {
+      "absolute_rate": 0.10190217391304347,
+      "other_failure_rate": 0.32051282051282054,
+      "count": 75
+    },
+    "prototype": {
+      "absolute_rate": 0.14130434782608695,
+      "other_failure_rate": 0.39543726235741444,
+      "count": 104
+    }
+  },
+  "complementarity": {
+    "unique_rescue": {
+      "prototype": {
+        "absolute_rate": 0.14130434782608695,
+        "baseline_failure_rate": 0.39543726235741444,
+        "count": 104
+      }
+    },
+    "oracle": {
+      "known_accuracy": 0.8932291666666666,
+      "unknown_recall": 0.6647727272727273,
+      "h_score": 0.7622511776325785,
+      "oscr": 0.8899665601325758
+    },
+    "baseline_success_rate": 0.6426630434782609,
+    "oracle_success_rate": 0.7839673913043478
+  },
+  "evidence": {
+    "source": "inner_episode_oof",
+    "registrable": true,
+    "folds": 4,
+    "sample_count": 736,
+    "sample_keys_unique": true,
+    "outer_test_used": false,
+    "formal_unknown_used": false
+  }
+}
