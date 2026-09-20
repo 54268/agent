@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "dataset": {
+    "name": "WiSig Full non-equalized",
+    "root": "data/WiSig",
+    "audit": "artifacts/audits/wisig_support_by_cell.json",
+    "sample_shape": [256, 2],
+    "normalization": "per_packet_complex_rms"
+  },
+  "reproducibility": {
+    "class_partition_seeds": [13, 42, 87],
+    "training_seeds": [0, 1, 2],
+    "selection_rule": "filter_by_min_aggregate_support_then_shuffle_sorted_tx_with_numpy_default_rng",
+    "persist_realized_manifest": true
+  },
+  "p3_domain_split": {
+    "train_dates": ["2021_03_01", "2021_03_08"],
+    "validation_dates": ["2021_03_15"],
+    "test_dates": ["2021_03_23"],
+    "train_receivers": ["8-8", "20-20", "18-19", "3-2", "3-19", "24-16", "13-7", "24-13", "7-7", "19-19", "23-5", "23-7", "19-1", "14-14", "23-3", "13-13", "1-1", "20-19", "23-1", "24-5"],
+    "validation_receivers": ["19-20", "19-2", "20-1", "8-7", "11-10"],
+    "test_receivers": ["13-14", "8-14", "1-19", "2-19", "18-2"]
+  },
+  "scale_sweep": [
+    {"id": "C50", "min_packets_each_split": 1600, "expected_tx": 50, "known": 35, "unknown": 15},
+    {"id": "C87", "min_packets_each_split": 800, "expected_tx": 87, "known": 60, "unknown": 27},
+    {"id": "C143", "min_packets_each_split": 400, "expected_tx": 143, "known": 100, "unknown": 43},
+    {"id": "C152", "min_packets_each_split": 200, "expected_tx": 152, "known": 106, "unknown": 46},
+    {"id": "C158", "min_packets_each_split": 100, "expected_tx": 158, "known": 110, "unknown": 48},
+    {"id": "F174", "min_packets_each_split": 1, "expected_tx": 174, "known": 120, "unknown": 54}
+  ],
+  "main_experiment": {
+    "protocol": "P3",
+    "scale": "F174",
+    "known": 120,
+    "unknown": 54,
+    "class_partition_seed": 42
+  },
+  "openness_sweep": [
+    {"known": 140, "unknown": 34, "openness": 0.0557},
+    {"known": 120, "unknown": 54, "openness": 0.0965},
+    {"known": 100, "unknown": 74, "openness": 0.1456},
+    {"known": 80, "unknown": 94, "openness": 0.2063},
+    {"known": 60, "unknown": 114, "openness": 0.2839}
+  ],
+  "few_shot_packets_per_known_tx": [5, 10, 20, 50, 100, 300],
+  "awgn_snr_db": [-10, -5, 0, 5, 10, 20, "clean"],
+  "strict_rules": {
+    "real_unknown_in_training": false,
+    "real_unknown_in_validation": false,
+    "group_split_keys": ["tx", "rx", "capture_date"],
+    "class_aware_sampling": true,
+    "report_macro_and_worst_group": true,
+    "oscr_uses_pre_rejection_predictions": true
+  }
+}
+

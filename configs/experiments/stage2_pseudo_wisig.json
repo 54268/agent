@@ -1,0 +1,28 @@
+{
+  "dataset": "wisig",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "stage1_checkpoint": "results/stage1/wisig_k40u20/model.pt",
+  "output_dir": "results/stage2/wisig_pseudo_boundary_seed42",
+  "seed": 42,
+  "extract_batch_size": 512,
+  "pseudo_val_ratio": 0.2,
+  "pseudo_unknown": {
+    "seed_ratio": 0.2,
+    "variations": 6,
+    "eta_min": 0.45,
+    "eta_max": 1.35,
+    "repel_weight": 0.35,
+    "jitter": 0.1,
+    "noise": 0.04,
+    "knn_k": 10,
+    "shell_low_quantile": 0.9,
+    "shell_high_quantile": 0.999
+  },
+  "boundary_hidden_dim": 192,
+  "boundary_dropout": 0.15,
+  "boundary_epochs": 35,
+  "boundary_batch_size": 512,
+  "boundary_lr": 0.001,
+  "boundary_weight_decay": 0.0001,
+  "class_aux_weight": 0.25
+}

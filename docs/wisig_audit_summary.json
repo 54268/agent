@@ -1,0 +1,80 @@
+{
+  "audit_date": "2026-09-15",
+  "dataset_root": "D:/learn_pytorch/笔记/多智能体/Multi-Agent OS-SEI/data/WiSig",
+  "scan_mode": "read_only_full_pickle_metadata_scan",
+  "physical_pkl_files": 158,
+  "unique_filename_files": 152,
+  "duplicate_extra_copies": 6,
+  "unique_pkl_gib": 36.484,
+  "duplicate_pkl_gib": 1.629,
+  "zip_gib": 9.048,
+  "dataset_on_disk_gib": 47.161,
+  "union_tx_count": 174,
+  "union_rx_count": 41,
+  "capture_dates": [
+    "2021_03_01",
+    "2021_03_08",
+    "2021_03_15",
+    "2021_03_23"
+  ],
+  "total_packets": 9563785,
+  "schema": {
+    "top_level_keys": ["data", "node_list"],
+    "block_dtype": "float64",
+    "sample_shape": [256, 2]
+  },
+  "by_date": {
+    "2021_03_01": {"receiver_files": 32, "nonempty_tx": 174, "packets": 1937019},
+    "2021_03_08": {"receiver_files": 40, "nonempty_tx": 174, "packets": 2478993},
+    "2021_03_15": {"receiver_files": 40, "nonempty_tx": 174, "packets": 2501683},
+    "2021_03_23": {"receiver_files": 40, "nonempty_tx": 174, "packets": 2646090}
+  },
+  "duplicate_files_sha256_verified_equal": [
+    "dataset_2021_03_01_node13-13.pkl",
+    "dataset_2021_03_01_node18-2.pkl",
+    "dataset_2021_03_01_node19-19.pkl",
+    "dataset_2021_03_01_node19-20.pkl",
+    "dataset_2021_03_01_node24-5.pkl",
+    "dataset_2021_03_01_node8-8.pkl"
+  ],
+  "balanced_core": {
+    "minimum_packets_per_tx_rx_day": 400,
+    "packets_after_capping": 537600,
+    "transmitters": [
+      "20-15", "14-7", "14-10", "8-20", "6-15", "8-3", "8-18",
+      "16-16", "20-12", "10-11", "7-14", "15-1", "20-7", "7-11",
+      "11-7", "3-18", "1-18", "16-1", "4-1", "1-16", "5-5",
+      "17-11", "7-10", "10-7", "11-1", "3-13", "13-3", "17-10"
+    ],
+    "receivers": [
+      "1-1", "1-19", "18-2", "19-19", "19-2", "19-20",
+      "2-19", "20-1", "20-19", "3-19", "7-7", "8-8"
+    ]
+  },
+  "frozen_seed": 42,
+  "known_tx": [
+    "14-10", "20-7", "7-11", "7-10", "3-13", "11-7", "8-3", "7-14",
+    "16-1", "3-18", "4-1", "15-1", "13-3", "5-5", "10-7", "1-16"
+  ],
+  "unknown_tx": [
+    "20-15", "6-15", "17-10", "16-16", "20-12", "8-20",
+    "10-11", "11-1", "8-18", "1-18", "17-11", "14-7"
+  ],
+  "receiver_split": {
+    "train": ["1-1", "20-1", "2-19", "3-19", "8-8", "19-19", "19-20", "18-2"],
+    "validation": ["19-2", "7-7"],
+    "test": ["1-19", "20-19"]
+  },
+  "p3_expected_counts": {
+    "train_known": 102400,
+    "val_known": 12800,
+    "test_known": 12800,
+    "test_unknown": 9600
+  },
+  "notes": [
+    "The source files are full-dataset per-date/per-receiver pickles, not a compact SingleDay.pkl payload.",
+    "The local files are non-equalized; no pkl_wifi_eq files were found.",
+    "ZIP archives and duplicate extracted pickles must be ignored by the future manifest builder.",
+    "No source files were modified or deleted during the audit."
+  ]
+}

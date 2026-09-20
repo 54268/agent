@@ -1,0 +1,11 @@
+{
+  "base_config": "configs/experiments/stage7_screen_v4_oracle_k10u6.json",
+  "dataset": "oracle",
+  "name": "stage7_screen_v5_oracle_k10u6",
+  "method_profile": "stage7_g0_v5_agent_competence_calibration",
+  "output_dir": "results/stage7_screen_v5/oracle_k10u6",
+  "paired_config": "configs/experiments/stage7_screen_v5_wisig_k40u20.json",
+  "comparison_target": "stage7_screen_v4_oracle_nested_g0",
+  "local_pretrain_competence_weight": 0.0,
+  "competence_weight": 0.25
+}

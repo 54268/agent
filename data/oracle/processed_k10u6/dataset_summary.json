@@ -1,0 +1,116 @@
+{
+  "dataset": "oracle_kri16_demod",
+  "known_classes": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "7",
+    "9",
+    "13",
+    "14",
+    "15"
+  ],
+  "unknown_classes": [
+    "17",
+    "18",
+    "19",
+    "25",
+    "26",
+    "32"
+  ],
+  "segment_len": 256,
+  "max_per_label": 4000,
+  "seed": 42,
+  "num_train_known": 28000,
+  "num_val_known": 4000,
+  "num_test_known": 8000,
+  "num_test_unknown": 24000,
+  "signal_shape": [
+    2,
+    256
+  ],
+  "records": [
+    {
+      "label": "13",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "14",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "15",
+      "datatype": "cf64_le",
+      "num_windows": 5282
+    },
+    {
+      "label": "17",
+      "datatype": "cf64_le",
+      "num_windows": 6705
+    },
+    {
+      "label": "18",
+      "datatype": "cf64_le",
+      "num_windows": 8344
+    },
+    {
+      "label": "19",
+      "datatype": "cf64_le",
+      "num_windows": 8538
+    },
+    {
+      "label": "1",
+      "datatype": "cf64_le",
+      "num_windows": 8581
+    },
+    {
+      "label": "25",
+      "datatype": "cf64_le",
+      "num_windows": 6943
+    },
+    {
+      "label": "26",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "2",
+      "datatype": "cf64_le",
+      "num_windows": 7848
+    },
+    {
+      "label": "32",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "3",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "4",
+      "datatype": "cf64_le",
+      "num_windows": 9854
+    },
+    {
+      "label": "5",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    },
+    {
+      "label": "7",
+      "datatype": "cf64_le",
+      "num_windows": 10587
+    },
+    {
+      "label": "9",
+      "datatype": "cf64_le",
+      "num_windows": 10759
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# === Large raw datasets (do not upload) ===
+data/WiSig/pkl_wifi_2021_03_01/
+data/WiSig/pkl_wifi_2021_03_08/
+data/WiSig/pkl_wifi_2021_03_15/
+data/WiSig/pkl_wifi_2021_03_23/
+data/oracle/KRI-16IQImbalances-DemodulatedData/
+
+# === Experiment outputs & third-party reference code ===
+results/
+多智能体GitHub/
+
+# === Python / IDE / OS ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+.DS_Store
+Thumbs.db

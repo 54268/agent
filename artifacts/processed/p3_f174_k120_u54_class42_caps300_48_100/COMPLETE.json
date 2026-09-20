@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "splits": {
+    "train": {
+      "samples": 36000,
+      "classes": 120,
+      "target_per_tx": 300,
+      "source_cells": 3815
+    },
+    "validation": {
+      "samples": 5760,
+      "classes": 120,
+      "target_per_tx": 48,
+      "source_cells": 471
+    },
+    "test_known": {
+      "samples": 12000,
+      "classes": 120,
+      "target_per_tx": 100,
+      "source_cells": 576
+    },
+    "test_unknown": {
+      "samples": 5400,
+      "classes": 54,
+      "target_per_tx": 100,
+      "source_cells": 257
+    }
+  }
+}

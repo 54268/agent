@@ -1,0 +1,32 @@
+{
+  "dataset": "wisig",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "stage1_checkpoint": "results/stage1/multiseed/wisig/seed42/model.pt",
+  "no_communication_checkpoint": "results/stage3/multiseed/wisig/seed42/no_communication.pt",
+  "communication_checkpoint": "results/stage3/multiseed/wisig/seed42/communication.pt",
+  "output_dir": "results/stage4/wisig_router_seed42",
+  "seed": 42,
+  "extract_batch_size": 512,
+  "pseudo_val_ratio": 0.2,
+  "pseudo_unknown": {
+    "seed_ratio": 0.2,
+    "variations": 6,
+    "eta_min": 0.45,
+    "eta_max": 1.35,
+    "repel_weight": 0.35,
+    "jitter": 0.1,
+    "noise": 0.04,
+    "knn_k": 10,
+    "shell_low_quantile": 0.9,
+    "shell_high_quantile": 0.999
+  },
+  "router_hidden_dim": 64,
+  "router_epochs": 35,
+  "router_batch_size": 512,
+  "router_lr": 0.0005,
+  "router_weight_decay": 0.0001,
+  "router_class_weight": 0.7,
+  "router_balance_weight": 0.02,
+  "router_entropy_floor": 0.35,
+  "router_entropy_weight": 0.01
+}

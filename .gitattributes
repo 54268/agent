@@ -1,0 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl filter=lfs diff=lfs merge=lfs -text

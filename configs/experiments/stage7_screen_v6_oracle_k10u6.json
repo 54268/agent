@@ -1,0 +1,10 @@
+{
+  "base_config": "configs/experiments/stage7_screen_v5_oracle_k10u6.json",
+  "dataset": "oracle",
+  "name": "stage7_screen_v6_rngfixed_oracle_k10u6",
+  "method_profile": "stage7_g0_v6_independent_competence_head_rng_isolated",
+  "output_dir": "results/stage7_screen_v6_rngfixed/oracle_k10u6",
+  "paired_config": "configs/experiments/stage7_screen_v6_wisig_k40u20.json",
+  "comparison_target": "stage7_screen_v5_oracle_nested_g0",
+  "competence_mode": "independent_head"
+}

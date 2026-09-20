@@ -1,0 +1,10 @@
+{
+  "base_config": "configs/experiments/stage7_screen_v5_wisig_k40u20.json",
+  "dataset": "wisig",
+  "name": "stage7_screen_v6_rngfixed_wisig_k40u20",
+  "method_profile": "stage7_g0_v6_independent_competence_head_rng_isolated",
+  "output_dir": "results/stage7_screen_v6_rngfixed/wisig_k40u20",
+  "paired_config": "configs/experiments/stage7_screen_v6_oracle_k10u6.json",
+  "comparison_target": "stage7_screen_v5_wisig_nested_g0",
+  "competence_mode": "independent_head"
+}
