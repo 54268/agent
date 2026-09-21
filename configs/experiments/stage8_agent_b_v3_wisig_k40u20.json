@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/experiments/stage8_agent_b_v3_base.json",
+  "dataset": "wisig",
+  "name": "stage8_agent_b_v3_wisig_registered_not_run",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "output_dir": "results/stage8_agent_b_v3_quick/wisig_not_run",
+  "paired_config": "configs/experiments/stage8_agent_b_v3_oracle_k10u6.json"
+}

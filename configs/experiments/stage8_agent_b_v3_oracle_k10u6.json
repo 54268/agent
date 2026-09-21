@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/experiments/stage8_agent_b_v3_base.json",
+  "dataset": "oracle",
+  "name": "stage8_agent_b_v3_oracle_fold0",
+  "oracle_root": "data/oracle/processed_k10u6",
+  "output_dir": "results/stage8_agent_b_v3_quick/oracle_fold0",
+  "paired_config": "configs/experiments/stage8_agent_b_v3_wisig_k40u20.json"
+}

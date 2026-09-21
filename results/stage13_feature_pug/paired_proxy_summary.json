@@ -1,0 +1,138 @@
+{
+  "stage": "stage13_inherited_abc_feature_certified_pug",
+  "formal_unknown_used": false,
+  "datasets": {
+    "oracle": {
+      "test_proxy_means": {
+        "B0_stage5_full": {
+          "h_score": 0.9061796069990355,
+          "unknown_recall": 0.9183749999999999,
+          "known_accuracy": 0.8956875,
+          "auroc": 0.957907392578125,
+          "oscr": 0.9570999023437501,
+          "fpr95": 0.15550000000000003
+        },
+        "B1_stage5_plus_c": {
+          "h_score": 0.9082779601441633,
+          "unknown_recall": 0.921875,
+          "known_accuracy": 0.89653125,
+          "auroc": 0.9598856738281251,
+          "oscr": 0.9589971484375,
+          "fpr95": 0.146125
+        },
+        "B2_raw_feature_pug": {
+          "h_score": 0.9100620092592651,
+          "unknown_recall": 0.9251249999999999,
+          "known_accuracy": 0.8970312500000001,
+          "auroc": 0.9613380859374999,
+          "oscr": 0.9604269531249999,
+          "fpr95": 0.13953125
+        },
+        "B3_certified_feature_pug": {
+          "h_score": 0.9101930981297872,
+          "unknown_recall": 0.9255000000000001,
+          "known_accuracy": 0.89690625,
+          "auroc": 0.961573369140625,
+          "oscr": 0.9606709179687499,
+          "fpr95": 0.13834375000000002
+        },
+        "B4_utility_gate": {
+          "h_score": 0.9101930981297872,
+          "unknown_recall": 0.9255000000000001,
+          "known_accuracy": 0.89690625,
+          "auroc": 0.961573369140625,
+          "oscr": 0.9606709179687499,
+          "fpr95": 0.13834375000000002
+        },
+        "Old_stage12_iq_pug": {
+          "h_score": 0.9106454593148513,
+          "unknown_recall": 0.9262499999999999,
+          "known_accuracy": 0.8969687500000001,
+          "auroc": 0.9617222265625001,
+          "oscr": 0.9608025781249999,
+          "fpr95": 0.14034375
+        }
+      },
+      "pug_actions": {
+        "USE": 4,
+        "DOWNWEIGHT": 0,
+        "IGNORE": 1
+      },
+      "high_conf_agree_proxy": {
+        "count": 4063,
+        "stage5_rejected": 3495,
+        "c_or_certified_new_rescue": 53,
+        "lost_stage5_rejection": 6,
+        "stage5_plus_c_new_rescue": 28,
+        "certified_incremental_rescue_over_c": 26
+      },
+      "known_incremental_false_reject": 107
+    },
+    "wisig": {
+      "test_proxy_means": {
+        "B0_stage5_full": {
+          "h_score": 0.8931418835492198,
+          "unknown_recall": 0.9114130434782609,
+          "known_accuracy": 0.8766304347826086,
+          "auroc": 0.9471243557271976,
+          "oscr": 0.9023048905659262,
+          "fpr95": 0.14626358695652172
+        },
+        "B1_stage5_plus_c": {
+          "h_score": 0.8964847573607914,
+          "unknown_recall": 0.9168478260869565,
+          "known_accuracy": 0.8780570652173914,
+          "auroc": 0.9488568311377599,
+          "oscr": 0.9036686628662572,
+          "fpr95": 0.13967391304347826
+        },
+        "B2_raw_feature_pug": {
+          "h_score": 0.8964879964683364,
+          "unknown_recall": 0.9168478260869566,
+          "known_accuracy": 0.8780570652173914,
+          "auroc": 0.9486415812559074,
+          "oscr": 0.9036919231450851,
+          "fpr95": 0.13960597826086957
+        },
+        "B3_certified_feature_pug": {
+          "h_score": 0.8965281030439268,
+          "unknown_recall": 0.9165760869565218,
+          "known_accuracy": 0.8785326086956522,
+          "auroc": 0.9486377045427694,
+          "oscr": 0.9037334593572778,
+          "fpr95": 0.1387907608695652
+        },
+        "B4_utility_gate": {
+          "h_score": 0.8965281030439268,
+          "unknown_recall": 0.9165760869565218,
+          "known_accuracy": 0.8785326086956522,
+          "auroc": 0.9486377045427694,
+          "oscr": 0.9037334593572778,
+          "fpr95": 0.1387907608695652
+        },
+        "Old_stage12_iq_pug": {
+          "h_score": 0.8971441257414725,
+          "unknown_recall": 0.9171195652173914,
+          "known_accuracy": 0.879008152173913,
+          "auroc": 0.9501942048676748,
+          "oscr": 0.9044389288456994,
+          "fpr95": 0.13532608695652176
+        }
+      },
+      "pug_actions": {
+        "USE": 4,
+        "DOWNWEIGHT": 0,
+        "IGNORE": 1
+      },
+      "high_conf_agree_proxy": {
+        "count": 1164,
+        "stage5_rejected": 887,
+        "c_or_certified_new_rescue": 9,
+        "lost_stage5_rejection": 6,
+        "stage5_plus_c_new_rescue": 9,
+        "certified_incremental_rescue_over_c": 1
+      },
+      "known_incremental_false_reject": 36
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "stage": "stage12_certified_iq_pug_proxy_probe",
+  "formal_unknown_used": false,
+  "datasets": {
+    "oracle": {
+      "test_proxy_means": {
+        "stage5_openmax_component": {
+          "h_score": 0.7014580553351111,
+          "auroc": 0.8454742431640625,
+          "unknown_recall": 0.60625,
+          "known_accuracy": 0.9390625,
+          "oscr": 0.8436737060546875,
+          "fpr95": 0.534375
+        },
+        "stage5_plus_c_lite": {
+          "h_score": 0.7044067827070034,
+          "auroc": 0.85196533203125,
+          "unknown_recall": 0.609375,
+          "known_accuracy": 0.93984375,
+          "oscr": 0.84979248046875,
+          "fpr95": 0.5171875
+        },
+        "stage5_plus_c_full_all": {
+          "h_score": 0.7049707878903695,
+          "auroc": 0.85859375,
+          "unknown_recall": 0.6109375,
+          "known_accuracy": 0.9390625,
+          "oscr": 0.856365966796875,
+          "fpr95": 0.494140625
+        },
+        "stage5_plus_c_full_routed": {
+          "h_score": 0.7049707878903695,
+          "auroc": 0.8553268432617187,
+          "unknown_recall": 0.6109375,
+          "known_accuracy": 0.9390625,
+          "oscr": 0.853106689453125,
+          "fpr95": 0.50546875
+        },
+        "stage5_plus_c_raw_pug": {
+          "h_score": 0.7108625018690329,
+          "auroc": 0.8651519775390625,
+          "unknown_recall": 0.6171875,
+          "known_accuracy": 0.940625,
+          "oscr": 0.86282958984375,
+          "fpr95": 0.458984375
+        },
+        "stage5_plus_c_certified_pug": {
+          "h_score": 0.7167537407304378,
+          "auroc": 0.8640411376953125,
+          "unknown_recall": 0.621875,
+          "known_accuracy": 0.94140625,
+          "oscr": 0.8617340087890625,
+          "fpr95": 0.46171875
+        }
+      },
+      "utility_selected_test_proxy_mean": {
+        "h_score": 0.7128981935668988,
+        "auroc": 0.86285400390625,
+        "unknown_recall": 0.61875,
+        "known_accuracy": 0.93828125,
+        "oscr": 0.86060791015625,
+        "fpr95": 0.4640625
+      },
+      "pug_use_fold_count": 3,
+      "total_generated": 1440,
+      "total_certified": 326,
+      "total_hard_certified": 147
+    },
+    "wisig": {
+      "test_proxy_means": {
+        "stage5_openmax_component": {
+          "h_score": 0.75677134170895,
+          "auroc": 0.8350635528564453,
+          "unknown_recall": 0.658984375,
+          "known_accuracy": 0.90009765625,
+          "oscr": 0.7820968627929688,
+          "fpr95": 0.81103515625
+        },
+        "stage5_plus_c_lite": {
+          "h_score": 0.7551426283191827,
+          "auroc": 0.8448174476623536,
+          "unknown_recall": 0.656640625,
+          "known_accuracy": 0.90048828125,
+          "oscr": 0.7919456481933593,
+          "fpr95": 0.77666015625
+        },
+        "stage5_plus_c_full_all": {
+          "h_score": 0.756815691019017,
+          "auroc": 0.8510744094848632,
+          "unknown_recall": 0.65859375,
+          "known_accuracy": 0.9009765625,
+          "oscr": 0.7982698440551758,
+          "fpr95": 0.740234375
+        },
+        "stage5_plus_c_full_routed": {
+          "h_score": 0.756815691019017,
+          "auroc": 0.8478291511535645,
+          "unknown_recall": 0.65859375,
+          "known_accuracy": 0.9009765625,
+          "oscr": 0.7950677871704102,
+          "fpr95": 0.74814453125
+        },
+        "stage5_plus_c_raw_pug": {
+          "h_score": 0.7589506222971614,
+          "auroc": 0.8559996604919433,
+          "unknown_recall": 0.661328125,
+          "known_accuracy": 0.901171875,
+          "oscr": 0.8031116485595703,
+          "fpr95": 0.70009765625
+        },
+        "stage5_plus_c_certified_pug": {
+          "h_score": 0.7602255468006246,
+          "auroc": 0.852330493927002,
+          "unknown_recall": 0.66328125,
+          "known_accuracy": 0.90107421875,
+          "oscr": 0.7992450714111328,
+          "fpr95": 0.73515625
+        }
+      },
+      "utility_selected_test_proxy_mean": {
+        "h_score": 0.7599818877079241,
+        "auroc": 0.8503815650939941,
+        "unknown_recall": 0.662890625,
+        "known_accuracy": 0.901171875,
+        "oscr": 0.7973751068115235,
+        "fpr95": 0.73896484375
+      },
+      "pug_use_fold_count": 4,
+      "total_generated": 5760,
+      "total_certified": 2450,
+      "total_hard_certified": 437
+    }
+  }
+}

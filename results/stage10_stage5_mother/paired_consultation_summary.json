@@ -1,0 +1,514 @@
+{
+  "stage": "stage10_stage5_mother_consultation_feasibility",
+  "method_config": {
+    "method_profile": "stage5_v4_frozen_mother_candidate_consultation_v1",
+    "seed": 42,
+    "partition_seed": 2026,
+    "outer_fold": 0,
+    "batch_size": 128,
+    "train_samples_per_class": 128,
+    "calibration_samples_per_class": 64,
+    "test_samples_per_class": 64,
+    "certificate_scale": 0.25,
+    "query_budget": 0.25,
+    "query_cost": 0.01,
+    "known_acceptance": 0.95,
+    "device": "auto"
+  },
+  "datasets": {
+    "oracle": {
+      "stage": "stage10_stage5_mother_consultation_feasibility",
+      "dataset": "oracle",
+      "seed": 42,
+      "outer_fold": 0,
+      "device": "cuda",
+      "support_classes": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "proxy_unknown_classes": [
+        1,
+        9
+      ],
+      "formal_unknown_used": false,
+      "formal_unknown_sample_count_not_accessed": 24000,
+      "sample_counts": {
+        "train": 1024,
+        "calibration": 512,
+        "test_known": 512,
+        "test_proxy_unknown": 128
+      },
+      "mother": {
+        "checkpoint": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage5_unified_v4\\oracle_k10u6\\lco\\folds\\fold0\\experts.pt",
+        "sha256": "a4b1a702b04611a189e84863f5cab2141196a0ae9c0cce4033ba735a88cf6a3d",
+        "best_epoch": 30
+      },
+      "provenance": {
+        "config_path": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\configs\\experiments\\stage10_stage5_mother_oracle.json",
+        "config_sha256": "bfbee6a2f92c6a909b6734b08b9849b5ceae89bdbebe5ee3301f8212a11290f8",
+        "mother_config_sha256": "de773a34b6cebb8902aaa01536619c023bbf7897fe752ffaf0f9c634b6d759f8",
+        "git_head": "a10f9f1379261e08418465a0b701d5734e03a883",
+        "partition_seed": 2026
+      },
+      "view_usage_known": {
+        "raw": 0.23681971430778503,
+        "spectral": 7.233815267682076e-05,
+        "envelope_phase": 0.08021597564220428,
+        "difference_iq": 0.1302649974822998,
+        "complex_iq": 0.5526269674301147
+      },
+      "view_usage_proxy_unknown": {
+        "raw": 0.1474742293357849,
+        "spectral": 4.3526553781703115e-05,
+        "envelope_phase": 0.08731449395418167,
+        "difference_iq": 0.3370975852012634,
+        "complex_iq": 0.42807015776634216
+      },
+      "identity_local_accuracy": 0.990234375,
+      "geometry_local_accuracy": 0.998046875,
+      "identity_only_correct": 1,
+      "geometry_only_correct": 5,
+      "pair_truth_coverage": 0.998046875,
+      "responder_pair_accuracy_when_answerable": 1.0,
+      "calibration_counterfactual_gain": {
+        "mean": 0.014128814451396465,
+        "positive_fraction": 0.697265625,
+        "query_policy_threshold": 0.01
+      },
+      "conditions": {
+        "no_communication": {
+          "known_accuracy": 0.990234375,
+          "known_nll": 0.03409699723124504,
+          "query_fraction": 0.0,
+          "query_count": 0,
+          "candidate_flips": 0,
+          "rescues": 0,
+          "harms": 0,
+          "changed_score_samples": 0
+        },
+        "random_query": {
+          "known_accuracy": 0.990234375,
+          "known_nll": 0.034053459763526917,
+          "query_fraction": 0.158203125,
+          "query_count": 81,
+          "candidate_flips": 0,
+          "rescues": 0,
+          "harms": 0,
+          "changed_score_samples": 81
+        },
+        "confidence_central_query": {
+          "known_accuracy": 0.994140625,
+          "known_nll": 0.014247988350689411,
+          "query_fraction": 0.158203125,
+          "query_count": 81,
+          "candidate_flips": 2,
+          "rescues": 2,
+          "harms": 0,
+          "changed_score_samples": 81
+        },
+        "agent_initiated_query": {
+          "known_accuracy": 0.994140625,
+          "known_nll": 0.014251064509153366,
+          "query_fraction": 0.158203125,
+          "query_count": 81,
+          "candidate_flips": 2,
+          "rescues": 2,
+          "harms": 0,
+          "changed_score_samples": 81
+        },
+        "always_query": {
+          "known_accuracy": 0.994140625,
+          "known_nll": 0.014246530830860138,
+          "query_fraction": 1.0,
+          "query_count": 512,
+          "candidate_flips": 2,
+          "rescues": 2,
+          "harms": 0,
+          "changed_score_samples": 512
+        }
+      },
+      "interventions": {
+        "message_shuffle": {
+          "known_accuracy": 0.9921875,
+          "known_nll": 0.03336833417415619,
+          "query_fraction": 0.158203125,
+          "query_count": 81,
+          "candidate_flips": 1,
+          "rescues": 1,
+          "harms": 0,
+          "changed_score_samples": 19
+        },
+        "wrong_candidate_pair": {
+          "known_accuracy": 0.990234375,
+          "known_nll": 0.04454590752720833,
+          "query_fraction": 0.158203125,
+          "query_count": 81,
+          "candidate_flips": 1,
+          "rescues": 0,
+          "harms": 0,
+          "changed_score_samples": 81
+        }
+      },
+      "open_set_proxy_evaluation": {
+        "identity_msp_no_communication": {
+          "threshold": 0.0003886997699737549,
+          "known_accept_rate": 0.927734375,
+          "known_accuracy": 0.927734375,
+          "unknown_recall": 0.5859375,
+          "h_score": 0.7182459677419355,
+          "auroc": 0.847137451171875
+        },
+        "examiner_no_communication": {
+          "threshold": 0.8833984285593033,
+          "known_accept_rate": 0.9296875,
+          "known_accuracy": 0.9296875,
+          "unknown_recall": 0.9296875,
+          "h_score": 0.9296875,
+          "auroc": 0.9797286987304688
+        },
+        "examiner_active_query": {
+          "threshold": 0.8755859285593033,
+          "known_accept_rate": 0.939453125,
+          "known_accuracy": 0.939453125,
+          "unknown_recall": 0.9375,
+          "h_score": 0.9384755463059313,
+          "auroc": 0.9821243286132812
+        },
+        "examiner_static_mean_fusion": {
+          "threshold": 0.9166666865348816,
+          "known_accept_rate": 0.92578125,
+          "known_accuracy": 0.92578125,
+          "unknown_recall": 0.9375,
+          "h_score": 0.9316037735849056,
+          "auroc": 0.98779296875
+        },
+        "examiner_reason_counts_known": {
+          "low_identity_confidence": 107,
+          "identity_entropy": 5,
+          "identity_prototype_distance": 67,
+          "geometry_candidate_distance": 65,
+          "low_geometry_candidate_confidence": 46,
+          "low_view_agreement": 222
+        },
+        "examiner_reason_counts_proxy_unknown": {
+          "low_identity_confidence": 69,
+          "identity_entropy": 0,
+          "identity_prototype_distance": 21,
+          "geometry_candidate_distance": 33,
+          "low_geometry_candidate_confidence": 0,
+          "low_view_agreement": 5
+        },
+        "active_query_changed_open_risk_known": 73,
+        "active_query_changed_open_risk_proxy_unknown": 40
+      },
+      "live_runtime_replay": {
+        "samples": 128,
+        "matches_counterfactual_cache": true,
+        "public_query_count": 26
+      },
+      "static_mean_fusion": {
+        "known_accuracy": 1.0,
+        "known_nll": 0.0033917988184839487,
+        "query_fraction": 0.0,
+        "query_count": 0
+      },
+      "proxy_unknown_query_fraction": 0.7109375,
+      "query_policy_predicted_gain_mean": 0.01668662987817955,
+      "limitations": [
+        "Stage-5 frozen fold experts; only a new pair verifier and A-owned query policy are fitted",
+        "B counterfactual outputs are cached for fair interventions; deployment must execute B only on queried rows",
+        "C uses public scalar tails only; no reconstruction/consistency tools yet",
+        "Unknown results are outer-fold proxy Unknown, never formal Unknown",
+        "One seed and one outer fold; not a formal multi-seed result"
+      ],
+      "consultation_gate": {
+        "passed": false,
+        "required": [
+          "positive unique B rescue",
+          "active accuracy > no communication",
+          "active NLL < no communication",
+          "active accuracy > random",
+          "active accuracy > confidence selector",
+          "correct message > shuffle"
+        ]
+      },
+      "feasibility_checks": {
+        "correct_message_beats_shuffle_accuracy": true,
+        "correct_message_beats_wrong_pair_accuracy": true,
+        "open_examiner_beats_identity_msp_auroc": true,
+        "active_open_h_beats_static_fusion": true,
+        "active_open_auroc_beats_static_fusion": false,
+        "live_runtime_matches_cache": true
+      }
+    },
+    "wisig": {
+      "stage": "stage10_stage5_mother_consultation_feasibility",
+      "dataset": "wisig",
+      "seed": 42,
+      "outer_fold": 0,
+      "device": "cuda",
+      "support_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39
+      ],
+      "proxy_unknown_classes": [
+        9,
+        11,
+        12,
+        21,
+        24,
+        25,
+        30,
+        38
+      ],
+      "formal_unknown_used": false,
+      "formal_unknown_sample_count_not_accessed": 4800,
+      "sample_counts": {
+        "train": 4096,
+        "calibration": 1440,
+        "test_known": 2048,
+        "test_proxy_unknown": 512
+      },
+      "mother": {
+        "checkpoint": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage5_unified_v4\\wisig_k40u20\\lco\\folds\\fold0\\experts.pt",
+        "sha256": "1a862d2317665dab3b1afc0a7d72e310799b974bf3cc06ef33cf3dd970e7d891",
+        "best_epoch": 14
+      },
+      "provenance": {
+        "config_path": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\configs\\experiments\\stage10_stage5_mother_wisig.json",
+        "config_sha256": "240cd5a4398acf6b6abe13743794d2178a99057f8b9897d7a16e01a22c3e3fdf",
+        "mother_config_sha256": "00fd0f15929fcb75e6f3c660da8c3fa7c0bea9dbc93dd39a904e88fa558a727a",
+        "git_head": "a10f9f1379261e08418465a0b701d5734e03a883",
+        "partition_seed": 2026
+      },
+      "view_usage_known": {
+        "raw": 0.018190084025263786,
+        "spectral": 0.004463878460228443,
+        "envelope_phase": 0.038763001561164856,
+        "difference_iq": 0.02422907017171383,
+        "complex_iq": 0.9143539667129517
+      },
+      "view_usage_proxy_unknown": {
+        "raw": 0.06296007335186005,
+        "spectral": 0.039386652410030365,
+        "envelope_phase": 0.12689495086669922,
+        "difference_iq": 0.14181241393089294,
+        "complex_iq": 0.6289459466934204
+      },
+      "identity_local_accuracy": 0.908203125,
+      "geometry_local_accuracy": 0.92431640625,
+      "identity_only_correct": 15,
+      "geometry_only_correct": 48,
+      "pair_truth_coverage": 0.92626953125,
+      "responder_pair_accuracy_when_answerable": 0.9884027411702688,
+      "calibration_counterfactual_gain": {
+        "mean": 0.028290102258324623,
+        "positive_fraction": 0.9444444444444444,
+        "query_policy_threshold": 0.015709881780093478
+      },
+      "conditions": {
+        "no_communication": {
+          "known_accuracy": 0.908203125,
+          "known_nll": 0.37332189083099365,
+          "query_fraction": 0.0,
+          "query_count": 0,
+          "candidate_flips": 0,
+          "rescues": 0,
+          "harms": 0,
+          "changed_score_samples": 0
+        },
+        "random_query": {
+          "known_accuracy": 0.912109375,
+          "known_nll": 0.36835920810699463,
+          "query_fraction": 0.25830078125,
+          "query_count": 529,
+          "candidate_flips": 22,
+          "rescues": 11,
+          "harms": 3,
+          "changed_score_samples": 529
+        },
+        "confidence_central_query": {
+          "known_accuracy": 0.9169921875,
+          "known_nll": 0.35195034742355347,
+          "query_fraction": 0.25830078125,
+          "query_count": 529,
+          "candidate_flips": 88,
+          "rescues": 27,
+          "harms": 9,
+          "changed_score_samples": 529
+        },
+        "agent_initiated_query": {
+          "known_accuracy": 0.91748046875,
+          "known_nll": 0.35177528858184814,
+          "query_fraction": 0.25830078125,
+          "query_count": 529,
+          "candidate_flips": 73,
+          "rescues": 25,
+          "harms": 6,
+          "changed_score_samples": 529
+        },
+        "always_query": {
+          "known_accuracy": 0.9169921875,
+          "known_nll": 0.35220587253570557,
+          "query_fraction": 1.0,
+          "query_count": 2048,
+          "candidate_flips": 88,
+          "rescues": 27,
+          "harms": 9,
+          "changed_score_samples": 2048
+        }
+      },
+      "interventions": {
+        "message_shuffle": {
+          "known_accuracy": 0.90869140625,
+          "known_nll": 0.37660670280456543,
+          "query_fraction": 0.25830078125,
+          "query_count": 529,
+          "candidate_flips": 14,
+          "rescues": 2,
+          "harms": 1,
+          "changed_score_samples": 130
+        },
+        "wrong_candidate_pair": {
+          "known_accuracy": 0.90673828125,
+          "known_nll": 0.3707174062728882,
+          "query_fraction": 0.25830078125,
+          "query_count": 529,
+          "candidate_flips": 69,
+          "rescues": 5,
+          "harms": 8,
+          "changed_score_samples": 529
+        }
+      },
+      "open_set_proxy_evaluation": {
+        "identity_msp_no_communication": {
+          "threshold": 0.871787017583847,
+          "known_accept_rate": 0.9521484375,
+          "known_accuracy": 0.90087890625,
+          "unknown_recall": 0.048828125,
+          "h_score": 0.09263536311053984,
+          "auroc": 0.8202762603759766
+        },
+        "examiner_no_communication": {
+          "threshold": 0.9284505397081374,
+          "known_accept_rate": 0.95458984375,
+          "known_accuracy": 0.89794921875,
+          "unknown_recall": 0.404296875,
+          "h_score": 0.5575567702474691,
+          "auroc": 0.9065289497375488
+        },
+        "examiner_active_query": {
+          "threshold": 0.9271484196186065,
+          "known_accept_rate": 0.947265625,
+          "known_accuracy": 0.90478515625,
+          "unknown_recall": 0.4453125,
+          "h_score": 0.5968636980108499,
+          "auroc": 0.9073100090026855
+        },
+        "examiner_static_mean_fusion": {
+          "threshold": 0.9142578124999998,
+          "known_accept_rate": 0.95068359375,
+          "known_accuracy": 0.90673828125,
+          "unknown_recall": 0.56640625,
+          "h_score": 0.6972597986410342,
+          "auroc": 0.9279804229736328
+        },
+        "examiner_reason_counts_known": {
+          "low_identity_confidence": 35,
+          "identity_entropy": 7,
+          "identity_prototype_distance": 162,
+          "geometry_candidate_distance": 81,
+          "low_geometry_candidate_confidence": 98,
+          "low_view_agreement": 1665
+        },
+        "examiner_reason_counts_proxy_unknown": {
+          "low_identity_confidence": 6,
+          "identity_entropy": 1,
+          "identity_prototype_distance": 24,
+          "geometry_candidate_distance": 129,
+          "low_geometry_candidate_confidence": 60,
+          "low_view_agreement": 292
+        },
+        "active_query_changed_open_risk_known": 491,
+        "active_query_changed_open_risk_proxy_unknown": 354
+      },
+      "live_runtime_replay": {
+        "samples": 128,
+        "matches_counterfactual_cache": true,
+        "public_query_count": 32
+      },
+      "static_mean_fusion": {
+        "known_accuracy": 0.92529296875,
+        "known_nll": 0.29496851563453674,
+        "query_fraction": 0.0,
+        "query_count": 0
+      },
+      "proxy_unknown_query_fraction": 0.88671875,
+      "query_policy_predicted_gain_mean": 0.027494727137952257,
+      "limitations": [
+        "Stage-5 frozen fold experts; only a new pair verifier and A-owned query policy are fitted",
+        "B counterfactual outputs are cached for fair interventions; deployment must execute B only on queried rows",
+        "C uses public scalar tails only; no reconstruction/consistency tools yet",
+        "Unknown results are outer-fold proxy Unknown, never formal Unknown",
+        "One seed and one outer fold; not a formal multi-seed result"
+      ],
+      "consultation_gate": {
+        "passed": true,
+        "required": [
+          "positive unique B rescue",
+          "active accuracy > no communication",
+          "active NLL < no communication",
+          "active accuracy > random",
+          "active accuracy > confidence selector",
+          "correct message > shuffle"
+        ]
+      },
+      "feasibility_checks": {
+        "correct_message_beats_shuffle_accuracy": true,
+        "correct_message_beats_wrong_pair_accuracy": true,
+        "open_examiner_beats_identity_msp_auroc": true,
+        "active_open_h_beats_static_fusion": false,
+        "active_open_auroc_beats_static_fusion": false,
+        "live_runtime_matches_cache": true
+      }
+    }
+  },
+  "paired_gate_passed": false,
+  "conclusion": "components_feasible_multiagent_necessity_unproven"
+}

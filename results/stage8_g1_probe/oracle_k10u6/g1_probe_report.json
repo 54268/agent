@@ -1,0 +1,1065 @@
+{
+  "stage": "stage8_g0_g1_probe",
+  "dataset": "oracle",
+  "device": "cuda",
+  "formal_unknown_used": false,
+  "formal_unknown_sample_count": 24000,
+  "capability_audit": {
+    "passed": true,
+    "temporal_accepts_only_temporal_observation": true,
+    "spectral_accepts_only_spectral_observation": true,
+    "fft_confined_to_observation_builder": true,
+    "public_contract_has_no_private_state": true,
+    "coordinator_present": false
+  },
+  "folds": [
+    {
+      "inner_fold": 0,
+      "known_classes": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "proxy_unknown_classes": [
+        4,
+        7
+      ],
+      "training": [
+        {
+          "epoch": 1.0,
+          "loss": 5.30019654168023,
+          "temporal_train_accuracy": 0.14756944444444445,
+          "spectral_train_accuracy": 0.16666666666666666
+        },
+        {
+          "epoch": 2.0,
+          "loss": 5.12303278181288,
+          "temporal_train_accuracy": 0.1736111111111111,
+          "spectral_train_accuracy": 0.1701388888888889
+        },
+        {
+          "epoch": 3.0,
+          "loss": 5.039812088012695,
+          "temporal_train_accuracy": 0.16666666666666666,
+          "spectral_train_accuracy": 0.20833333333333334
+        },
+        {
+          "epoch": 4.0,
+          "loss": 5.4038711123996315,
+          "temporal_train_accuracy": 0.16666666666666666,
+          "spectral_train_accuracy": 0.1909722222222222
+        },
+        {
+          "epoch": 5.0,
+          "loss": 5.390722168816461,
+          "temporal_train_accuracy": 0.1857638888888889,
+          "spectral_train_accuracy": 0.18055555555555555
+        },
+        {
+          "epoch": 6.0,
+          "loss": 5.281376096937391,
+          "temporal_train_accuracy": 0.24479166666666666,
+          "spectral_train_accuracy": 0.1753472222222222
+        },
+        {
+          "epoch": 7.0,
+          "loss": 5.49104658762614,
+          "temporal_train_accuracy": 0.2690972222222222,
+          "spectral_train_accuracy": 0.21875
+        },
+        {
+          "epoch": 8.0,
+          "loss": 5.7372972170511884,
+          "temporal_train_accuracy": 0.296875,
+          "spectral_train_accuracy": 0.23958333333333334
+        },
+        {
+          "epoch": 9.0,
+          "loss": 5.7693394554985895,
+          "temporal_train_accuracy": 0.2881944444444444,
+          "spectral_train_accuracy": 0.24131944444444445
+        },
+        {
+          "epoch": 10.0,
+          "loss": 5.410309950510661,
+          "temporal_train_accuracy": 0.3211805555555556,
+          "spectral_train_accuracy": 0.25
+        },
+        {
+          "epoch": 11.0,
+          "loss": 5.316753069559733,
+          "temporal_train_accuracy": 0.3732638888888889,
+          "spectral_train_accuracy": 0.2777777777777778
+        },
+        {
+          "epoch": 12.0,
+          "loss": 5.354650974273682,
+          "temporal_train_accuracy": 0.3454861111111111,
+          "spectral_train_accuracy": 0.3038194444444444
+        }
+      ],
+      "temporal_threshold": 1.553279411792755,
+      "spectral_threshold": 1.8023632168769836,
+      "temporal_known_accuracy": 0.22135416666666666,
+      "spectral_known_accuracy": 0.1640625,
+      "temporal_unknown_recall": 0.07421875,
+      "spectral_unknown_recall": 0.0703125,
+      "temporal_h": 0.1111646475770925,
+      "spectral_h": 0.0984375,
+      "best_single_h": 0.1111646475770925,
+      "oracle_h": 0.20089285714285715,
+      "oracle_headroom": 0.08972820956576465,
+      "temporal_rescues_spectral": 0.158203125,
+      "spectral_rescues_temporal": 0.1142578125,
+      "bidirectional_rescue": true
+    },
+    {
+      "inner_fold": 1,
+      "known_classes": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "proxy_unknown_classes": [
+        5,
+        6
+      ],
+      "training": [
+        {
+          "epoch": 1.0,
+          "loss": 5.261586666107178,
+          "temporal_train_accuracy": 0.16666666666666666,
+          "spectral_train_accuracy": 0.16666666666666666
+        },
+        {
+          "epoch": 2.0,
+          "loss": 5.110160827636719,
+          "temporal_train_accuracy": 0.1875,
+          "spectral_train_accuracy": 0.16319444444444445
+        },
+        {
+          "epoch": 3.0,
+          "loss": 5.141537931230333,
+          "temporal_train_accuracy": 0.1875,
+          "spectral_train_accuracy": 0.19791666666666666
+        },
+        {
+          "epoch": 4.0,
+          "loss": 5.531999640994602,
+          "temporal_train_accuracy": 0.20833333333333334,
+          "spectral_train_accuracy": 0.22743055555555555
+        },
+        {
+          "epoch": 5.0,
+          "loss": 6.142149925231934,
+          "temporal_train_accuracy": 0.19444444444444445,
+          "spectral_train_accuracy": 0.20833333333333334
+        },
+        {
+          "epoch": 6.0,
+          "loss": 5.740376737382677,
+          "temporal_train_accuracy": 0.16666666666666666,
+          "spectral_train_accuracy": 0.22395833333333334
+        },
+        {
+          "epoch": 7.0,
+          "loss": 5.66782612270779,
+          "temporal_train_accuracy": 0.16666666666666666,
+          "spectral_train_accuracy": 0.2708333333333333
+        },
+        {
+          "epoch": 8.0,
+          "loss": 5.54810889561971,
+          "temporal_train_accuracy": 0.18055555555555555,
+          "spectral_train_accuracy": 0.18055555555555555
+        },
+        {
+          "epoch": 9.0,
+          "loss": 5.315661642286512,
+          "temporal_train_accuracy": 0.21354166666666666,
+          "spectral_train_accuracy": 0.1684027777777778
+        },
+        {
+          "epoch": 10.0,
+          "loss": 5.300793011983235,
+          "temporal_train_accuracy": 0.2361111111111111,
+          "spectral_train_accuracy": 0.1736111111111111
+        },
+        {
+          "epoch": 11.0,
+          "loss": 5.335304472181532,
+          "temporal_train_accuracy": 0.2690972222222222,
+          "spectral_train_accuracy": 0.22743055555555555
+        },
+        {
+          "epoch": 12.0,
+          "loss": 5.425578965081109,
+          "temporal_train_accuracy": 0.3003472222222222,
+          "spectral_train_accuracy": 0.2934027777777778
+        }
+      ],
+      "temporal_threshold": 1.6837714970111848,
+      "spectral_threshold": 1.575262290239334,
+      "temporal_known_accuracy": 0.20963541666666666,
+      "spectral_known_accuracy": 0.15755208333333334,
+      "temporal_unknown_recall": 0.0234375,
+      "spectral_unknown_recall": 0.046875,
+      "temporal_h": 0.04216131284916201,
+      "spectral_h": 0.07225318471337579,
+      "best_single_h": 0.07225318471337579,
+      "oracle_h": 0.11369680851063829,
+      "oracle_headroom": 0.041443623797262505,
+      "temporal_rescues_spectral": 0.1103515625,
+      "spectral_rescues_temporal": 0.0771484375,
+      "bidirectional_rescue": true
+    },
+    {
+      "inner_fold": 2,
+      "known_classes": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "proxy_unknown_classes": [
+        3,
+        8
+      ],
+      "training": [
+        {
+          "epoch": 1.0,
+          "loss": 5.200232876671685,
+          "temporal_train_accuracy": 0.1684027777777778,
+          "spectral_train_accuracy": 0.16666666666666666
+        },
+        {
+          "epoch": 2.0,
+          "loss": 5.221558888753255,
+          "temporal_train_accuracy": 0.19270833333333334,
+          "spectral_train_accuracy": 0.16493055555555555
+        },
+        {
+          "epoch": 3.0,
+          "loss": 5.560713662041558,
+          "temporal_train_accuracy": 0.2048611111111111,
+          "spectral_train_accuracy": 0.18229166666666666
+        },
+        {
+          "epoch": 4.0,
+          "loss": 5.608120335472955,
+          "temporal_train_accuracy": 0.17708333333333334,
+          "spectral_train_accuracy": 0.21180555555555555
+        },
+        {
+          "epoch": 5.0,
+          "loss": 5.425465689765082,
+          "temporal_train_accuracy": 0.171875,
+          "spectral_train_accuracy": 0.24305555555555555
+        },
+        {
+          "epoch": 6.0,
+          "loss": 5.5127059618632,
+          "temporal_train_accuracy": 0.1892361111111111,
+          "spectral_train_accuracy": 0.2517361111111111
+        },
+        {
+          "epoch": 7.0,
+          "loss": 5.477523061964247,
+          "temporal_train_accuracy": 0.2638888888888889,
+          "spectral_train_accuracy": 0.2465277777777778
+        },
+        {
+          "epoch": 8.0,
+          "loss": 5.263066397772895,
+          "temporal_train_accuracy": 0.2569444444444444,
+          "spectral_train_accuracy": 0.2760416666666667
+        },
+        {
+          "epoch": 9.0,
+          "loss": 5.232761594984266,
+          "temporal_train_accuracy": 0.2534722222222222,
+          "spectral_train_accuracy": 0.28125
+        },
+        {
+          "epoch": 10.0,
+          "loss": 5.372847027248806,
+          "temporal_train_accuracy": 0.3003472222222222,
+          "spectral_train_accuracy": 0.28125
+        },
+        {
+          "epoch": 11.0,
+          "loss": 5.433772828843859,
+          "temporal_train_accuracy": 0.3229166666666667,
+          "spectral_train_accuracy": 0.2829861111111111
+        },
+        {
+          "epoch": 12.0,
+          "loss": 5.374040338728163,
+          "temporal_train_accuracy": 0.3003472222222222,
+          "spectral_train_accuracy": 0.3159722222222222
+        }
+      ],
+      "temporal_threshold": 1.716188907623291,
+      "spectral_threshold": 1.7443994522094726,
+      "temporal_known_accuracy": 0.18619791666666666,
+      "spectral_known_accuracy": 0.13411458333333334,
+      "temporal_unknown_recall": 0.0703125,
+      "spectral_unknown_recall": 0.08984375,
+      "temporal_h": 0.1020780456852792,
+      "spectral_h": 0.10760356104651163,
+      "best_single_h": 0.10760356104651163,
+      "oracle_h": 0.20195425072046108,
+      "oracle_headroom": 0.09435068967394945,
+      "temporal_rescues_spectral": 0.1396484375,
+      "spectral_rescues_temporal": 0.10546875,
+      "bidirectional_rescue": true
+    },
+    {
+      "inner_fold": 3,
+      "known_classes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "proxy_unknown_classes": [
+        0,
+        2
+      ],
+      "training": [
+        {
+          "epoch": 1.0,
+          "loss": 5.323810736338298,
+          "temporal_train_accuracy": 0.18229166666666666,
+          "spectral_train_accuracy": 0.1684027777777778
+        },
+        {
+          "epoch": 2.0,
+          "loss": 5.188460773891872,
+          "temporal_train_accuracy": 0.1909722222222222,
+          "spectral_train_accuracy": 0.1684027777777778
+        },
+        {
+          "epoch": 3.0,
+          "loss": 5.255191485087077,
+          "temporal_train_accuracy": 0.2065972222222222,
+          "spectral_train_accuracy": 0.2065972222222222
+        },
+        {
+          "epoch": 4.0,
+          "loss": 5.517947143978542,
+          "temporal_train_accuracy": 0.19618055555555555,
+          "spectral_train_accuracy": 0.2222222222222222
+        },
+        {
+          "epoch": 5.0,
+          "loss": 5.439033296373156,
+          "temporal_train_accuracy": 0.19444444444444445,
+          "spectral_train_accuracy": 0.2309027777777778
+        },
+        {
+          "epoch": 6.0,
+          "loss": 5.448625829484728,
+          "temporal_train_accuracy": 0.203125,
+          "spectral_train_accuracy": 0.2465277777777778
+        },
+        {
+          "epoch": 7.0,
+          "loss": 5.51111380259196,
+          "temporal_train_accuracy": 0.1840277777777778,
+          "spectral_train_accuracy": 0.2378472222222222
+        },
+        {
+          "epoch": 8.0,
+          "loss": 5.345265600416395,
+          "temporal_train_accuracy": 0.2743055555555556,
+          "spectral_train_accuracy": 0.2013888888888889
+        },
+        {
+          "epoch": 9.0,
+          "loss": 5.511531617906359,
+          "temporal_train_accuracy": 0.2777777777777778,
+          "spectral_train_accuracy": 0.1857638888888889
+        },
+        {
+          "epoch": 10.0,
+          "loss": 5.61970763736301,
+          "temporal_train_accuracy": 0.2309027777777778,
+          "spectral_train_accuracy": 0.25
+        },
+        {
+          "epoch": 11.0,
+          "loss": 5.548713684082031,
+          "temporal_train_accuracy": 0.2638888888888889,
+          "spectral_train_accuracy": 0.28125
+        },
+        {
+          "epoch": 12.0,
+          "loss": 5.3181801901923285,
+          "temporal_train_accuracy": 0.2465277777777778,
+          "spectral_train_accuracy": 0.3229166666666667
+        }
+      ],
+      "temporal_threshold": 1.5634126484394073,
+      "spectral_threshold": 1.689362847805023,
+      "temporal_known_accuracy": 0.203125,
+      "spectral_known_accuracy": 0.1640625,
+      "temporal_unknown_recall": 0.046875,
+      "spectral_unknown_recall": 0.03515625,
+      "temporal_h": 0.076171875,
+      "spectral_h": 0.057904411764705885,
+      "best_single_h": 0.076171875,
+      "oracle_h": 0.1262979233226837,
+      "oracle_headroom": 0.05012604832268369,
+      "temporal_rescues_spectral": 0.134765625,
+      "spectral_rescues_temporal": 0.1025390625,
+      "bidirectional_rescue": true
+    }
+  ],
+  "cross_class_rescue_macro_auroc_by_fold": [
+    0.5225705100524973,
+    0.46244389071079933,
+    0.45116345663928087,
+    0.5540907822051602
+  ],
+  "g1_gate": {
+    "passed": false,
+    "checks": {
+      "four_inner_folds": true,
+      "temporal_local_known_capability": false,
+      "spectral_local_known_capability": false,
+      "temporal_unique_rescue": true,
+      "spectral_unique_rescue": true,
+      "oracle_headroom": true,
+      "bidirectional_every_fold": true
+    },
+    "values": {
+      "minimum_temporal_unique_rescue": 0.1103515625,
+      "minimum_spectral_unique_rescue": 0.0771484375,
+      "minimum_temporal_known_accuracy": 0.18619791666666666,
+      "minimum_spectral_known_accuracy": 0.13411458333333334,
+      "mean_oracle_headroom": 0.06891214283991508,
+      "num_folds": 4.0
+    },
+    "next_gate": "redesign_agents"
+  },
+  "g15_gate": {
+    "passed": false,
+    "checks": {
+      "macro_auroc": false,
+      "positive_folds": false
+    },
+    "values": {
+      "macro_auroc": 0.4975671599019344,
+      "positive_folds": 2.0,
+      "num_folds": 4.0
+    },
+    "next_gate": "redesign_agents"
+  },
+  "memory_auditor_unlocked": false,
+  "forced_consultation_unlocked": false,
+  "decision": "stop_and_redesign_ab",
+  "protocol": {
+    "seed": 2026,
+    "num_classes": 10,
+    "formal_unknown_sample_count": 24000,
+    "formal_unknown_used_for_training_selection_or_calibration": false,
+    "outer_folds": [
+      {
+        "index": 0,
+        "known_classes": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "proxy_unknown_classes": [
+          1,
+          9
+        ],
+        "counts": {
+          "train_known": 22400,
+          "calibration_known": 3200,
+          "test_known": 6400,
+          "test_proxy_unknown": 1600
+        },
+        "inner_folds": [
+          {
+            "index": 0,
+            "known_classes": [
+              0,
+              2,
+              3,
+              5,
+              6,
+              8
+            ],
+            "proxy_unknown_classes": [
+              4,
+              7
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 1,
+            "known_classes": [
+              0,
+              2,
+              3,
+              4,
+              7,
+              8
+            ],
+            "proxy_unknown_classes": [
+              5,
+              6
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 2,
+            "known_classes": [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            "proxy_unknown_classes": [
+              3,
+              8
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 3,
+            "known_classes": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "proxy_unknown_classes": [
+              0,
+              2
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "known_classes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9
+        ],
+        "proxy_unknown_classes": [
+          0,
+          6
+        ],
+        "counts": {
+          "train_known": 22400,
+          "calibration_known": 3200,
+          "test_known": 6400,
+          "test_proxy_unknown": 1600
+        },
+        "inner_folds": [
+          {
+            "index": 0,
+            "known_classes": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              9
+            ],
+            "proxy_unknown_classes": [
+              7,
+              8
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 1,
+            "known_classes": [
+              1,
+              2,
+              3,
+              5,
+              7,
+              8
+            ],
+            "proxy_unknown_classes": [
+              4,
+              9
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 2,
+            "known_classes": [
+              2,
+              4,
+              5,
+              7,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              1,
+              3
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 3,
+            "known_classes": [
+              1,
+              3,
+              4,
+              7,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              2,
+              5
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "known_classes": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "proxy_unknown_classes": [
+          3,
+          8
+        ],
+        "counts": {
+          "train_known": 22400,
+          "calibration_known": 3200,
+          "test_known": 6400,
+          "test_proxy_unknown": 1600
+        },
+        "inner_folds": [
+          {
+            "index": 0,
+            "known_classes": [
+              1,
+              2,
+              4,
+              5,
+              7,
+              9
+            ],
+            "proxy_unknown_classes": [
+              0,
+              6
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 1,
+            "known_classes": [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            "proxy_unknown_classes": [
+              4,
+              9
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 2,
+            "known_classes": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              9
+            ],
+            "proxy_unknown_classes": [
+              1,
+              2
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 3,
+            "known_classes": [
+              0,
+              1,
+              2,
+              4,
+              6,
+              9
+            ],
+            "proxy_unknown_classes": [
+              5,
+              7
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "known_classes": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "proxy_unknown_classes": [
+          2,
+          5
+        ],
+        "counts": {
+          "train_known": 22400,
+          "calibration_known": 3200,
+          "test_known": 6400,
+          "test_proxy_unknown": 1600
+        },
+        "inner_folds": [
+          {
+            "index": 0,
+            "known_classes": [
+              1,
+              3,
+              6,
+              7,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              0,
+              4
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 1,
+            "known_classes": [
+              0,
+              3,
+              4,
+              6,
+              7,
+              9
+            ],
+            "proxy_unknown_classes": [
+              1,
+              8
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 2,
+            "known_classes": [
+              0,
+              1,
+              4,
+              6,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              3,
+              7
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 3,
+            "known_classes": [
+              0,
+              1,
+              3,
+              4,
+              7,
+              8
+            ],
+            "proxy_unknown_classes": [
+              6,
+              9
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "known_classes": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "proxy_unknown_classes": [
+          4,
+          7
+        ],
+        "counts": {
+          "train_known": 22400,
+          "calibration_known": 3200,
+          "test_known": 6400,
+          "test_proxy_unknown": 1600
+        },
+        "inner_folds": [
+          {
+            "index": 0,
+            "known_classes": [
+              0,
+              2,
+              5,
+              6,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              1,
+              3
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 1,
+            "known_classes": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              8
+            ],
+            "proxy_unknown_classes": [
+              5,
+              9
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 2,
+            "known_classes": [
+              0,
+              1,
+              3,
+              5,
+              6,
+              9
+            ],
+            "proxy_unknown_classes": [
+              2,
+              8
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          },
+          {
+            "index": 3,
+            "known_classes": [
+              1,
+              2,
+              3,
+              5,
+              8,
+              9
+            ],
+            "proxy_unknown_classes": [
+              0,
+              6
+            ],
+            "counts": {
+              "train_known": 16800,
+              "train_proxy_unknown": 5600,
+              "calibration_known": 2400,
+              "validation_proxy_unknown": 800,
+              "test_known": 4800,
+              "test_proxy_unknown": 1600
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

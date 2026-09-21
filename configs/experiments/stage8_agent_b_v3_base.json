@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/experiments/stage8_g1_probe_base.json",
+  "method_profile": "stage8_agent_b_robust_spectral_v3_quick",
+  "observation_profile": "legacy_v1",
+  "temporal_observation_profile": "legacy_v1",
+  "spectral_observation_profile": "robust_v3",
+  "quick_inner_fold": 0
+}

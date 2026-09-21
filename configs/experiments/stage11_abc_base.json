@@ -1,0 +1,13 @@
+{
+  "method_profile": "frozen_stage5_v4_abc_open_set_pug_v1",
+  "seed": 42,
+  "partition_seed": 2026,
+  "batch_size": 256,
+  "train_samples_per_class": 128,
+  "cal_samples_per_class": 64,
+  "test_samples_per_class": 64,
+  "known_acceptance": 0.95,
+  "lite_escalation_quantile": 0.8,
+  "pug_eta": 1.5,
+  "device": "auto"
+}

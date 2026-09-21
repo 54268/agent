@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/experiments/stage8_g1_probe_base.json",
+  "dataset": "oracle",
+  "name": "stage8_g1_probe_oracle_k10u6",
+  "oracle_root": "data/oracle/processed_k10u6",
+  "output_dir": "results/stage8_g1_redesign/oracle_k10u6",
+  "paired_config": "configs/experiments/stage8_g1_probe_wisig_k40u20.json"
+}

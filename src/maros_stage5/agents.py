@@ -153,6 +153,10 @@ class IdentityAgent(nn.Module):
 
     def forward(self, x: torch.Tensor) -> AgentOutput:
         state = self.encoder(self.stem(x))
+        return self.forward_from_state(state)
+
+    def forward_from_state(self, state: torch.Tensor) -> AgentOutput:
+        """Re-evaluate a generated Identity state; no source report is reused."""
         logits = self.classifier(state)
         ev = _summary(logits)
         normalized_state = F.normalize(state, dim=-1)
@@ -164,7 +168,7 @@ class IdentityAgent(nn.Module):
         ev.update({"distances": distances, "d1": d2[:, 0], "d2": d2[:, 1],
                    "distance_margin": d2[:, 1] - d2[:, 0]})
         reliability = ev["confidence"] * (1.0 - ev["entropy"] / max(float(torch.log(
-            torch.tensor(self.num_classes, device=x.device))), 1e-6))
+            torch.tensor(self.num_classes, device=state.device))), 1e-6))
         unknown = torch.stack([1.0 - ev["confidence"], ev["entropy"], ev["energy"]], dim=1)
         return AgentOutput(state, logits, unknown, reliability.clamp(0, 1),
                            self.message_head(state), ev)
@@ -285,6 +289,26 @@ class GeometryAgent(nn.Module):
                    "view_logits": view_logits, "view_distances": view_distances,
                    "view_d1": view_d2[:, :, 0],
                    "view_distance_margin": view_d2[:, :, 1] - view_d2[:, :, 0]})
+        reliability = torch.exp(-d2[:, 0]) * ev["confidence"]
+        unknown = torch.stack([d2[:, 0], -ev["distance_margin"],
+                               1.0 - ev["confidence"]], dim=1)
+        return AgentOutput(state, logits, unknown, reliability.clamp(0, 1),
+                           self.message_head(state), ev)
+
+    def forward_from_state(self, state: torch.Tensor) -> AgentOutput:
+        """Re-evaluate a fused Geometry state generated in its learned space.
+
+        View-local evidence is intentionally absent: a fused state cannot
+        truthfully reconstruct the private sensor states or their gate action.
+        """
+        state = F.normalize(state, dim=-1)
+        logits = self.logits_from_state(state)
+        p = F.normalize(self.prototypes, dim=-1)
+        distances = torch.cdist(state, p, p=2.0) ** 2
+        d2 = distances.topk(2, dim=-1, largest=False).values
+        ev = _summary(logits)
+        ev.update({"distances": distances, "d1": d2[:, 0], "d2": d2[:, 1],
+                   "distance_margin": d2[:, 1] - d2[:, 0]})
         reliability = torch.exp(-d2[:, 0]) * ev["confidence"]
         unknown = torch.stack([d2[:, 0], -ev["distance_margin"],
                                1.0 - ev["confidence"]], dim=1)

@@ -1,0 +1,1002 @@
+{
+  "stage": "stage8_next_round_g1_redesign",
+  "formal_unknown_used": false,
+  "memory_auditor_router_forced_communication_unlocked": false,
+  "oracle_small_set_learnability": {
+    "selected_candidates": {
+      "legacy_v1": "candidate_a",
+      "isolated_v2": "candidate_a"
+    },
+    "passed": true,
+    "rows": [
+      {
+        "profile": "legacy_v1",
+        "samples_per_class": 16,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 1.0,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 1.0,
+        "passed": true
+      },
+      {
+        "profile": "legacy_v1",
+        "samples_per_class": 32,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 1.0,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 1.0,
+        "passed": true
+      },
+      {
+        "profile": "legacy_v1",
+        "samples_per_class": 64,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 0.960938,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 0.999997,
+        "passed": true
+      },
+      {
+        "profile": "isolated_v2",
+        "samples_per_class": 16,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 1.0,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 1.0,
+        "passed": true
+      },
+      {
+        "profile": "isolated_v2",
+        "samples_per_class": 32,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 1.0,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 1.0,
+        "passed": true
+      },
+      {
+        "profile": "isolated_v2",
+        "samples_per_class": 64,
+        "temporal_train_accuracy": 1.0,
+        "spectral_train_accuracy": 1.0,
+        "temporal_pair_auroc": 1.0,
+        "spectral_pair_auroc": 1.0,
+        "passed": true
+      }
+    ]
+  },
+  "identity_pair_rescue_by_fold": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 0,
+      "temporal_known_accuracy": 0.924819,
+      "spectral_known_accuracy": 0.899457,
+      "temporal_pair_auroc": 0.9869,
+      "spectral_pair_auroc": 0.988807,
+      "temporal_pair_accuracy": 0.905797,
+      "spectral_pair_accuracy": 0.882699,
+      "temporal_hard_pair_accuracy": 0.980525,
+      "spectral_hard_pair_accuracy": 0.960598,
+      "temporal_pair_brier": 0.103015,
+      "spectral_pair_brier": 0.048952,
+      "temporal_to_spectral_identity_rescue": 0.029438,
+      "spectral_to_temporal_identity_rescue": 0.004076,
+      "temporal_to_spectral_pair_rescue": 0.024909,
+      "spectral_to_temporal_pair_rescue": 0.005888,
+      "temporal_unknown_rejection_rescue": 0.021739,
+      "spectral_unknown_rejection_rescue": 0.006793
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 1,
+      "temporal_known_accuracy": 0.931159,
+      "spectral_known_accuracy": 0.910779,
+      "temporal_pair_auroc": 0.991503,
+      "spectral_pair_auroc": 0.990307,
+      "temporal_pair_accuracy": 0.914402,
+      "spectral_pair_accuracy": 0.890399,
+      "temporal_hard_pair_accuracy": 0.977808,
+      "spectral_hard_pair_accuracy": 0.972826,
+      "temporal_pair_brier": 0.071937,
+      "spectral_pair_brier": 0.047828,
+      "temporal_to_spectral_identity_rescue": 0.026721,
+      "spectral_to_temporal_identity_rescue": 0.006341,
+      "temporal_to_spectral_pair_rescue": 0.017663,
+      "spectral_to_temporal_pair_rescue": 0.009058,
+      "temporal_unknown_rejection_rescue": 0.01087,
+      "spectral_unknown_rejection_rescue": 0.033967
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 2,
+      "temporal_known_accuracy": 0.919837,
+      "spectral_known_accuracy": 0.887681,
+      "temporal_pair_auroc": 0.991703,
+      "spectral_pair_auroc": 0.991952,
+      "temporal_pair_accuracy": 0.907609,
+      "spectral_pair_accuracy": 0.890851,
+      "temporal_hard_pair_accuracy": 0.981884,
+      "spectral_hard_pair_accuracy": 0.97192,
+      "temporal_pair_brier": 0.062304,
+      "spectral_pair_brier": 0.048195,
+      "temporal_to_spectral_identity_rescue": 0.038949,
+      "spectral_to_temporal_identity_rescue": 0.006793,
+      "temporal_to_spectral_pair_rescue": 0.018569,
+      "spectral_to_temporal_pair_rescue": 0.008605,
+      "temporal_unknown_rejection_rescue": 0.014946,
+      "spectral_unknown_rejection_rescue": 0.074728
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 3,
+      "temporal_known_accuracy": 0.93433,
+      "spectral_known_accuracy": 0.922101,
+      "temporal_pair_auroc": 0.993285,
+      "spectral_pair_auroc": 0.994846,
+      "temporal_pair_accuracy": 0.927989,
+      "spectral_pair_accuracy": 0.918931,
+      "temporal_hard_pair_accuracy": 0.990489,
+      "spectral_hard_pair_accuracy": 0.97962,
+      "temporal_pair_brier": 0.089988,
+      "spectral_pair_brier": 0.031933,
+      "temporal_to_spectral_identity_rescue": 0.020833,
+      "spectral_to_temporal_identity_rescue": 0.008605,
+      "temporal_to_spectral_pair_rescue": 0.013134,
+      "spectral_to_temporal_pair_rescue": 0.002717,
+      "temporal_unknown_rejection_rescue": 0.017663,
+      "spectral_unknown_rejection_rescue": 0.088315
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 0,
+      "temporal_known_accuracy": 0.81901,
+      "spectral_known_accuracy": 0.171875,
+      "temporal_pair_auroc": 0.974284,
+      "spectral_pair_auroc": 0.492859,
+      "temporal_pair_accuracy": 0.80599,
+      "spectral_pair_accuracy": 0.158854,
+      "temporal_hard_pair_accuracy": 0.807292,
+      "spectral_hard_pair_accuracy": 0.177083,
+      "temporal_pair_brier": 0.050946,
+      "spectral_pair_brier": 0.231694,
+      "temporal_to_spectral_identity_rescue": 0.679688,
+      "spectral_to_temporal_identity_rescue": 0.032552,
+      "temporal_to_spectral_pair_rescue": 0.794271,
+      "spectral_to_temporal_pair_rescue": 0.102865,
+      "temporal_unknown_rejection_rescue": 0.0,
+      "spectral_unknown_rejection_rescue": 0.035156
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 1,
+      "temporal_known_accuracy": 0.709635,
+      "spectral_known_accuracy": 0.153646,
+      "temporal_pair_auroc": 0.949261,
+      "spectral_pair_auroc": 0.498535,
+      "temporal_pair_accuracy": 0.74349,
+      "spectral_pair_accuracy": 0.175781,
+      "temporal_hard_pair_accuracy": 0.759115,
+      "spectral_hard_pair_accuracy": 0.207031,
+      "temporal_pair_brier": 0.068395,
+      "spectral_pair_brier": 0.231321,
+      "temporal_to_spectral_identity_rescue": 0.605469,
+      "spectral_to_temporal_identity_rescue": 0.049479,
+      "temporal_to_spectral_pair_rescue": 0.71875,
+      "spectral_to_temporal_pair_rescue": 0.108073,
+      "temporal_unknown_rejection_rescue": 0.003906,
+      "spectral_unknown_rejection_rescue": 0.078125
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 2,
+      "temporal_known_accuracy": 0.574219,
+      "spectral_known_accuracy": 0.19401,
+      "temporal_pair_auroc": 0.768364,
+      "spectral_pair_auroc": 0.519919,
+      "temporal_pair_accuracy": 0.539062,
+      "spectral_pair_accuracy": 0.183594,
+      "temporal_hard_pair_accuracy": 0.604167,
+      "spectral_hard_pair_accuracy": 0.197917,
+      "temporal_pair_brier": 0.174038,
+      "spectral_pair_brier": 0.213079,
+      "temporal_to_spectral_identity_rescue": 0.46224,
+      "spectral_to_temporal_identity_rescue": 0.082031,
+      "temporal_to_spectral_pair_rescue": 0.596354,
+      "spectral_to_temporal_pair_rescue": 0.204427,
+      "temporal_unknown_rejection_rescue": 0.214844,
+      "spectral_unknown_rejection_rescue": 0.050781
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 3,
+      "temporal_known_accuracy": 0.785156,
+      "spectral_known_accuracy": 0.167969,
+      "temporal_pair_auroc": 0.969819,
+      "spectral_pair_auroc": 0.507383,
+      "temporal_pair_accuracy": 0.798177,
+      "spectral_pair_accuracy": 0.164062,
+      "temporal_hard_pair_accuracy": 0.798177,
+      "spectral_hard_pair_accuracy": 0.207031,
+      "temporal_pair_brier": 0.053615,
+      "spectral_pair_brier": 0.232536,
+      "temporal_to_spectral_identity_rescue": 0.648438,
+      "spectral_to_temporal_identity_rescue": 0.03125,
+      "temporal_to_spectral_pair_rescue": 0.764323,
+      "spectral_to_temporal_pair_rescue": 0.110677,
+      "temporal_unknown_rejection_rescue": 0.113281,
+      "spectral_unknown_rejection_rescue": 0.035156
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 0,
+      "temporal_known_accuracy": 0.875,
+      "spectral_known_accuracy": 0.918478,
+      "temporal_pair_auroc": 0.978994,
+      "spectral_pair_auroc": 0.995014,
+      "temporal_pair_accuracy": 0.86413,
+      "spectral_pair_accuracy": 0.915761,
+      "temporal_hard_pair_accuracy": 0.932518,
+      "spectral_hard_pair_accuracy": 0.970109,
+      "temporal_pair_brier": 0.04994,
+      "spectral_pair_brier": 0.031908,
+      "temporal_to_spectral_identity_rescue": 0.008605,
+      "spectral_to_temporal_identity_rescue": 0.052083,
+      "temporal_to_spectral_pair_rescue": 0.009511,
+      "spectral_to_temporal_pair_rescue": 0.05163,
+      "temporal_unknown_rejection_rescue": 0.017663,
+      "spectral_unknown_rejection_rescue": 0.014946
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 1,
+      "temporal_known_accuracy": 0.888134,
+      "spectral_known_accuracy": 0.928895,
+      "temporal_pair_auroc": 0.989653,
+      "spectral_pair_auroc": 0.995111,
+      "temporal_pair_accuracy": 0.885417,
+      "spectral_pair_accuracy": 0.921196,
+      "temporal_hard_pair_accuracy": 0.939764,
+      "spectral_hard_pair_accuracy": 0.971014,
+      "temporal_pair_brier": 0.033224,
+      "spectral_pair_brier": 0.034009,
+      "temporal_to_spectral_identity_rescue": 0.006341,
+      "spectral_to_temporal_identity_rescue": 0.047101,
+      "temporal_to_spectral_pair_rescue": 0.014493,
+      "spectral_to_temporal_pair_rescue": 0.043025,
+      "temporal_unknown_rejection_rescue": 0.009511,
+      "spectral_unknown_rejection_rescue": 0.014946
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 2,
+      "temporal_known_accuracy": 0.875,
+      "spectral_known_accuracy": 0.915761,
+      "temporal_pair_auroc": 0.988424,
+      "spectral_pair_auroc": 0.995034,
+      "temporal_pair_accuracy": 0.882246,
+      "spectral_pair_accuracy": 0.914402,
+      "temporal_hard_pair_accuracy": 0.947917,
+      "spectral_hard_pair_accuracy": 0.975091,
+      "temporal_pair_brier": 0.039035,
+      "spectral_pair_brier": 0.0424,
+      "temporal_to_spectral_identity_rescue": 0.009964,
+      "spectral_to_temporal_identity_rescue": 0.050725,
+      "temporal_to_spectral_pair_rescue": 0.011322,
+      "spectral_to_temporal_pair_rescue": 0.039855,
+      "temporal_unknown_rejection_rescue": 0.01087,
+      "spectral_unknown_rejection_rescue": 0.024457
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 3,
+      "temporal_known_accuracy": 0.916214,
+      "spectral_known_accuracy": 0.936141,
+      "temporal_pair_auroc": 0.992716,
+      "spectral_pair_auroc": 0.997107,
+      "temporal_pair_accuracy": 0.912138,
+      "spectral_pair_accuracy": 0.930254,
+      "temporal_hard_pair_accuracy": 0.96558,
+      "spectral_hard_pair_accuracy": 0.977355,
+      "temporal_pair_brier": 0.032519,
+      "spectral_pair_brier": 0.026094,
+      "temporal_to_spectral_identity_rescue": 0.004076,
+      "spectral_to_temporal_identity_rescue": 0.024004,
+      "temporal_to_spectral_pair_rescue": 0.014493,
+      "spectral_to_temporal_pair_rescue": 0.024909,
+      "temporal_unknown_rejection_rescue": 0.039402,
+      "spectral_unknown_rejection_rescue": 0.017663
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 0,
+      "temporal_known_accuracy": 0.317708,
+      "spectral_known_accuracy": 0.173177,
+      "temporal_pair_auroc": 0.690457,
+      "spectral_pair_auroc": 0.500366,
+      "temporal_pair_accuracy": 0.328125,
+      "spectral_pair_accuracy": 0.169271,
+      "temporal_hard_pair_accuracy": 0.33724,
+      "spectral_hard_pair_accuracy": 0.178385,
+      "temporal_pair_brier": 0.193847,
+      "spectral_pair_brier": 0.244109,
+      "temporal_to_spectral_identity_rescue": 0.25,
+      "spectral_to_temporal_identity_rescue": 0.105469,
+      "temporal_to_spectral_pair_rescue": 0.545573,
+      "spectral_to_temporal_pair_rescue": 0.335938,
+      "temporal_unknown_rejection_rescue": 0.0,
+      "spectral_unknown_rejection_rescue": 0.074219
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 1,
+      "temporal_known_accuracy": 0.338542,
+      "spectral_known_accuracy": 0.182292,
+      "temporal_pair_auroc": 0.750195,
+      "spectral_pair_auroc": 0.494171,
+      "temporal_pair_accuracy": 0.360677,
+      "spectral_pair_accuracy": 0.177083,
+      "temporal_hard_pair_accuracy": 0.384115,
+      "spectral_hard_pair_accuracy": 0.179688,
+      "temporal_pair_brier": 0.188637,
+      "spectral_pair_brier": 0.228207,
+      "temporal_to_spectral_identity_rescue": 0.279948,
+      "spectral_to_temporal_identity_rescue": 0.123698,
+      "temporal_to_spectral_pair_rescue": 0.611979,
+      "spectral_to_temporal_pair_rescue": 0.299479,
+      "temporal_unknown_rejection_rescue": 0.035156,
+      "spectral_unknown_rejection_rescue": 0.042969
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 2,
+      "temporal_known_accuracy": 0.358073,
+      "spectral_known_accuracy": 0.160156,
+      "temporal_pair_auroc": 0.796241,
+      "spectral_pair_auroc": 0.488963,
+      "temporal_pair_accuracy": 0.389323,
+      "spectral_pair_accuracy": 0.157552,
+      "temporal_hard_pair_accuracy": 0.39974,
+      "spectral_hard_pair_accuracy": 0.171875,
+      "temporal_pair_brier": 0.177683,
+      "spectral_pair_brier": 0.245174,
+      "temporal_to_spectral_identity_rescue": 0.308594,
+      "spectral_to_temporal_identity_rescue": 0.110677,
+      "temporal_to_spectral_pair_rescue": 0.640625,
+      "spectral_to_temporal_pair_rescue": 0.308594,
+      "temporal_unknown_rejection_rescue": 0.070312,
+      "spectral_unknown_rejection_rescue": 0.035156
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 3,
+      "temporal_known_accuracy": 0.376302,
+      "spectral_known_accuracy": 0.167969,
+      "temporal_pair_auroc": 0.790935,
+      "spectral_pair_auroc": 0.487113,
+      "temporal_pair_accuracy": 0.390625,
+      "spectral_pair_accuracy": 0.157552,
+      "temporal_hard_pair_accuracy": 0.394531,
+      "spectral_hard_pair_accuracy": 0.169271,
+      "temporal_pair_brier": 0.168739,
+      "spectral_pair_brier": 0.229773,
+      "temporal_to_spectral_identity_rescue": 0.307292,
+      "spectral_to_temporal_identity_rescue": 0.098958,
+      "temporal_to_spectral_pair_rescue": 0.625,
+      "spectral_to_temporal_pair_rescue": 0.279948,
+      "temporal_unknown_rejection_rescue": 0.082031,
+      "spectral_unknown_rejection_rescue": 0.042969
+    }
+  ],
+  "directional_predictability_by_fold": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 0,
+      "temporal_to_spectral_auroc": 0.945892,
+      "temporal_to_spectral_pr_auc": 0.320008,
+      "temporal_to_spectral_support": 65,
+      "spectral_to_temporal_auroc": 0.907281,
+      "spectral_to_temporal_pr_auc": 0.247559,
+      "spectral_to_temporal_support": 9
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 1,
+      "temporal_to_spectral_auroc": 0.953246,
+      "temporal_to_spectral_pr_auc": 0.28515,
+      "temporal_to_spectral_support": 59,
+      "spectral_to_temporal_auroc": 0.928539,
+      "spectral_to_temporal_pr_auc": 0.10718,
+      "spectral_to_temporal_support": 14
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 2,
+      "temporal_to_spectral_auroc": 0.958157,
+      "temporal_to_spectral_pr_auc": 0.434464,
+      "temporal_to_spectral_support": 86,
+      "spectral_to_temporal_auroc": 0.949263,
+      "spectral_to_temporal_pr_auc": 0.154529,
+      "spectral_to_temporal_support": 15
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "fold": 3,
+      "temporal_to_spectral_auroc": 0.953877,
+      "temporal_to_spectral_pr_auc": 0.300276,
+      "temporal_to_spectral_support": 46,
+      "spectral_to_temporal_auroc": 0.935226,
+      "spectral_to_temporal_pr_auc": 0.14355,
+      "spectral_to_temporal_support": 19
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 0,
+      "temporal_to_spectral_auroc": 0.657291,
+      "temporal_to_spectral_pr_auc": 0.778125,
+      "temporal_to_spectral_support": 522,
+      "spectral_to_temporal_auroc": 0.700673,
+      "spectral_to_temporal_pr_auc": 0.060335,
+      "spectral_to_temporal_support": 25
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 1,
+      "temporal_to_spectral_auroc": 0.682884,
+      "temporal_to_spectral_pr_auc": 0.765894,
+      "temporal_to_spectral_support": 465,
+      "spectral_to_temporal_auroc": 0.667736,
+      "spectral_to_temporal_pr_auc": 0.084034,
+      "spectral_to_temporal_support": 38
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 2,
+      "temporal_to_spectral_auroc": 0.539767,
+      "temporal_to_spectral_pr_auc": 0.518105,
+      "temporal_to_spectral_support": 355,
+      "spectral_to_temporal_auroc": 0.560126,
+      "spectral_to_temporal_pr_auc": 0.104773,
+      "spectral_to_temporal_support": 63
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 3,
+      "temporal_to_spectral_auroc": 0.656574,
+      "temporal_to_spectral_pr_auc": 0.777151,
+      "temporal_to_spectral_support": 498,
+      "spectral_to_temporal_auroc": 0.622984,
+      "spectral_to_temporal_pr_auc": 0.044796,
+      "spectral_to_temporal_support": 24
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 0,
+      "temporal_to_spectral_auroc": 0.950686,
+      "temporal_to_spectral_pr_auc": 0.10161,
+      "temporal_to_spectral_support": 19,
+      "spectral_to_temporal_auroc": 0.948865,
+      "spectral_to_temporal_pr_auc": 0.512803,
+      "spectral_to_temporal_support": 115
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 1,
+      "temporal_to_spectral_auroc": 0.954584,
+      "temporal_to_spectral_pr_auc": 0.071456,
+      "temporal_to_spectral_support": 14,
+      "spectral_to_temporal_auroc": 0.950566,
+      "spectral_to_temporal_pr_auc": 0.406424,
+      "spectral_to_temporal_support": 104
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 2,
+      "temporal_to_spectral_auroc": 0.960887,
+      "temporal_to_spectral_pr_auc": 0.154239,
+      "temporal_to_spectral_support": 22,
+      "spectral_to_temporal_auroc": 0.929572,
+      "spectral_to_temporal_pr_auc": 0.383305,
+      "spectral_to_temporal_support": 112
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "fold": 3,
+      "temporal_to_spectral_auroc": 0.968117,
+      "temporal_to_spectral_pr_auc": 0.076654,
+      "temporal_to_spectral_support": 9,
+      "spectral_to_temporal_auroc": 0.945165,
+      "spectral_to_temporal_pr_auc": 0.239688,
+      "spectral_to_temporal_support": 53
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 0,
+      "temporal_to_spectral_auroc": 0.613688,
+      "temporal_to_spectral_pr_auc": 0.405377,
+      "temporal_to_spectral_support": 192,
+      "spectral_to_temporal_auroc": 0.529858,
+      "spectral_to_temporal_pr_auc": 0.111526,
+      "spectral_to_temporal_support": 81
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 1,
+      "temporal_to_spectral_auroc": 0.60492,
+      "temporal_to_spectral_pr_auc": 0.383846,
+      "temporal_to_spectral_support": 215,
+      "spectral_to_temporal_auroc": 0.51665,
+      "spectral_to_temporal_pr_auc": 0.134447,
+      "spectral_to_temporal_support": 95
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 2,
+      "temporal_to_spectral_auroc": 0.604933,
+      "temporal_to_spectral_pr_auc": 0.430452,
+      "temporal_to_spectral_support": 237,
+      "spectral_to_temporal_auroc": 0.560641,
+      "spectral_to_temporal_pr_auc": 0.124632,
+      "spectral_to_temporal_support": 85
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 3,
+      "temporal_to_spectral_auroc": 0.617625,
+      "temporal_to_spectral_pr_auc": 0.453201,
+      "temporal_to_spectral_support": 236,
+      "spectral_to_temporal_auroc": 0.521049,
+      "spectral_to_temporal_pr_auc": 0.106709,
+      "spectral_to_temporal_support": 76
+    }
+  ],
+  "class_reindex_invariance": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    }
+  ],
+  "observation_leakage": {
+    "legacy_v1": {
+      "wisig": null,
+      "oracle": null
+    },
+    "isolated_v2": {
+      "wisig": {
+        "formal_unknown_used": false,
+        "interpretation": "Lower held-out R2 indicates stronger information isolation; the audit is diagnostic and has no pass threshold.",
+        "profiles": {
+          "legacy_v1": {
+            "temporal_to_spectral_descriptor": {
+              "r2": 0.36614444872745533,
+              "normalized_rmse": 0.45876455456994786,
+              "train_samples": 768,
+              "test_samples": 768,
+              "input_dim": 512,
+              "target_dim": 72
+            },
+            "spectral_to_temporal_order_descriptor": {
+              "r2": 0.8406455299622461,
+              "normalized_rmse": 0.2577182806229073,
+              "train_samples": 768,
+              "test_samples": 768,
+              "input_dim": 390,
+              "target_dim": 67
+            }
+          },
+          "isolated_v2": {
+            "temporal_to_spectral_descriptor": {
+              "r2": 0.7710803632376139,
+              "normalized_rmse": 0.2750335983537611,
+              "train_samples": 768,
+              "test_samples": 768,
+              "input_dim": 256,
+              "target_dim": 72,
+              "r2_change_vs_legacy_v1": 0.40493591451015853
+            },
+            "spectral_to_temporal_order_descriptor": {
+              "r2": 0.8244024338057879,
+              "normalized_rmse": 0.2660358283515958,
+              "train_samples": 768,
+              "test_samples": 768,
+              "input_dim": 520,
+              "target_dim": 67,
+              "r2_change_vs_legacy_v1": -0.016243096156458137
+            }
+          }
+        }
+      },
+      "oracle": {
+        "formal_unknown_used": false,
+        "interpretation": "Lower held-out R2 indicates stronger information isolation; the audit is diagnostic and has no pass threshold.",
+        "profiles": {
+          "legacy_v1": {
+            "temporal_to_spectral_descriptor": {
+              "r2": -0.023077424884765683,
+              "normalized_rmse": 0.5249641286334145,
+              "train_samples": 192,
+              "test_samples": 192,
+              "input_dim": 512,
+              "target_dim": 72
+            },
+            "spectral_to_temporal_order_descriptor": {
+              "r2": -0.010626713597745413,
+              "normalized_rmse": 0.18560001441245338,
+              "train_samples": 192,
+              "test_samples": 192,
+              "input_dim": 390,
+              "target_dim": 67
+            }
+          },
+          "isolated_v2": {
+            "temporal_to_spectral_descriptor": {
+              "r2": 0.0008083491127236488,
+              "normalized_rmse": 0.5313159917753408,
+              "train_samples": 192,
+              "test_samples": 192,
+              "input_dim": 256,
+              "target_dim": 72,
+              "r2_change_vs_legacy_v1": 0.023885773997489333
+            },
+            "spectral_to_temporal_order_descriptor": {
+              "r2": -0.009346065339901444,
+              "normalized_rmse": 0.18828599091403425,
+              "train_samples": 192,
+              "test_samples": 192,
+              "input_dim": 520,
+              "target_dim": 67,
+              "r2_change_vs_legacy_v1": 0.001280648257843969
+            }
+          }
+        }
+      }
+    }
+  },
+  "observation_leakage_comparison": [
+    {
+      "dataset": "wisig",
+      "profile": "legacy_v1",
+      "temporal_to_spectral_r2": 0.366144,
+      "temporal_to_spectral_normalized_rmse": 0.458765,
+      "spectral_to_temporal_r2": 0.840646,
+      "spectral_to_temporal_normalized_rmse": 0.257718,
+      "temporal_to_spectral_r2_change_vs_v1": null,
+      "spectral_to_temporal_r2_change_vs_v1": null
+    },
+    {
+      "dataset": "wisig",
+      "profile": "isolated_v2",
+      "temporal_to_spectral_r2": 0.77108,
+      "temporal_to_spectral_normalized_rmse": 0.275034,
+      "spectral_to_temporal_r2": 0.824402,
+      "spectral_to_temporal_normalized_rmse": 0.266036,
+      "temporal_to_spectral_r2_change_vs_v1": 0.404936,
+      "spectral_to_temporal_r2_change_vs_v1": -0.016243
+    },
+    {
+      "dataset": "oracle",
+      "profile": "legacy_v1",
+      "temporal_to_spectral_r2": -0.023077,
+      "temporal_to_spectral_normalized_rmse": 0.524964,
+      "spectral_to_temporal_r2": -0.010627,
+      "spectral_to_temporal_normalized_rmse": 0.1856,
+      "temporal_to_spectral_r2_change_vs_v1": null,
+      "spectral_to_temporal_r2_change_vs_v1": null
+    },
+    {
+      "dataset": "oracle",
+      "profile": "isolated_v2",
+      "temporal_to_spectral_r2": 0.000808,
+      "temporal_to_spectral_normalized_rmse": 0.531316,
+      "spectral_to_temporal_r2": -0.009346,
+      "spectral_to_temporal_normalized_rmse": 0.188286,
+      "temporal_to_spectral_r2_change_vs_v1": 0.023886,
+      "spectral_to_temporal_r2_change_vs_v1": 0.001281
+    }
+  ],
+  "gates": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "g1": "FAIL",
+      "g15": "PASS",
+      "outcome": "STOP-AND-REDESIGN"
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "g1": "FAIL",
+      "g15": "FAIL",
+      "outcome": "STOP-AND-REDESIGN"
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "g1": "FAIL",
+      "g15": "PASS",
+      "outcome": "STOP-AND-REDESIGN"
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "g1": "FAIL",
+      "g15": "FAIL",
+      "outcome": "STOP-AND-REDESIGN"
+    }
+  ],
+  "failure_diagnosis": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "wisig",
+      "folds": [],
+      "g1_failed_checks": [
+        "temporal_to_spectral_identity_rescue",
+        "spectral_to_temporal_identity_rescue",
+        "temporal_to_spectral_pair_rescue",
+        "spectral_to_temporal_pair_rescue"
+      ],
+      "g15_failed_checks": []
+    },
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "folds": [],
+      "g1_failed_checks": [
+        "spectral_local_learnability",
+        "spectral_pair_auroc",
+        "spectral_hard_pair_accuracy",
+        "spectral_to_temporal_identity_rescue"
+      ],
+      "g15_failed_checks": [
+        "auroc_temporal_rescues_spectral",
+        "auroc_spectral_rescues_temporal"
+      ]
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "wisig",
+      "folds": [
+        {
+          "inner_fold": 0,
+          "causes": [
+            {
+              "category": "one_way_rescue",
+              "temporal_to_spectral_rescue": 0.008605072463768116,
+              "spectral_to_temporal_rescue": 0.052083333333333336
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 1,
+          "causes": [
+            {
+              "category": "repeated_or_noncomplementary_capability",
+              "temporal_to_spectral_rescue": 0.006340579710144928,
+              "spectral_to_temporal_rescue": 0.04710144927536232
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 2,
+          "causes": [
+            {
+              "category": "one_way_rescue",
+              "temporal_to_spectral_rescue": 0.009963768115942028,
+              "spectral_to_temporal_rescue": 0.050724637681159424
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 3,
+          "causes": [
+            {
+              "category": "repeated_or_noncomplementary_capability",
+              "temporal_to_spectral_rescue": 0.004076086956521739,
+              "spectral_to_temporal_rescue": 0.024003623188405796
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        }
+      ],
+      "g1_failed_checks": [
+        "temporal_to_spectral_identity_rescue",
+        "spectral_to_temporal_identity_rescue",
+        "temporal_to_spectral_pair_rescue",
+        "spectral_to_temporal_pair_rescue"
+      ],
+      "g15_failed_checks": []
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "folds": [
+        {
+          "inner_fold": 0,
+          "causes": [
+            {
+              "category": "local_generalization_failure",
+              "agent": "temporal",
+              "train_accuracy": 1.0,
+              "heldout_identity_accuracy": 0.3177083333333333,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "verifier_generalization_failure",
+              "agent": "temporal",
+              "pair_auroc": 0.690456814236111
+            },
+            {
+              "category": "local_generalization_failure",
+              "agent": "spectral",
+              "train_accuracy": 0.9996744791666666,
+              "heldout_identity_accuracy": 0.17317708333333334,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "verifier_generalization_failure",
+              "agent": "spectral",
+              "pair_auroc": 0.5003658718532986
+            },
+            {
+              "category": "possible_over_isolation",
+              "interpretation": "both v2 observations fell below the local capability gate"
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 1,
+          "causes": [
+            {
+              "category": "local_generalization_failure",
+              "agent": "temporal",
+              "train_accuracy": 1.0,
+              "heldout_identity_accuracy": 0.3385416666666667,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "local_generalization_failure",
+              "agent": "spectral",
+              "train_accuracy": 0.9990234375,
+              "heldout_identity_accuracy": 0.18229166666666666,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "verifier_generalization_failure",
+              "agent": "spectral",
+              "pair_auroc": 0.494171142578125
+            },
+            {
+              "category": "possible_over_isolation",
+              "interpretation": "both v2 observations fell below the local capability gate"
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 2,
+          "causes": [
+            {
+              "category": "local_generalization_failure",
+              "agent": "temporal",
+              "train_accuracy": 0.9983723958333334,
+              "heldout_identity_accuracy": 0.3580729166666667,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "local_generalization_failure",
+              "agent": "spectral",
+              "train_accuracy": 1.0,
+              "heldout_identity_accuracy": 0.16015625,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "verifier_generalization_failure",
+              "agent": "spectral",
+              "pair_auroc": 0.48896331787109376
+            },
+            {
+              "category": "possible_over_isolation",
+              "interpretation": "both v2 observations fell below the local capability gate"
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        },
+        {
+          "inner_fold": 3,
+          "causes": [
+            {
+              "category": "local_generalization_failure",
+              "agent": "temporal",
+              "train_accuracy": 1.0,
+              "heldout_identity_accuracy": 0.3763020833333333,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "local_generalization_failure",
+              "agent": "spectral",
+              "train_accuracy": 0.9996744791666666,
+              "heldout_identity_accuracy": 0.16796875,
+              "interpretation": "training learned but held-out evaluation failed"
+            },
+            {
+              "category": "verifier_generalization_failure",
+              "agent": "spectral",
+              "pair_auroc": 0.4871134440104167
+            },
+            {
+              "category": "possible_over_isolation",
+              "interpretation": "both v2 observations fell below the local capability gate"
+            }
+          ],
+          "passed_all_fold_level_diagnostics": false
+        }
+      ],
+      "g1_failed_checks": [
+        "temporal_local_learnability",
+        "spectral_local_learnability",
+        "spectral_pair_auroc",
+        "temporal_hard_pair_accuracy",
+        "spectral_hard_pair_accuracy"
+      ],
+      "g15_failed_checks": [
+        "auroc_temporal_rescues_spectral",
+        "auroc_spectral_rescues_temporal"
+      ]
+    }
+  ]
+}

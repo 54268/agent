@@ -1,0 +1,10 @@
+{
+  "base_config": "configs/experiments/stage10_stage5_mother_base.json",
+  "dataset": "wisig",
+  "name": "stage10_stage5_mother_wisig_outer0",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "mother_config": "configs/experiments/stage5_unified_wisig_k40u20.json",
+  "mother_checkpoint": "results/stage5_unified_v4/wisig_k40u20/lco/folds/fold0/experts.pt",
+  "output_dir": "results/stage10_stage5_mother/wisig_outer0",
+  "paired_config": "configs/experiments/stage10_stage5_mother_oracle.json"
+}

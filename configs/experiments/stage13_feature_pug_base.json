@@ -1,0 +1,16 @@
+{
+  "method_profile": "stage5_full_inherited_abc_feature_certified_pug_v1",
+  "seed": 42,
+  "partition_seed": 2026,
+  "batch_size": 512,
+  "train_samples_per_class": 512,
+  "lco_max_samples": 4096,
+  "feature_kinds": ["competition", "disagreement", "mixed"],
+  "feature_etas": [1.0, 1.5, 2.0, 2.5],
+  "c_weight_grid": [0.0, 0.05, 0.1, 0.2],
+  "pug_weight_grid": [0.0, 0.05, 0.1, 0.2],
+  "lite_escalation_quantile": 0.8,
+  "iq_max_seeds_per_class": 12,
+  "iq_etas": [0.15, 0.3, 0.45],
+  "device": "auto"
+}

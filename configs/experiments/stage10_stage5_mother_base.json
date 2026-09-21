@@ -1,0 +1,15 @@
+{
+  "method_profile": "stage5_v4_frozen_mother_candidate_consultation_v1",
+  "seed": 42,
+  "partition_seed": 2026,
+  "outer_fold": 0,
+  "batch_size": 128,
+  "train_samples_per_class": 128,
+  "calibration_samples_per_class": 64,
+  "test_samples_per_class": 64,
+  "certificate_scale": 0.25,
+  "query_budget": 0.25,
+  "query_cost": 0.01,
+  "known_acceptance": 0.95,
+  "device": "auto"
+}

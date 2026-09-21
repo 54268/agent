@@ -1,0 +1,10 @@
+{
+  "base_config": "configs/experiments/stage13_feature_pug_base.json",
+  "dataset": "wisig",
+  "name": "stage13_feature_pug_wisig",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "mother_config": "configs/experiments/stage5_unified_wisig_k40u20.json",
+  "fold_checkpoint_pattern": "results/stage5_unified_v4/wisig_k40u20/lco/folds/fold{fold}/experts.pt",
+  "stage5_selection": "results/stage5_unified_v4/wisig_k40u20/lco/lco_selection.json",
+  "paired_config": "configs/experiments/stage13_feature_pug_oracle.json"
+}

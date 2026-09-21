@@ -6,7 +6,21 @@
 > 显式 Communication，以及 Reliability Router。各阶段都保留独立入口、三随机种子聚合和反事实对照，
 > 不把未通过净增益闸门的模块包装成正结果。
 
-**当前主线为 Stage-7 条件咨询式多智能体。** Stage-6 V2–V7 已停止继续调参，其运行仅是未完成的
+**当前主线已切换到 Stage-8 异构私有任务 Agent。** Stage-7 已冻结为历史基线；其 nested G0 证明了
+局部互补存在，但没有跨类别、跨数据集共同可迁移的选择规则。Stage-8 新建 `src/maros_stage8/`，先实现
+API 硬隔离的 Temporal/Spectral Agent、prototype-conditioned verifier 和 candidate-level evidence table，
+不复制 Stage-7 Prototype super-agent，也不在 G1/G1.5 通过前训练 Router。第二轮已证明 ORACLE
+small-set 可满拟合、删除了 class-id embedding，并完成 identity/unknown/pair rescue、方向预测、class
+reindex 与 observation leakage 审计。原 v1 在 WiSig 能力重复、在 ORACLE Spectral 泛化近随机；lossy
+observation v2 在 WiSig 只交换了主弱关系，在 ORACLE 过度删除可泛化信息。四组实验均为
+`STOP-AND-REDESIGN`，因此 Memory/Auditor、forced consultation 与 VOI Coordinator 继续锁定。详见
+[`docs/stage8_g1_redesign_round2.md`](docs/stage8_g1_redesign_round2.md)。
+
+最新 Agent-B v3 快速验证只改 B 的 phase-free segment spectrum，并冻结 A；ORACLE fold-0 仍只有
+`Known Acc=0.1484、pair AUC=0.4870`，触发早停，没有运行四折或 WiSig。结论为
+`SPECTRAL-PRIVATE-TASK-REDESIGN-REQUIRED`：下一步应改变 B 的 private task，而不是继续堆频谱通道。
+
+Stage-6 V2–V7 已停止继续调参，其运行仅是未完成的
 WiSig 单 fold 开发诊断，完整性登记见 [`results/stage6_diagnostic_index.md`](results/stage6_diagnostic_index.md)。
 Stage-7 只保留 Waveform Identity 与 Enrollment/Prototype 两个具有私有观察、独立决策和条件响应能力的
 推理 Agent，通过 `STOP / W_FIRST / P_FIRST` 一轮低带宽语义通信验证真实协作价值。裁决、校准、阈值、
@@ -87,6 +101,11 @@ Unified V4 和旧 F174 结果继续保留为历史基线，不能替代 Stage-7 
 | Stage-6 V2–V7 未完成诊断索引 | [`results/stage6_diagnostic_index.md`](results/stage6_diagnostic_index.md) |
 | Stage-7 条件咨询、nested LCO 与晋级闸门 | [`docs/stage7_conditional_consultation.md`](docs/stage7_conditional_consultation.md) |
 | Stage-7 nested G0 实测失败诊断 | [`docs/stage7_nested_g0_diagnosis.md`](docs/stage7_nested_g0_diagnosis.md) |
+| Stage-7 冻结基线 | [`docs/stage7_frozen_baseline.md`](docs/stage7_frozen_baseline.md) |
+| Stage-8 私有任务 Agent 设计 | [`docs/stage8_private_task_agents.md`](docs/stage8_private_task_agents.md) |
+| Stage-8 G0/G1 小探针 | [`docs/stage8_g0_g1_probe.md`](docs/stage8_g0_g1_probe.md) |
+| Stage-8 G1 prototype verifier 与信息隔离重构 | [`docs/stage8_g1_redesign_round2.md`](docs/stage8_g1_redesign_round2.md) |
+| Stage-8 Agent-B v3 快速验证 | [`docs/stage8_agent_b_v3_quick_validation.md`](docs/stage8_agent_b_v3_quick_validation.md) |
 | 第一阶段审计与框架 | [`docs/phase1_audit_and_framework.md`](docs/phase1_audit_and_framework.md) |
 | 近年论文与代码映射 | [`docs/literature/recent_papers_and_code.md`](docs/literature/recent_papers_and_code.md) |
 | 机器可读实验矩阵 | [`configs/protocols/wisig_only_experiment_matrix.json`](configs/protocols/wisig_only_experiment_matrix.json) |

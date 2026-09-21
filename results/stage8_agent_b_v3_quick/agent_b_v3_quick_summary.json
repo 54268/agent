@@ -1,0 +1,100 @@
+{
+  "stage": "stage8_agent_b_v3_quick_validation",
+  "formal_unknown_used": false,
+  "executed_scope": {
+    "oracle_inner_fold_0": true,
+    "oracle_four_folds": false,
+    "wisig": false,
+    "stop_reason": "B3 failed both fold-0 continuation thresholds and both early-stop thresholds"
+  },
+  "local_capability": [
+    {
+      "profile": "legacy_v1",
+      "dataset": "oracle",
+      "fold": 0,
+      "train_accuracy": 0.9375,
+      "eval_accuracy": 0.171875,
+      "pair_auroc": 0.4928592258029514,
+      "hard_pair_accuracy": 0.17708333333333334
+    },
+    {
+      "profile": "isolated_v2",
+      "dataset": "oracle",
+      "fold": 0,
+      "train_accuracy": 0.9996744791666666,
+      "eval_accuracy": 0.17317708333333334,
+      "pair_auroc": 0.5003658718532986,
+      "hard_pair_accuracy": 0.17838541666666666
+    },
+    {
+      "profile": "robust_spectral_v3",
+      "dataset": "oracle",
+      "fold": 0,
+      "train_accuracy": 0.9195963541666666,
+      "eval_accuracy": 0.1484375,
+      "pair_auroc": 0.4870456271701389,
+      "hard_pair_accuracy": 0.18359375
+    }
+  ],
+  "spectral_to_temporal_rescue": [
+    {
+      "profile": "legacy_v1",
+      "identity_rescue": 0.032552083333333336,
+      "pair_rescue": 0.10286458333333333,
+      "rescue_auroc": 0.7006729475100942,
+      "rescue_pr_auc": 0.0603348820647791,
+      "positive_support": 25
+    },
+    {
+      "profile": "isolated_v2",
+      "identity_rescue": 0.10546875,
+      "pair_rescue": 0.3359375,
+      "rescue_auroc": 0.5298578539723615,
+      "rescue_pr_auc": 0.1115260353702299,
+      "positive_support": 81
+    },
+    {
+      "profile": "robust_spectral_v3",
+      "identity_rescue": 0.029947916666666668,
+      "pair_rescue": 0.10416666666666667,
+      "rescue_auroc": null,
+      "rescue_pr_auc": null,
+      "positive_support": null,
+      "not_run_reason": "fold-0 local capability failed; directional cross-fold prediction would be invalid"
+    }
+  ],
+  "nuisance_state_drift": {
+    "legacy_v1": {
+      "time_shift": 0.00028133438900113106,
+      "small_cfo": 0.004479088820517063
+    },
+    "robust_v3_noalign": {
+      "time_shift": 0.010160108096897602,
+      "small_cfo": 0.021881289780139923
+    },
+    "robust_v3": {
+      "time_shift": 0.013947368133813143,
+      "small_cfo": 0.016400448977947235
+    }
+  },
+  "prototype_generalization": {
+    "train_pgr": 1.6277437210083008,
+    "eval_pgr": 0.11260274797677994,
+    "train_intra_class_distance": 0.1081933006644249,
+    "eval_intra_class_distance": 0.14094232022762299,
+    "train_inter_class_distance": 0.17611096799373627,
+    "eval_inter_class_distance": 0.01587049290537834,
+    "eval_prototype_margin": -0.05488622561097145,
+    "eval_prototype_centroid_drift": 0.1169508621096611
+  },
+  "fold0_gate": {
+    "required_eval_accuracy": 0.35,
+    "required_pair_auroc": 0.65,
+    "early_stop_accuracy": 0.25,
+    "early_stop_pair_auroc": 0.60,
+    "worth_continuing": false,
+    "early_stop": true
+  },
+  "class_reindex_invariance_passed": true,
+  "conclusion": "SPECTRAL-PRIVATE-TASK-REDESIGN-REQUIRED"
+}

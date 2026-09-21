@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/experiments/stage9_g0_base.json",
+  "dataset": "wisig",
+  "name": "stage9_g0_wisig_outer0",
+  "wisig_pkl": "data/WiSig/WiSig_OpenSet_1Day_1Rx/wisig_openset_subset.pkl",
+  "output_dir": "results/stage9_g0/wisig_outer0",
+  "paired_config": "configs/experiments/stage9_g0_oracle_k10u6.json"
+}

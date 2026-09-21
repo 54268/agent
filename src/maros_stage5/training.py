@@ -254,20 +254,19 @@ def pseudo_to_records(model: RoleStructuredExperts, pseudo: PseudoUnknownBatch,
                       openmax: OpenMaxEVT, device: torch.device) -> ExpertRecords:
     zi = torch.from_numpy(pseudo.identity_state).to(device)
     zg = torch.from_numpy(pseudo.geometry_state).to(device)
-    identity_logits = model.identity.classifier(zi)
-    geometry_logits = model.geometry.logits_from_state(zg)
+    # Generated states must be freshly evaluated by both agents.  This is a
+    # real state-level forward path, not a copy of the source Known report.
+    identity = model.identity.forward_from_state(zi)
+    geometry = model.geometry.forward_from_state(zg)
+    identity_logits, geometry_logits = identity.class_logits, geometry.class_logits
     ip = F.softmax(identity_logits, dim=1); gp = F.softmax(geometry_logits, dim=1)
-    ilog = F.log_softmax(identity_logits, dim=1)
-    iconf = ip.max(dim=1).values
-    ientropy = -(ip * ilog).sum(dim=1)
-    ienergy = -torch.logsumexp(identity_logits, dim=1)
-    proto = F.normalize(model.geometry.prototypes, dim=-1)
-    dist = torch.cdist(zg, proto, p=2.0) ** 2
-    near = dist.topk(2, dim=1, largest=False).values
-    gconf = gp.max(dim=1).values
-    identity_proto = F.normalize(model.identity.prototypes, dim=-1)
-    identity_dist = torch.cdist(F.normalize(zi, dim=-1), identity_proto, p=2.0) ** 2
-    identity_near = identity_dist.topk(2, dim=1, largest=False).values
+    iconf = identity.evidence["confidence"]
+    ientropy = identity.evidence["entropy"]
+    ienergy = identity.evidence["energy"]
+    near = torch.stack([geometry.evidence["d1"], geometry.evidence["d2"]], dim=1)
+    gconf = geometry.evidence["confidence"]
+    identity_near = torch.stack(
+        [identity.evidence["d1"], identity.evidence["d2"]], dim=1)
     disagreement = (identity_logits.argmax(1) != geometry_logits.argmax(1)).float()
     base = torch.stack([1.0 - iconf, ientropy, ienergy, near[:, 0],
                         -(near[:, 1] - near[:, 0]), 1.0 - gconf], dim=1)

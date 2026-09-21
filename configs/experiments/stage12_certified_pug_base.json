@@ -1,0 +1,14 @@
+{
+  "method_profile": "stage5_frozen_openmax_plus_certified_iq_pug_proxy_v1",
+  "seed": 42,
+  "partition_seed": 2026,
+  "batch_size": 256,
+  "train_samples_per_class": 128,
+  "cal_samples_per_class": 64,
+  "test_samples_per_class": 64,
+  "max_seeds_per_class": 12,
+  "etas": [0.15, 0.3, 0.45],
+  "known_acceptance": 0.95,
+  "lite_escalation_quantile": 0.8,
+  "device": "auto"
+}

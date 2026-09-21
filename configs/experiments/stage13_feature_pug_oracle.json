@@ -1,0 +1,10 @@
+{
+  "base_config": "configs/experiments/stage13_feature_pug_base.json",
+  "dataset": "oracle",
+  "name": "stage13_feature_pug_oracle",
+  "oracle_root": "data/oracle/processed_k10u6",
+  "mother_config": "configs/experiments/stage5_unified_oracle_k10u6.json",
+  "fold_checkpoint_pattern": "results/stage5_unified_v4/oracle_k10u6/lco/folds/fold{fold}/experts.pt",
+  "stage5_selection": "results/stage5_unified_v4/oracle_k10u6/lco/lco_selection.json",
+  "paired_config": "configs/experiments/stage13_feature_pug_wisig.json"
+}
