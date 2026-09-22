@@ -12,6 +12,8 @@ results/**/*.npz
 results/**/*.npy
 results/**/*.joblib
 results/**/lco_selection.json
+tests/**/artifacts/**/*.pt
+tests/**/artifacts/**/*.pth
 多智能体GitHub/
 
 # === Python / IDE / OS ===

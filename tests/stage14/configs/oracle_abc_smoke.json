@@ -1,0 +1,20 @@
+{
+  "dataset": "oracle",
+  "stage13_config": "configs/experiments/stage13_feature_pug_oracle.json",
+  "outer_fold": 0,
+  "seed": 42,
+  "train_samples_per_class": 48,
+  "proxy_samples_per_class": 48,
+  "calibration_samples_per_class": 48,
+  "test_samples_per_class": 32,
+  "pug_kind": "competition",
+  "pug_eta": 1.5,
+  "updates": 24,
+  "episodes_per_update": 64,
+  "max_steps": 6,
+  "message_budget": 4,
+  "tool_budget": 3,
+  "use_geometry_actor": true,
+  "device": "auto",
+  "output_dir": "tests/stage14/artifacts/oracle_fold0_abc_smoke"
+}

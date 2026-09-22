@@ -1,0 +1,230 @@
+{
+  "stage": "stage14_heterogeneous_comm_mappo",
+  "dataset": "oracle",
+  "outer_fold": 0,
+  "formal_unknown_used": false,
+  "formal_unknown_count_not_accessed": 24000,
+  "actors": [
+    "identity",
+    "open_set"
+  ],
+  "actor_parameter_sharing": false,
+  "critic": "single_centralized_V_state_only",
+  "perception_checkpoint": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage5_unified_v4\\oracle_k10u6\\lco\\folds\\fold0\\experts.pt",
+  "training_episode_count": 640,
+  "loaded_actor_checkpoint": "D:\\learn_pytorch\\笔记\\多智能体\\Multi-Agent OS-SEI\\results\\stage14\\oracle_fold0_ac_smoke\\actors_inference.pt",
+  "certification": {
+    "generated": 256,
+    "certified": 160,
+    "certification_rate": 0.625,
+    "boundary": 160,
+    "hard": 0,
+    "per_class": {
+      "0": {
+        "generated": 32,
+        "certified": 32
+      },
+      "1": {
+        "generated": 32,
+        "certified": 12
+      },
+      "2": {
+        "generated": 32,
+        "certified": 28
+      },
+      "3": {
+        "generated": 32,
+        "certified": 20
+      },
+      "4": {
+        "generated": 32,
+        "certified": 20
+      },
+      "5": {
+        "generated": 32,
+        "certified": 16
+      },
+      "6": {
+        "generated": 32,
+        "certified": 12
+      },
+      "7": {
+        "generated": 32,
+        "certified": 20
+      }
+    },
+    "own_prototype_distance_mean": 0.3908446431159973,
+    "nearest_rival_distance_mean": 1.2190804481506348,
+    "competition_gap_mean": 0.8282357454299927,
+    "local_scale_mean": 0.14240705425618216,
+    "boundary_crossing_ratio": 1.0,
+    "nearest_known_distance_mean": 0.19939067668747157,
+    "fell_into_rival_core_ratio": 0.0,
+    "too_far_ratio": 0.0,
+    "c_support_outside_ratio": 0.625,
+    "a_confidence_before": 0.9995664978816328,
+    "a_confidence_after": 0.21636236226848304,
+    "b_confidence_before": 0.9844019097788343,
+    "b_confidence_after": 0.9526664855096239,
+    "disagreement_before": 0.0,
+    "disagreement_after": 0.015625
+  },
+  "history": [],
+  "metrics": {
+    "known_accuracy": 0.953125,
+    "unknown_recall": 0.9375,
+    "h_score": 0.9452479338842975,
+    "auroc": 0.96905517578125,
+    "oscr": 0.96722412109375,
+    "mean_reward": 0.8099999999999999,
+    "mean_steps": 3.0,
+    "unique_trajectories": 2,
+    "action_usage": {
+      "PROPOSE_TOP1": 320,
+      "QUERY_A": 320,
+      "ABSTAIN": 320,
+      "CHECK_GEO_PROTOTYPE": 320,
+      "ASK_C": 320,
+      "ACCEPT_CURRENT_KNOWN": 248,
+      "REJECT_UNKNOWN": 72
+    },
+    "timeout_count": 0
+  },
+  "causal_interventions": {
+    "b_agent_removal": null,
+    "all_c_tools_shuffle": {
+      "known_accuracy": 0.9140625,
+      "unknown_recall": 0.71875,
+      "h_score": 0.8047248803827751,
+      "auroc": 0.9102783203125,
+      "oscr": 0.909393310546875,
+      "mean_reward": 0.6599999999999999,
+      "mean_steps": 3.0,
+      "unique_trajectories": 2,
+      "action_usage": {
+        "PROPOSE_TOP1": 320,
+        "QUERY_A": 320,
+        "ABSTAIN": 320,
+        "CHECK_GEO_PROTOTYPE": 320,
+        "ASK_C": 320,
+        "ACCEPT_CURRENT_KNOWN": 252,
+        "REJECT_UNKNOWN": 68
+      },
+      "timeout_count": 0
+    },
+    "delta_h_remove_b": null,
+    "delta_h_shuffle_c_tools": 0.1405230535015224
+  },
+  "known_accuracy_operating_point": {
+    "selection_data": "calibration_known_only",
+    "calibration_default_metrics": {
+      "known_accuracy": 0.9296875,
+      "unknown_recall": 0.0,
+      "h_score": 0.0,
+      "auroc": NaN,
+      "oscr": NaN,
+      "mean_reward": 0.769375,
+      "mean_steps": 3.0,
+      "unique_trajectories": 2,
+      "action_usage": {
+        "PROPOSE_TOP1": 384,
+        "QUERY_A": 384,
+        "ABSTAIN": 384,
+        "CHECK_GEO_PROTOTYPE": 384,
+        "ASK_C": 384,
+        "ACCEPT_CURRENT_KNOWN": 358,
+        "REJECT_UNKNOWN": 26
+      },
+      "timeout_count": 0
+    },
+    "operating_points": [
+      {
+        "calibration": {
+          "target_known_accuracy": 0.95,
+          "threshold": 0.4428726136684418,
+          "calibration_known_accuracy": 0.9505208333333334,
+          "calibration_known_count": 384,
+          "feasible": true
+        },
+        "test_metrics": {
+          "reject_threshold": 0.4428726136684418,
+          "known_accuracy": 0.97265625,
+          "unknown_recall": 0.890625,
+          "h_score": 0.9298349056603774,
+          "auroc": 0.96905517578125,
+          "oscr": 0.96722412109375
+        }
+      },
+      {
+        "calibration": {
+          "target_known_accuracy": 0.97,
+          "threshold": 0.5205729603767395,
+          "calibration_known_accuracy": 0.9713541666666666,
+          "calibration_known_count": 384,
+          "feasible": true
+        },
+        "test_metrics": {
+          "reject_threshold": 0.5205729603767395,
+          "known_accuracy": 0.98828125,
+          "unknown_recall": 0.84375,
+          "h_score": 0.9103144989339019,
+          "auroc": 0.96905517578125,
+          "oscr": 0.96722412109375
+        }
+      },
+      {
+        "calibration": {
+          "target_known_accuracy": 0.98,
+          "threshold": 0.5993808507919312,
+          "calibration_known_accuracy": 0.9817708333333334,
+          "calibration_known_count": 384,
+          "feasible": true
+        },
+        "test_metrics": {
+          "reject_threshold": 0.5993808507919312,
+          "known_accuracy": 0.9921875,
+          "unknown_recall": 0.375,
+          "h_score": 0.5442857142857143,
+          "auroc": 0.96905517578125,
+          "oscr": 0.96722412109375
+        }
+      },
+      {
+        "calibration": {
+          "target_known_accuracy": 0.99,
+          "threshold": Infinity,
+          "calibration_known_accuracy": 0.9895833333333334,
+          "calibration_known_count": 384,
+          "feasible": false
+        },
+        "test_metrics": {
+          "reject_threshold": Infinity,
+          "known_accuracy": 0.99609375,
+          "unknown_recall": 0.0,
+          "h_score": 0.0,
+          "auroc": 0.96905517578125,
+          "oscr": 0.96722412109375
+        }
+      }
+    ],
+    "matched_test_point_diagnostic_only": {
+      "warning": "diagnostic curve point only; never use this test-selected threshold for deployment",
+      "selection_data": "test_known_labels_only",
+      "calibration": {
+        "target_known_accuracy": 0.95,
+        "threshold": 0.3685673475265503,
+        "calibration_known_accuracy": 0.9531249999999999,
+        "calibration_known_count": 256,
+        "feasible": true
+      },
+      "test_metrics": {
+        "reject_threshold": 0.3685673475265503,
+        "known_accuracy": 0.953125,
+        "unknown_recall": 0.9375,
+        "h_score": 0.9452479338842975,
+        "auroc": 0.96905517578125,
+        "oscr": 0.96722412109375
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "base_config": "tests/stage14/configs/oracle_abc_smoke.json",
+  "actors_checkpoint": "tests/stage14/artifacts/oracle_fold0_abc_smoke/actors_inference.pt",
+  "known_accuracy_targets": [0.95, 0.97, 0.98, 0.99],
+  "diagnostic_test_known_accuracy": 0.95,
+  "output_dir": "tests/stage14/artifacts/oracle_fold0_abc_known95"
+}

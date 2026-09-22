@@ -1,0 +1,23 @@
+{
+  "dataset": "oracle",
+  "stage13_config": "configs/experiments/stage13_feature_pug_oracle.json",
+  "outer_fold": 0,
+  "seed": 42,
+  "train_samples_per_class": 100000,
+  "proxy_samples_per_class": 100000,
+  "calibration_samples_per_class": 100000,
+  "test_samples_per_class": 100000,
+  "pug_source_samples_per_class": 512,
+  "pug_kind": "competition",
+  "pug_eta": 1.5,
+  "updates": 64,
+  "episodes_per_update": 256,
+  "ppo_epochs": 4,
+  "minibatch_episodes": 32,
+  "max_steps": 6,
+  "message_budget": 4,
+  "tool_budget": 3,
+  "use_geometry_actor": false,
+  "device": "auto",
+  "output_dir": "results/stage14/final_ac_fold0_seed42"
+}
