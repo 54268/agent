@@ -1,24 +1,30 @@
-"""Simple leakage-safe knowledge and case memory for Stage 15."""
+"""Role-private memory and shared domain knowledge for Stage 15."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 from typing import Any
 
+import numpy as np
+
 
 DEFAULT_GLOBAL_KNOWLEDGE = (
-    "RF open-set decisions should not trust a single confidence score. "
-    "High classifier confidence can coexist with receiver/domain shift. "
-    "Prototype, geometry, OpenMax, boundary and multi-view consistency are "
-    "complementary evidence sources. Conflicting evidence should trigger "
-    "additional verification before accepting a known identity."
+    "Open-set RF identification should not trust one confidence score. "
+    "Receiver/domain shift can preserve high softmax confidence while changing "
+    "class-conditional geometry. Identity evidence, geometry evidence, OpenMax, "
+    "boundary risk and multi-view consistency are complementary. Agents should "
+    "communicate only evidence they actually observed and should seek additional "
+    "evidence when their local views conflict."
 )
 
 
 @dataclass
 class Case:
-    public_summary: dict[str, Any]
-    revealed_tools: dict[str, Any]
-    decision: str
+    """One role's own past experience; never contains ground truth."""
+
+    local_summary: dict[str, Any]
+    private_tools: dict[str, Any]
+    observed_messages: list[dict[str, Any]]
+    final_decision: str
     candidate_class: int | None
     note: str = ""
 
@@ -33,29 +39,32 @@ class CaseMemory:
         if len(self.cases) > self.max_cases:
             del self.cases[:-self.max_cases]
 
-    def retrieve(self, public_summary: dict[str, Any], k: int = 3) -> list[dict]:
-        """Retrieve by class agreement and confidence proximity.
+    @staticmethod
+    def _distance(left: dict[str, Any], right: dict[str, Any]) -> float:
+        keys = set(left) & set(right)
+        if not keys:
+            return 10.0
+        distances = []
+        for key in keys:
+            a, b = left[key], right[key]
+            if isinstance(a, (int, float, np.integer, np.floating)) and                     isinstance(b, (int, float, np.integer, np.floating)):
+                distances.append(abs(float(a) - float(b)))
+            else:
+                distances.append(0.0 if a == b else 1.0)
+        return float(np.mean(distances)) if distances else 10.0
 
-        This intentionally avoids labels, source provenance and formal-unknown flags.
-        """
+    def retrieve(self, local_summary: dict[str, Any],
+                 k: int = 3) -> list[dict[str, Any]]:
         if not self.cases or k <= 0:
             return []
-        target_class = public_summary.get("identity_top1")
-        target_prob = float(public_summary.get("identity_top1_probability", 0.0))
-        scored = []
-        for case in self.cases:
-            c_class = case.public_summary.get("identity_top1")
-            c_prob = float(case.public_summary.get(
-                "identity_top1_probability", 0.0))
-            score = abs(target_prob - c_prob)
-            if c_class != target_class:
-                score += 1.0
-            scored.append((score, case))
-        scored.sort(key=lambda row: row[0])
+        ranked = sorted(
+            self.cases,
+            key=lambda case: self._distance(local_summary, case.local_summary))
         return [{
-            "public_summary": case.public_summary,
-            "revealed_tools": case.revealed_tools,
-            "decision": case.decision,
+            "local_summary": case.local_summary,
+            "private_tools": case.private_tools,
+            "observed_messages": case.observed_messages[-6:],
+            "final_decision": case.final_decision,
             "candidate_class": case.candidate_class,
             "note": case.note,
-        } for _, case in scored[:k]]
+        } for case in ranked[:k]]
