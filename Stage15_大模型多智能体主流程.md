@@ -1,118 +1,155 @@
-# Stage 15：基于大模型的多智能体开放集辐射源识别
+# Stage 15：大模型多智能体开放集辐射源识别
 
-Stage 15 将项目主线从传统 MAPPO/CTDE 多智能体强化学习切换为 **LLM-based Multi-Agent + RF Tools + Memory/Knowledge**。
+## 1. 当前正式主线
 
-## 1. 新主线
+Stage 15 采用：
 
-不再将“专家网络”本身定义为 Agent。
+**Partially Observable Heterogeneous LLM Multi-Agent + RF Tools + Independent Memory**
 
-三个 Agent 都是大模型决策主体：
+Stage 14 的 Comm-MAPPO/CTDE 不删除，冻结为传统 MARL baseline。
 
-- **Proposer Agent**：根据当前 RF 摘要提出已知类候选，并主动决定是否调用额外 RF 工具；
-- **Critic Agent**：专门寻找反证、域偏移和未知风险，不允许只做简单附和；
-- **Arbiter Agent**：综合前两者意见和已揭示证据，决定继续调用工具、接受已知类或拒绝为未知。
+## 2. 三个真正的 Agent
 
-## 2. RF 工具层
+### Proposer Agent
+只接收 identity-side 局部观测，例如 Top-1、Top-2、概率、margin、entropy。
 
-Stage 14 已有感知能力全部保留，并降级为可调用工具：
+私有工具：
+- identity prototype
+- identity energy / distance margin
 
-- identity prototype risk
-- geometry prototype risk
-- OpenMax risk
-- frozen boundary risk
-- energy / distance margins
-- geometry multi-view risks
+任务：
+- 形成已知类假设；
+- 判断是否需要更多身份侧证据；
+- 将必要证据通过显式消息发给其他 Agent。
 
-Agent 不直接读取 Ground Truth、数据来源、formal unknown 标志。
+### Critic Agent
+只接收 geometry/open-set-side 局部观测。
 
-## 3. 大模型接口
+私有工具：
+- geometry prototype
+- geometry margin
+- OpenMax
+- boundary
+- multi-view geometry risk
 
-默认通过 OpenAI-compatible Chat Completions 接口调用，因此可接：
+任务：
+- 主动寻找 Proposer 假设的反证；
+- 分析开放集风险与域偏移迹象；
+- 支持或质疑当前候选；
+- 将必要证据显式发送给其他 Agent。
 
-- 本地 vLLM / SGLang 部署的 Qwen 等开源大模型；
-- 任何 OpenAI-compatible 托管模型。
+### Arbiter Agent
+不直接读取原始 RF 数值，不拥有 RF 工具。
+
+任务：
+- 读取 Proposer / Critic 发来的消息；
+- 证据不足时主动向指定 Agent 追问；
+- 最终执行 Known / Unknown 裁决。
+
+## 3. 为什么这一版属于实质多智能体
+
+系统明确具备：
+
+1. 独立 Agent 决策主体；
+2. 角色异构；
+3. 局部/部分可观测；
+4. 私有工具；
+5. 独立 Case Memory；
+6. 显式 Agent-to-Agent 消息；
+7. 信息不对称；
+8. 联合开放集目标；
+9. Agent 行为相互依赖；
+10. Ground Truth / provenance / formal unknown 防泄漏。
+
+共享同一个 Qwen 权重并不代表是同一个 Agent。三者不共享上下文、私有观测、私有工具结果和记忆；也支持未来为三个角色配置不同模型后端。
+
+## 4. RF 模块不是 Agent
+
+以下模块全部属于 Agent 可调用的 RF 工具或感知层：
+
+- classifier
+- prototype
+- geometry
+- OpenMax
+- boundary
+- energy / distance margin
+- multi-view evidence
+
+不再把“一个专家网络”包装成“一个 Agent”。
+
+## 5. 单一运行入口
+
+仓库根目录：
+
+```powershell
+python run_stage15.py
+```
+
+快速验证：
+
+```powershell
+python run_stage15.py --samples-per-class 4
+```
 
 默认配置：
 
-```json
-{
-  "model": "Qwen/Qwen3-8B",
-  "base_url": "http://127.0.0.1:8000/v1"
-}
-```
+`configs/experiments/stage15_llm_multiagent_oracle.json`
 
-## 4. 知识与记忆
+## 6. 大模型服务
 
-当前第一版包含两层：
+默认：
 
-1. **Global RF Knowledge**：写入系统提示的领域先验；
-2. **Case Memory**：只保存无标签的历史公开摘要、已调用工具结果和最终决策。
+- model: `Qwen/Qwen3-8B`
+- endpoint: `http://127.0.0.1:8000/v1`
 
-后续将把这一层升级为：
-- 外部 RF 文献 / 方法知识库；
-- 跨数据集 RF foundation model 表征；
-- 检索增强 RAG；
-- 反思与长期记忆。
+入口连接 OpenAI-compatible Chat Completions API。
 
-## 5. 与 Stage 14 的关系
+因此运行前需要已经启动对应的本地 vLLM/SGLang 服务，或者把配置里的 model/base_url 换成你实际使用的服务。
 
-Stage 14 不删除，冻结为传统多智能体强化学习 baseline。
+## 7. 输出
 
-Stage 15 不再使用：
-- GRU Actor 作为主决策器；
-- centralized critic；
-- PPO / GAE / policy clipping 作为主训练算法。
+默认目录：
 
-Stage 14 中以下部分继续复用：
-- nested Leave-Class-Out 开放集协议；
-- formal unknown 防泄漏约束；
-- Stage 5 冻结感知模型；
-- prototype / geometry / OpenMax / boundary 等证据；
-- 评估数据划分。
+`results/stage15/llm_multiagent_oracle_fold0/`
 
-## 6. 当前代码
+### summary.md
+人工阅读的最终总结果，包括：
 
-| 内容 | 路径 |
-|---|---|
-| Agent 定义 | `src/maros_stage15/agents.py` |
-| 严格动作协议 | `src/maros_stage15/schemas.py` |
-| LLM Provider | `src/maros_stage15/providers.py` |
-| RF Tools | `src/maros_stage15/tools.py` |
-| Memory | `src/maros_stage15/memory.py` |
-| Agentic 编排 | `src/maros_stage15/orchestrator.py` |
-| 主配置 | `configs/experiments/stage15_llm_multiagent_oracle.json` |
-| 运行入口 | `scripts/experiments/run_stage15_llm_multiagent.py` |
-| 协议测试 | `tests/stage15/test_agentic_contracts.py` |
+- Known Accuracy
+- Unknown Recall
+- H-score
+- 平均协作轮数
+- 平均工具调用
+- 平均 Agent 消息数
+- Unique trajectories
+- 每个 Agent 的动作统计
+- RF Tool 使用次数
 
-## 7. 运行
+### summary.json
+完整机器可读汇总。
 
-先启动一个 OpenAI-compatible 本地模型服务，例如 vLLM，然后运行：
+### agent_stats.json
+专门统计多智能体是否真正发生协作：
 
-```powershell
-conda run --no-capture-output -n pytorch python scripts/experiments/run_stage15_llm_multiagent.py --config configs/experiments/stage15_llm_multiagent_oracle.json
-```
+- proposer / critic / arbiter action usage
+- tool usage
+- mean turns
+- mean messages
+- mean tool calls
+- unique trajectories
 
-协议测试：
+### trajectories.jsonl
+逐样本保存完整 Agent 行动、工具调用和通信轨迹，用于后续分析典型 Known / Unknown 案例。
 
-```powershell
-conda run --no-capture-output -n pytorch python -m pytest -q tests/stage15
-```
+## 8. 第一轮实验关注点
 
-## 8. 下一阶段
+除了识别指标，更重要的是检查：
 
-第一轮只验证：
+- 三个 Agent 是否产生差异化行为；
+- Critic 是否真正改变部分样本的最终裁决；
+- Arbiter 是否主动追问；
+- 工具调用是否随样本变化；
+- unique trajectories 是否明显高于 Stage 14；
+- 是否出现退化成固定流程的情况。
 
-1. 单 LLM Agent；
-2. Proposer + Arbiter；
-3. Proposer + Critic + Arbiter；
-4. Stage 14 MAPPO baseline；
-5. 固定规则 / 单 MLP evidence fusion baseline。
-
-验证重点不是只看 H-score，还要看：
-- 是否真的产生多样化工具调用轨迹；
-- Critic 是否改变最终决策；
-- 多 Agent 相比单 Agent 是否有增益；
-- 工具调用成本和推理延迟；
-- 去掉 memory / knowledge / critic 后性能变化。
-
-只有这些实验成立后，再考虑 LoRA / preference optimization / RL fine-tuning。
+下一阶段再正式做 Single LLM / no-communication / no-Critic / shared-global-observation 等消融。
