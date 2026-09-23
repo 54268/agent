@@ -149,7 +149,7 @@ def main():
         "unknown_recall": unknown_recall,
         "h_score": h_score,
         "samples": len(records),
-        "formal_unknown_used": false if False else False
+        "formal_unknown_used": False
     }
     output = ROOT / cfg["output_dir"]
     output.mkdir(parents=True, exist_ok=True)
