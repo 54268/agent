@@ -5,8 +5,8 @@
   "seed": 42,
   "llm": {
     "provider": "openai_compatible",
-    "model": "Qwen/Qwen3-8B",
-    "base_url": "http://127.0.0.1:8000/v1",
+    "model": "qwen3:8b",
+    "base_url": "http://127.0.0.1:11434/v1",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.1,
     "timeout_seconds": 120
