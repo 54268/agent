@@ -1,4 +1,4 @@
-"""Strict schemas for LLM-agent actions and RF evidence."""
+"""Schemas for autonomous LLM agents, private observations and messages."""
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
@@ -17,8 +17,20 @@ class Action(str, Enum):
     PROPOSE = "propose"
     SUPPORT = "support"
     CHALLENGE = "challenge"
+    SHARE_EVIDENCE = "share_evidence"
+    ASK_PEER = "ask_peer"
     ABSTAIN = "abstain"
     FINAL = "final"
+
+
+class MessageKind(str, Enum):
+    PROPOSAL = "proposal"
+    EVIDENCE = "evidence"
+    QUERY = "query"
+    SUPPORT = "support"
+    CHALLENGE = "challenge"
+    ABSTAIN = "abstain"
+    SYSTEM = "system"
 
 
 @dataclass(frozen=True)
@@ -33,10 +45,32 @@ class ToolResult:
 
 
 @dataclass(frozen=True)
+class AgentMessage:
+    sender: Role | str
+    recipient: Role | str
+    kind: MessageKind
+    content: str
+    candidate_class: int | None = None
+    confidence: float | None = None
+    evidence_name: str | None = None
+    evidence_value: Any = None
+    turn: int = 0
+
+    def to_dict(self) -> dict[str, Any]:
+        row = asdict(self)
+        row["sender"] = self.sender.value if isinstance(self.sender, Role) else self.sender
+        row["recipient"] = (
+            self.recipient.value if isinstance(self.recipient, Role) else self.recipient)
+        row["kind"] = self.kind.value
+        return row
+
+
+@dataclass(frozen=True)
 class AgentAction:
     action: Action
     reason: str
     tool: str | None = None
+    recipient: Role | None = None
     candidate_class: int | None = None
     decision: str | None = None
     confidence: float | None = None
@@ -49,10 +83,15 @@ class AgentAction:
         reason = str(payload.get("reason", "")).strip()
         if not reason:
             raise ValueError("agent action needs a non-empty reason")
+
         tool = payload.get("tool")
+        recipient_raw = payload.get("recipient")
+        recipient = None if recipient_raw in (None, "", "null") else Role(
+            str(recipient_raw).strip())
         candidate = payload.get("candidate_class")
         decision = payload.get("decision")
         confidence = payload.get("confidence")
+
         if candidate is not None:
             candidate = int(candidate)
         if confidence is not None:
@@ -63,51 +102,44 @@ class AgentAction:
             decision = str(decision).strip().lower()
             if decision not in {"known", "unknown"}:
                 raise ValueError("decision must be known or unknown")
+
         return cls(
             action=action,
             reason=reason,
             tool=None if tool is None else str(tool),
+            recipient=recipient,
             candidate_class=candidate,
             decision=decision,
             confidence=confidence,
         )
 
 
-@dataclass(frozen=True)
-class TranscriptItem:
-    role: Role
-    action: Action
-    reason: str
-    candidate_class: int | None = None
-    tool: str | None = None
-    tool_result: ToolResult | None = None
-    decision: str | None = None
-
-    def to_dict(self) -> dict[str, Any]:
-        row = asdict(self)
-        row["role"] = self.role.value
-        row["action"] = self.action.value
-        return row
-
-
 @dataclass
-class SharedState:
-    public_summary: dict[str, Any]
-    current_candidate: int | None = None
-    revealed_tools: dict[str, ToolResult] = field(default_factory=dict)
-    transcript: list[TranscriptItem] = field(default_factory=list)
-    remaining_tool_budget: int = 4
+class AgentContext:
+    """What one agent is actually allowed to know at one decision step."""
+
+    role: Role
+    num_known_classes: int
+    private_summary: dict[str, Any]
+    current_candidate: int | None
+    inbox: list[AgentMessage] = field(default_factory=list)
+    private_tools: dict[str, ToolResult] = field(default_factory=dict)
+    own_history: list[dict[str, Any]] = field(default_factory=list)
+    remaining_tool_budget: int = 0
     turn: int = 0
 
     def safe_dict(self) -> dict[str, Any]:
         return {
-            "public_summary": self.public_summary,
+            "role": self.role.value,
+            "num_known_classes": self.num_known_classes,
+            "private_observation": dict(self.private_summary),
             "current_candidate": self.current_candidate,
-            "revealed_tools": {
+            "messages_received": [message.to_dict() for message in self.inbox[-12:]],
+            "private_tool_results": {
                 name: result.to_dict()
-                for name, result in self.revealed_tools.items()
+                for name, result in self.private_tools.items()
             },
-            "transcript": [item.to_dict() for item in self.transcript],
+            "own_recent_actions": list(self.own_history[-8:]),
             "remaining_tool_budget": self.remaining_tool_budget,
             "turn": self.turn,
         }
