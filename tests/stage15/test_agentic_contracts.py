@@ -7,7 +7,7 @@ from maros_stage15.agents import build_default_agents
 from maros_stage15.orchestrator import AgenticOpenSetSystem
 from maros_stage15.providers import ScriptedChatModel
 from maros_stage15.schemas import Role
-from maros_stage15.tools import public_rf_summary
+from maros_stage15.tools import role_private_summary
 
 
 def snapshot(label=0):
@@ -26,9 +26,9 @@ def snapshot(label=0):
     )
 
 
-def test_public_summary_has_no_label_or_provenance():
-    a = public_rf_summary(snapshot(label=0))
-    b = public_rf_summary(with_label(snapshot(label=0), 2))
+def test_private_observations_have_no_label_or_provenance():
+    a = role_private_summary(snapshot(label=0), Role.PROPOSER)
+    b = role_private_summary(with_label(snapshot(label=0), 2), Role.PROPOSER)
     assert a == b
     text = json.dumps(a)
     assert "label" not in text
@@ -36,33 +36,71 @@ def test_public_summary_has_no_label_or_provenance():
     assert "formal_unknown" not in text
 
 
-def test_three_llm_roles_can_reach_known_final():
+def test_roles_receive_different_observations():
+    s = snapshot()
+    proposer = role_private_summary(s, Role.PROPOSER)
+    critic = role_private_summary(s, Role.CRITIC)
+    arbiter = role_private_summary(s, Role.ARBITER)
+    assert proposer != critic
+    assert arbiter == {}
+    assert all(key.startswith("identity_") for key in proposer)
+    assert all(key.startswith("geometry_") for key in critic)
+
+
+def test_three_agents_can_reach_known_final():
     model = ScriptedChatModel([
-        '{"action":"propose","reason":"top1 dominates","tool":null,'
-        '"candidate_class":0,"decision":null,"confidence":0.9}',
-        '{"action":"request_tool","reason":"check open-set risk","tool":"openmax",'
-        '"candidate_class":null,"decision":null,"confidence":null}',
-        '{"action":"final","reason":"proposal strong and no high unknown risk",'
-        '"tool":null,"candidate_class":0,"decision":"known","confidence":0.88}',
+        '{"action":"propose","reason":"identity top1 dominates","tool":null,'
+        '"recipient":null,"candidate_class":0,"decision":null,"confidence":0.9}',
+        '{"action":"support","reason":"geometry does not contradict candidate",'
+        '"tool":null,"recipient":null,"candidate_class":0,'
+        '"decision":null,"confidence":0.8}',
+        '{"action":"final","reason":"independent identity and geometry agree",'
+        '"tool":null,"recipient":null,"candidate_class":0,'
+        '"decision":"known","confidence":0.88}',
     ])
-    agents = build_default_agents(model)
-    system = AgenticOpenSetSystem(agents, max_turns=3, tool_budget=2)
+    system = AgenticOpenSetSystem(
+        build_default_agents(model), max_turns=3, tool_budget=2,
+        message_budget=4)
     result = system.run(snapshot())
     assert result.prediction == 0
     assert result.decision == "known"
+    assert result.message_count == 2
+
+
+def test_private_tool_is_not_shared_automatically():
+    model = ScriptedChatModel([
+        '{"action":"request_tool","reason":"verify identity prototype","tool":"identity_prototype",'
+        '"recipient":null,"candidate_class":null,"decision":null,"confidence":null}',
+        '{"action":"propose","reason":"identity evidence supports class 0","tool":null,'
+        '"recipient":null,"candidate_class":0,"decision":null,"confidence":0.9}',
+        '{"action":"support","reason":"geometry supports current candidate","tool":null,'
+        '"recipient":null,"candidate_class":0,"decision":null,"confidence":0.8}',
+        '{"action":"final","reason":"sufficient communicated evidence","tool":null,'
+        '"recipient":null,"candidate_class":0,"decision":"known","confidence":0.8}',
+    ])
+    system = AgenticOpenSetSystem(
+        build_default_agents(model), max_turns=4, tool_budget=2,
+        message_budget=4)
+    result = system.run(snapshot())
     assert result.tool_calls == 1
+    # Raw private tool result stays only in the owner's action log.
+    proposal_rows = [r for r in result.transcript if r["agent"] == "proposer"]
+    assert "private_tool_result" in proposal_rows[0]
+    assert "identity_prototype" not in json.dumps(
+        [r for r in result.transcript if r["agent"] != "proposer"])
 
 
 def test_timeout_fails_closed_to_unknown():
     model = ScriptedChatModel([
         '{"action":"abstain","reason":"need more evidence","tool":null,'
-        '"candidate_class":null,"decision":null,"confidence":0.2}',
-        '{"action":"abstain","reason":"insufficient counter-evidence","tool":null,'
-        '"candidate_class":null,"decision":null,"confidence":0.2}',
-        '{"action":"abstain","reason":"not enough evidence to finalize","tool":null,'
-        '"candidate_class":null,"decision":null,"confidence":0.2}',
+        '"recipient":null,"candidate_class":null,"decision":null,"confidence":0.2}',
+        '{"action":"abstain","reason":"insufficient evidence","tool":null,'
+        '"recipient":null,"candidate_class":null,"decision":null,"confidence":0.2}',
+        '{"action":"abstain","reason":"cannot finalize","tool":null,'
+        '"recipient":null,"candidate_class":null,"decision":null,"confidence":0.2}',
     ])
-    system = AgenticOpenSetSystem(build_default_agents(model), max_turns=3)
+    system = AgenticOpenSetSystem(
+        build_default_agents(model), max_turns=3, message_budget=4)
     result = system.run(snapshot())
     assert result.prediction == -1
     assert result.decision == "unknown"
