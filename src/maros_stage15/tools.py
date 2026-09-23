@@ -1,4 +1,4 @@
-"""Leakage-safe RF tools exposed to LLM agents."""
+"""Role-scoped, leakage-safe RF observations and tools."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -9,99 +9,139 @@ import numpy as np
 from maros_stage14.data import EpisodeSnapshot
 from maros_stage14.observations import ranked
 
-from .schemas import ToolResult
+from .schemas import Role, ToolResult
 
 
-def public_rf_summary(snapshot: EpisodeSnapshot) -> dict:
-    """Build the always-visible RF summary without label/provenance leakage."""
-    probability, top1, top2, p1, p2, entropy = ranked(snapshot.identity_logits)
-    g_probability, g_top1, g_top2, gp1, gp2, g_entropy = ranked(
-        snapshot.geometry_logits)
-    return {
-        "num_known_classes": snapshot.num_classes,
-        "identity_top1": int(top1),
-        "identity_top2": int(top2),
-        "identity_top1_probability": float(p1),
-        "identity_top2_probability": float(p2),
-        "identity_margin": float(p1 - p2),
-        "identity_entropy": float(entropy),
-        "geometry_top1": int(g_top1),
-        "geometry_top2": int(g_top2),
-        "geometry_top1_probability": float(gp1),
-        "geometry_top2_probability": float(gp2),
-        "geometry_margin": float(gp1 - gp2),
-        "geometry_entropy": float(g_entropy),
-        "identity_geometry_agree": bool(top1 == g_top1),
-    }
+def role_private_summary(snapshot: EpisodeSnapshot, role: Role) -> dict:
+    """Return genuinely local RF observations for one agent.
+
+    Ground truth, source provenance and formal-unknown flags are never exposed.
+    Proposer and Critic receive different sensor views; Arbiter receives no raw RF
+    score and must reason from communicated evidence.
+    """
+    if role == Role.PROPOSER:
+        _, top1, top2, p1, p2, entropy = ranked(snapshot.identity_logits)
+        return {
+            "identity_top1": int(top1),
+            "identity_top2": int(top2),
+            "identity_top1_probability": float(p1),
+            "identity_top2_probability": float(p2),
+            "identity_margin": float(p1 - p2),
+            "identity_entropy": float(entropy),
+        }
+    if role == Role.CRITIC:
+        _, top1, top2, p1, p2, entropy = ranked(snapshot.geometry_logits)
+        return {
+            "geometry_top1": int(top1),
+            "geometry_top2": int(top2),
+            "geometry_top1_probability": float(p1),
+            "geometry_top2_probability": float(p2),
+            "geometry_margin": float(p1 - p2),
+            "geometry_entropy": float(entropy),
+        }
+    if role == Role.ARBITER:
+        return {}
+    raise ValueError(f"unsupported role: {role}")
 
 
 @dataclass(frozen=True)
 class RFTool:
     name: str
     description: str
+    allowed_roles: frozenset[Role]
     fn: Callable[[EpisodeSnapshot], ToolResult]
 
 
 class RFToolRegistry:
-    """Frozen perception evidence presented as explicit on-demand tools."""
+    """Frozen perception modules used as private tools, not disguised agents."""
 
     def __init__(self):
+        proposer = frozenset({Role.PROPOSER})
+        critic = frozenset({Role.CRITIC})
         self._tools = {
             "identity_prototype": RFTool(
                 "identity_prototype",
-                "Known-class identity prototype risk in [0,1]; higher means less compatible.",
+                "Identity prototype risk in [0,1]; higher means less compatible "
+                "with the proposed known identity.",
+                proposer,
                 lambda s: ToolResult(
                     "identity_prototype",
                     float(s.identity_prototype_risk),
                     f"identity prototype risk={s.identity_prototype_risk:.4f}")),
+            "identity_energy_margin": RFTool(
+                "identity_energy_margin",
+                "Identity-only normalized energy and distance margin.",
+                proposer,
+                lambda s: ToolResult(
+                    "identity_energy_margin",
+                    {
+                        "identity_energy": float(np.tanh(s.identity_energy)),
+                        "identity_distance_margin": float(np.tanh(
+                            s.identity_distance_margin)),
+                    },
+                    "identity energy/distance evidence")),
             "geometry_prototype": RFTool(
                 "geometry_prototype",
                 "Geometry prototype risk in [0,1]; higher means less compatible.",
+                critic,
                 lambda s: ToolResult(
                     "geometry_prototype",
                     float(s.geometry_prototype_risk),
                     f"geometry prototype risk={s.geometry_prototype_risk:.4f}")),
+            "geometry_margin": RFTool(
+                "geometry_margin",
+                "Geometry-only normalized distance margin.",
+                critic,
+                lambda s: ToolResult(
+                    "geometry_margin",
+                    float(np.tanh(s.geometry_distance_margin)),
+                    "geometry distance-margin evidence")),
             "openmax": RFTool(
                 "openmax",
                 "OpenMax unknown risk in [0,1]; higher supports unknown rejection.",
+                critic,
                 lambda s: ToolResult(
                     "openmax", float(s.openmax_risk),
                     f"OpenMax risk={s.openmax_risk:.4f}")),
             "boundary": RFTool(
                 "boundary",
                 "Frozen open-set boundary risk in [0,1]; higher supports unknown rejection.",
+                critic,
                 lambda s: ToolResult(
                     "boundary", float(s.boundary_risk),
                     f"boundary risk={s.boundary_risk:.4f}")),
-            "energy_margin": RFTool(
-                "energy_margin",
-                "Energy and identity/geometry distance margins for uncertainty analysis.",
-                lambda s: ToolResult(
-                    "energy_margin",
-                    {
-                        "identity_energy": float(np.tanh(s.identity_energy)),
-                        "identity_distance_margin": float(np.tanh(
-                            s.identity_distance_margin)),
-                        "geometry_distance_margin": float(np.tanh(
-                            s.geometry_distance_margin)),
-                    },
-                    "normalized energy and distance margins")),
             "geometry_views": RFTool(
                 "geometry_views",
-                "Per-view geometry risks for checking consistency across RF views.",
+                "Per-view geometry risks for checking RF-view consistency.",
+                critic,
                 lambda s: ToolResult(
                     "geometry_views",
                     [float(v) for v in s.view_risks],
                     "per-view geometry risks")),
         }
 
-    def names(self) -> tuple[str, ...]:
-        return tuple(self._tools)
+    def names_for(self, role: Role) -> tuple[str, ...]:
+        return tuple(
+            name for name, tool in self._tools.items()
+            if role in tool.allowed_roles)
 
-    def descriptions(self) -> dict[str, str]:
-        return {name: tool.description for name, tool in self._tools.items()}
+    def descriptions_for(self, role: Role) -> dict[str, str]:
+        return {
+            name: tool.description for name, tool in self._tools.items()
+            if role in tool.allowed_roles
+        }
 
-    def call(self, name: str, snapshot: EpisodeSnapshot) -> ToolResult:
+    def call(self, role: Role, name: str,
+             snapshot: EpisodeSnapshot) -> ToolResult:
         if name not in self._tools:
             raise ValueError(f"unknown RF tool: {name}")
-        return self._tools[name].fn(snapshot)
+        tool = self._tools[name]
+        if role not in tool.allowed_roles:
+            raise PermissionError(f"{role.value} cannot call RF tool {name}")
+        return tool.fn(snapshot)
+
+    def permission_map(self) -> dict[str, tuple[str, ...]]:
+        return {
+            role.value: self.names_for(role)
+            for role in (Role.PROPOSER, Role.CRITIC, Role.ARBITER)
+        }
