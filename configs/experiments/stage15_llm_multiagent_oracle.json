@@ -1,0 +1,22 @@
+{
+  "dataset": "oracle",
+  "base_stage14_config": "configs/experiments/stage14_comm_mappo_oracle_ac.json",
+  "outer_fold": 0,
+  "seed": 42,
+  "llm": {
+    "provider": "openai_compatible",
+    "model": "qwen3:8b",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.1,
+    "timeout_seconds": 120
+  },
+  "agentic": {
+    "max_turns": 12,
+    "tool_budget": 4,
+    "memory_size": 256,
+    "message_budget": 8
+  },
+  "evaluation_samples_per_class": 64,
+  "output_dir": "results/stage15/llm_multiagent_oracle_fold0"
+}

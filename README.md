@@ -1,47 +1,59 @@
-# MAROS-SEI：多智能体开放集辐射源识别
+# MAROS-SEI：大模型多智能体开放集辐射源识别
 
-当前主线已经完成到 Stage 14，并冻结为 **A+C 异构通信 MAPPO 开放集拒识框架**。
+当前主线：**Stage 15 — Partially Observable Heterogeneous LLM Multi-Agent Open-Set SEI**。
 
-## 从这里开始
+Stage 14 Comm-MAPPO/CTDE 保留为传统 MARL baseline。
 
-1. 阅读根目录 [`多智能体开放集拒识_主流程.md`](多智能体开放集拒识_主流程.md)：最终架构、数据协议、训练、推理、指标和运行入口；
-2. 阅读 [`tests/stage14/README.md`](tests/stage14/README.md)：测试、消融、诊断、历史计划和非最终产物索引；
-3. 最终全量单折结果位于 `results/stage14/final_ac_fold0_seed42/`；
-4. Stage 1–13 的旧结果保留在 `总结果汇总.md`、`docs/` 和 `results/`，只作为历史研究记录。
+## 唯一运行入口
 
-## 最终 Stage 14 入口
+本地下载更新后，只运行仓库根目录：
 
 ```powershell
-conda run --no-capture-output -n pytorch python scripts/experiments/run_stage14_comm_mappo.py --config configs/experiments/stage14_comm_mappo_oracle_ac.json
+python run_stage15.py
 ```
 
-测试：
+快速烟雾测试：
 
 ```powershell
-conda run --no-capture-output -n pytorch python -m pytest -q tests/stage14
-conda run --no-capture-output -n pytorch python -m pytest -q
+python run_stage15.py --samples-per-class 4
 ```
 
-## 当前最终选择
+默认配置：
 
-- Agent A：已知身份假设；
-- Agent C：开放集证据获取和最终接受/拒绝；
-- 原 B Actor 删除，其有效几何原型证据并入 C 的按需工具；
-- 独立 GRU Actor + 集中式训练 Critic；
-- 推理模型只有 A、C Actor，不包含 Critic；
-- 正式 Unknown 不进入训练、校准或当前 smoke 评估。
+`configs/experiments/stage15_llm_multiagent_oracle.json`
 
-当前 Oracle 全量单折训练结果：Known Accuracy 93.94%、Unknown Recall 96.44%、H-score 95.17%、AUROC 98.64%、OSCR 98.33%。在仅用于曲线比较的 95% Known 匹配点，Unknown Recall 为 95.69%、H-score 为 95.34%。正式 5 折、多种子实验仍应在服务器运行。
+默认结果目录：
 
-## 目录职责
+`results/stage15/llm_multiagent_oracle_fold0/`
 
-| 目录 | 内容 |
-|---|---|
-| `src/maros_stage14/` | 最终多智能体开放集算法 |
-| `scripts/experiments/` | 正式训练入口 |
-| `configs/experiments/` | 最终主配置 |
-| `results/stage14/final_ac_fold0_seed42/` | 当前全量单折结果与 Actor-only 检查点 |
-| `tests/stage14/` | 测试、对照、诊断、计划和非最终产物 |
-| `docs/` | Stage 1–13 历史与长期设计资料 |
+其中：
 
-根目录只承担导航和最终主流程说明，不再堆放阶段测试报告。
+- `summary.md`：最方便人工查看的总结果；
+- `summary.json`：完整结构化汇总；
+- `agent_stats.json`：Agent动作、RF工具、通信与轨迹统计；
+- `trajectories.jsonl`：逐样本完整多智能体推理轨迹。
+
+## Stage 15 多智能体定义
+
+- **Proposer Agent**：只看 identity-side 局部观测，拥有 identity 私有工具；
+- **Critic Agent**：只看 geometry/open-set-side 局部观测，拥有 open-set 私有工具；
+- **Arbiter Agent**：不直接读取底层 RF 数值，只根据显式 Agent 消息裁决；
+- 每个 Agent 拥有独立上下文、独立私有工具结果、独立 Case Memory；
+- 跨 Agent 私有信息只能通过显式消息传递；
+- Ground Truth、数据来源和 formal unknown 标记禁止进入 Agent 上下文。
+
+RF classifier、Prototype、OpenMax、Boundary 等均属于工具，不把专家网络伪装成 Agent。
+
+## 大模型服务
+
+当前入口连接 OpenAI-compatible Chat Completions 服务。默认配置使用：
+
+`Qwen/Qwen3-8B @ http://127.0.0.1:8000/v1`
+
+因此运行 `run_stage15.py` 前，本地需已有兼容服务，或将配置中的 `base_url/model` 修改为你的实际模型服务。
+
+## 研究结构
+
+**RF 感知/基础模型 → 私有 RF 观测与工具 → Proposer ↔ Critic ↔ Arbiter → Known/Unknown → Unknown Discovery**
+
+详细设计见 `Stage15_大模型多智能体主流程.md`。
